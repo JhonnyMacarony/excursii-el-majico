@@ -12,6 +12,58 @@ app.get("/", (req, res) =>{
     res.render("layouts/layout.ejs")
 })
 
+app.get("/hurghada/home", (req, res) =>{
+    res.render("layouts/hurghada/home.ejs")
+})
+
+app.get("/marsalam/luxor", (req, res) =>{
+    res.render("layouts/marsalam/luxor.ejs")
+})
+
+app.get("/marsalam/asuan", (req, res) =>{
+    res.render("layouts/marsalam/asuan.ejs")
+})
+
+app.get("/marsalam/asuan-abu-simbel", (req, res) =>{
+    res.render("layouts/marsalam/asuan-abu-simbel.ejs")
+})
+
+app.get("/marsalam/home", (req, res) =>{
+    res.render("layouts/marsalam/home.ejs")
+})
+
+
+app.get("/marsalam/home", (req, res) =>{
+    res.render("layouts/marsalam/home.ejs")
+})
+
+
+app.get("/marsalam/home", (req, res) =>{
+    res.render("layouts/marsalam/home.ejs")
+})
+
+
+app.get("/marsalam/home", (req, res) =>{
+    res.render("layouts/marsalam/home.ejs")
+})
+
+
+app.get("/marsalam/home", (req, res) =>{
+    res.render("layouts/marsalam/home.ejs")
+})
+
+
+app.get("/marsalam/home", (req, res) =>{
+    res.render("layouts/marsalam/home.ejs")
+})
+
+
+app.get("/marsalam/home", (req, res) =>{
+    res.render("layouts/marsalam/home.ejs")
+})
+
+
+
 app.set("view engine", "ejs")
 app.set("views", __dirname + '/views')
 app.set('layout', 'layouts/layout')

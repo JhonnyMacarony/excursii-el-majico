@@ -4,13 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mybrary</title>
+    <title>Excursions El Majico</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .selection{
+            display: flex;
+            flex-direction: row;
+            margin: 200px;
+            border: none;
+        }
+        .image-selection{
+            height: 300px;
+            width: 500px;
+            padding-left: 50px;
+        }
+        .title-selection-hurghada{
+            position: absolute;
+            color: white;
+            padding-left: 250px;
+            padding-top: 268px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .title-selection-marsalam{
+            position: absolute;
+            color: white;
+            margin-left: 800px;
+            margin-top: 268px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    Before
-    <br>
-    <%- body %>
-    <br>
-    After
+
+    <div class="selection">
+        <a href="/hurghada/home"> <img class="image-selection" src="/images/Hurghada_Hotels_R03.jpg"> </a>
+        <p class="title-selection-hurghada">Hurghada</p>
+        <a href="/marsalam/home"> <img class="image-selection" src="/images/Carnelia_Beach,_Marsa_Alam_(2232052889).jpg"> </a>
+        <p class="title-selection-marsalam">Marsalam</p>
+        <a href=""><div>Another one</div></a>
+    </div>
+
 </body>
 </html>
