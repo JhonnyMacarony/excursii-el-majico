@@ -16,6 +16,10 @@ app.get("/hurghada/home", (req, res) =>{
     res.render("layouts/hurghada/home.ejs")
 })
 
+app.get("/marsalam/home", (req, res) =>{
+    res.render("layouts/marsalam/home.ejs")
+})
+
 app.get("/marsalam/luxor", (req, res) =>{
     res.render("layouts/marsalam/luxor.ejs")
 })
@@ -28,38 +32,38 @@ app.get("/marsalam/asuan-abu-simbel", (req, res) =>{
     res.render("layouts/marsalam/asuan-abu-simbel.ejs")
 })
 
-app.get("/marsalam/home", (req, res) =>{
-    res.render("layouts/marsalam/home.ejs")
+app.get("/marsalam/mega-city-tour", (req, res) =>{
+    res.render("layouts/marsalam/mega-city-tour.ejs")
 })
 
 
-app.get("/marsalam/home", (req, res) =>{
-    res.render("layouts/marsalam/home.ejs")
+app.get("/marsalam/super-safari", (req, res) =>{
+    res.render("layouts/marsalam/super-safari.ejs")
 })
 
 
-app.get("/marsalam/home", (req, res) =>{
-    res.render("layouts/marsalam/home.ejs")
+app.get("/marsalam/moto-safari", (req, res) =>{
+    res.render("layouts/marsalam/moto-safari.ejs")
 })
 
 
-app.get("/marsalam/home", (req, res) =>{
-    res.render("layouts/marsalam/home.ejs")
+app.get("/marsalam/seascope-glass-boat", (req, res) =>{
+    res.render("layouts/marsalam/seascope-glass-boat.ejs")
 })
 
 
-app.get("/marsalam/home", (req, res) =>{
-    res.render("layouts/marsalam/home.ejs")
+app.get("/marsalam/hammata-islands", (req, res) =>{
+    res.render("layouts/marsalam/hammata-islands.ejs")
 })
 
 
-app.get("/marsalam/home", (req, res) =>{
-    res.render("layouts/marsalam/home.ejs")
+app.get("/marsalam/marsa-imbarak", (req, res) =>{
+    res.render("layouts/marsalam/marsa-imbarak.ejs")
 })
 
 
-app.get("/marsalam/home", (req, res) =>{
-    res.render("layouts/marsalam/home.ejs")
+app.get("/marsalam/satayeh", (req, res) =>{
+    res.render("layouts/marsalam/satayeh.ejs")
 })
 
 

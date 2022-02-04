@@ -6,20 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marsalam</title>
     <style>
+        .excursions{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .excursion{
+            margin: 20px;
+            text-decoration: none;
+            color: black;
+            font-size: 27px;
+            height: 50px;
+            width: 300px;
+            padding: 10px;
+        }
+        .excursion:hover{
+            color: rgb(26, 26, 26);
+            background-color: rgba(77, 77, 77, 0.151);
+        }
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgb(37, 37, 37); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+            border-radius: 25px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+        .back:hover{
+            color: rgb(37, 37, 37);
+        }
+        .back{
+            font-size: 27px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
     </style>
 </head>
 <body>
+    <a class="back" href="/">     <p class="back">←</p>    </a>
     <div class="excursions">
-        <a href="/marsalam/luxor">1. Luxor</a>
-        <a href="/marsalam/asuan">2. Asuan</a>
-        <a href="/marsalam/asuan-abu-simbel.ejs">3. Asuan - Abu Simbel</a>
-        <a href="/marsalam/mega-city-tour">4. Mega City Tour</a>
-        <a href="/marsalam/super-safari">5. Super Safari</a>
-        <a>6. Moto safari</a>
-        <a>7. Seascope Glass Boat</a>
-        <a>8. Hammata Islands</a>
-        <a>9. Marsa Imbarak</a>
-        <a>10. Satayeh</a>
+        <a class="excursion" href="/marsalam/luxor">1. Luxor</a>
+        <a class="excursion" href="/marsalam/asuan">2. Asuan</a>
+        <a class="excursion" href="/marsalam/asuan-abu-simbel">3. Asuan - Abu Simbel</a>
+        <a class="excursion" href="/marsalam/mega-city-tour">4. Mega City Tour</a>
+        <a class="excursion" href="/marsalam/super-safari">5. Super Safari</a>
+        <a class="excursion" href="/marsalam/moto-safari">6. Moto Safari</a>
+        <a class="excursion" href="/marsalam/seascope-glass-boat">7. Seascope Glass Boat</a>
+        <a class="excursion" href="/marsalam/hammata-islands">8. Hammata Islands</a>
+        <a class="excursion" href="/marsalam/marsa-imbarak">9. Marsa Imbarak</a>
+        <a class="excursion" href="/marsalam/satayeh">10. Satayeh</a>
     </div>
 </body>
 </html>
