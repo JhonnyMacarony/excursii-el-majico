@@ -13,13 +13,15 @@
         .selection{
             display: flex;
             flex-direction: row;
-            margin: 200px;
+            margin-top: 200px;
+            margin-left: 100px;
             border: none;
         }
         .image-selection{
             height: 300px;
             width: 500px;
-            padding-left: 50px;
+            margin-left: 50px;
+            margin-right: 100px;
         }
         .image-selection:hover{
             animation: big 1s ease-in forwards;
@@ -51,21 +53,43 @@
         .title-selection-marsalam{
             position: absolute;
             color: white;
-            margin-left: 800px;
+            margin-left: 900px;
             margin-top: 268px;
             font-size: 26px;
             font-weight: bold;
         }
+        .title-selection-sharm{
+            position: absolute;
+            color: white;
+            margin-left: 1500px;
+            margin-top: 268px;
+            font-size: 26px;
+            font-weight: bold;
+            width: 220px;
+        }
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgb(37, 37, 37); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+            border-radius: 25px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
     </style>
 </head>
 <body>
-
     <div class="selection">
         <a href="/hurghada/home"> <img class="image-selection" src="/images/Hurghada_Hotels_R03.jpg"> </a>
         <p class="title-selection-hurghada">Hurghada</p>
         <a href="/marsalam/home"> <img class="image-selection" src="/images/Carnelia_Beach,_Marsa_Alam_(2232052889).jpg"> </a>
         <p class="title-selection-marsalam">Marsalam</p>
-        <a href=""><div>Another one</div></a>
+        <a href="/sharm-el-sheikh/home"> <img class="image-selection" src="/images/Sharm-El-Sheikh.jpg"> </a>
+        <p class="title-selection-sharm">Sharm El Sheikh</p>
     </div>
 
 </body>

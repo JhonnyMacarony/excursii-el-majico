@@ -12,10 +12,19 @@ app.get("/", (req, res) =>{
     res.render("layouts/layout.ejs")
 })
 
+                                                        //Hurghada
+
 app.get("/hurghada/home", (req, res) =>{
     res.render("layouts/hurghada/home.ejs")
 })
 
+                                                        //Sharm el sheikh
+
+app.get("/sharm-el-sheikh/home", (req, res) =>{
+    res.render("layouts/sharm-el-sheikh/home.ejs")
+})
+
+                                                        //Marsalam
 app.get("/marsalam/home", (req, res) =>{
     res.render("layouts/marsalam/home.ejs")
 })
