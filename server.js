@@ -18,6 +18,51 @@ app.get("/hurghada/home", (req, res) =>{
     res.render("layouts/hurghada/home.ejs")
 })
 
+app.get("/hurghada/cairo", (req, res) =>{
+    res.render("layouts/hurghada/cairo.ejs")
+})
+
+app.get("/hurghada/super-luxor", (req, res) =>{
+    res.render("layouts/hurghada/super-luxor.ejs")
+})
+
+app.get("/hurghada/super-luxor", (req, res) =>{
+    res.render("layouts/hurghada/super-luxor.ejs")
+})
+
+
+app.get("/hurghada/express-safari-5-ore", (req, res) =>{
+    res.render("layouts/hurghada/express-safari-5-ore.ejs")
+})
+
+app.get("/hurghada/moto-safari-3-ore", (req, res) =>{
+    res.render("layouts/hurghada/moto-safari-3-ore.ejs")
+})
+
+app.get("/hurghada/insula-orange-bay", (req, res) =>{
+    res.render("layouts/hurghada/insula-orange-bay.ejs")
+})
+
+app.get("/hurghada/insula-paradise", (req, res) =>{
+    res.render("layouts/hurghada/insula-paradise.ejs")
+})
+
+app.get("/hurghada/casa-delfinilor", (req, res) =>{
+    res.render("layouts/hurghada/casa-delfinilor.ejs")
+})
+
+app.get("/hurghada/paraseling", (req, res) =>{
+    res.render("layouts/hurghada/paraseling.ejs")
+})
+
+app.get("/hurghada/scufundari", (req, res) =>{
+    res.render("layouts/hurghada/scufundari.ejs")
+})
+
+app.get("/hurghada/submarin-sindbad", (req, res) =>{
+    res.render("layouts/hurghada/submarin-sindbad.ejs")
+})
+
                                                         //Sharm el sheikh
 
 app.get("/sharm-el-sheikh/home", (req, res) =>{
