@@ -154,11 +154,13 @@ app.get("/marsalam/marsa-imbarak", (req, res) =>{
     res.render("layouts/marsalam/marsa-imbarak.ejs")
 })
 
-
 app.get("/marsalam/satayeh", (req, res) =>{
     res.render("layouts/marsalam/satayeh.ejs")
 })
 
+app.get("/marsalam/mega-nefertari", (req, res) =>{
+    res.render("layouts/marsalam/mega-nefertari.ejs")
+})
 
 
 app.set("view engine", "ejs")
