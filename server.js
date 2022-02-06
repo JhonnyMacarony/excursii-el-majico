@@ -30,6 +30,9 @@ app.get("/hurghada/super-luxor", (req, res) =>{
     res.render("layouts/hurghada/super-luxor.ejs")
 })
 
+app.get("/hurghada/super-safari", (req, res) =>{
+    res.render("layouts/hurghada/super-safari.ejs")
+})
 
 app.get("/hurghada/express-safari-5-ore", (req, res) =>{
     res.render("layouts/hurghada/express-safari-5-ore.ejs")
@@ -61,6 +64,42 @@ app.get("/hurghada/scufundari", (req, res) =>{
 
 app.get("/hurghada/submarin-sindbad", (req, res) =>{
     res.render("layouts/hurghada/submarin-sindbad.ejs")
+})
+
+app.get("/hurghada/batiskaf", (req, res) =>{
+    res.render("layouts/hurghada/batiskaf.ejs")
+})
+
+app.get("/hurghada/dolphin-show", (req, res) =>{
+    res.render("layouts/hurghada/dolphin-show.ejs")
+})
+
+app.get("/hurghada/acvariu", (req, res) =>{
+    res.render("layouts/hurghada/acvariu.ejs")
+})
+
+app.get("/hurghada/aswan-abu-sibel", (req, res) =>{
+    res.render("layouts/hurghada/aswan-abu-sibel.ejs")
+})
+
+app.get("/hurghada/manastirea-sfantul-pavel-si-antonie", (req, res) =>{
+    res.render("layouts/hurghada/manastirea-sfantul-pavel-si-antonie.ejs")
+})
+
+app.get("/hurghada/excursie-privata", (req, res) =>{
+    res.render("layouts/hurghada/excursie-privata.ejs")
+})
+
+app.get("/hurghada/vizitarea-orasului-hurghada", (req, res) =>{
+    res.render("layouts/hurghada/vizitarea-orasului-hurghada.ejs")
+})
+
+app.get("/hurghada/abu-dabbab", (req, res) =>{
+    res.render("layouts/hurghada/abu-dabbab.ejs")
+})
+
+app.get("/hurghada/excursie-cu-avionul-din-hurghada-la-cairo", (req, res) =>{
+    res.render("layouts/hurghada/excursie-cu-avionul-din-hurghada-la-cairo.ejs")
 })
 
                                                         //Sharm el sheikh
