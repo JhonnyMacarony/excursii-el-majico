@@ -18,12 +18,38 @@
         .back:hover{
             color: rgb(37, 37, 37);
         }
+        .translation-btn-usa{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1300px;
+        }
+        .translation-btn-ro{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1390px;
+        }
+        .invisible{
+            display: none;
+            top: -1000000px;
+        }
     </style>
 </head>
 <body>
     <a class="back" href="/marsalam/home">     <p class="back">←</p>    </a>
+    <div class="translation">
+        <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa" id="translation-btn-usa">
+        <img src="/images/1200px-Flag_of_Romania.svg.png" class="translation-btn-ro" id="translation-btn-ro">
+    </div>
     <h1>Asuan</h1>
-    <p class="paragraph">
+    <p id="paragraph-ro" class="paragraph">
         Excursia zilnica catre cel mai indepartat oras in sudul Egiptului
         Orasul a fost construit pe cea mai uimitoare sectiune a Nilului. Vizita la Marele Baraj din Asuan pe Lacul Nasser - cea mai mare rezervatie artificiala de apa de pe planeta.
         Vei vizita si Templul Isis pe insula Philae. Vizita la parfumeria original egipteana, pranz cu vedere la Nil.
@@ -31,10 +57,36 @@
         Pretul include bilete pentru vizitarea cladirilor antice, autobuz de transfer cu aer conditionat, pranzul ( bauturile sunt conta cost )
         Plecarea se face devreme, ajungand pe la ora 23:00.
         <br><br>
-        Adult: 110 €<br>
-        Copil: 55 €<br><br>
         Cand:<br>
         marti
     </p>
+    <p id="paragraph-usa" class="paragraph invisible">
+        Daily excursion to the furthest city to south in Egypt. The city is founded on the most amazing section of Nile. 
+        Visit of the Great Asuan Dam on the Nasser Lake – biggest artificial water reservoir on the planet! Also You will 
+        visit Isis Temple on Philae Island. Visit in original Egyptian perfumery, lunch with Nile view. In the program there 
+        is a Nubian Village visit (egyptian coffee and tea, pictures with crocodiles). Price included tickets for visiting 
+        ancient buildings, air-conditioned bus transfer, lunch (drinks extra charge). Departure at early time, arrival at 
+        around 23:00 PM
+        <br><br>
+        When:<br>
+        Tuesday
+    </p>
 </body>
+<script>
+    const translateBtnUsa = document.getElementById("translation-btn-usa")
+    const translateBtnRo = document.getElementById("translation-btn-ro")
+    const paragraphUsa = document.getElementById("paragraph-usa")
+    const paragraphRo = document.getElementById("paragraph-ro")
+
+    translateBtnUsa.addEventListener("click", ()=>{
+        paragraphUsa.classList.remove("invisible")
+        paragraphRo.classList.add("invisible")
+    })
+
+    translateBtnRo.addEventListener("click", ()=>{
+        paragraphUsa.classList.add("invisible")
+        paragraphRo.classList.remove("invisible")
+    })
+
+</script>
 </html>

@@ -18,12 +18,38 @@
         .back:hover{
             color: rgb(37, 37, 37);
         }
+        .translation-btn-usa{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1300px;
+        }
+        .translation-btn-ro{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1390px;
+        }
+        .invisible{
+            display: none;
+            top: -1000000px;
+        }
     </style>
 </head>
 <body>
     <a class="back" href="/marsalam/home">     <p class="back">←</p>    </a>
+    <div class="translation">
+        <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa" id="translation-btn-usa">
+        <img src="/images/1200px-Flag_of_Romania.svg.png" class="translation-btn-ro" id="translation-btn-ro">
+    </div>
     <h1>Super Safari</h1>
-    <p class="paragraph">
+    <p id="paragraph-ro" class="paragraph">
         Excursie pe nedescoperitul desert in timpul zilei, spre terenul mai adanc al desertului, unde veti vedea cum oamenii traiesc in conditii foarte dificile si cum se descurca zi de zi
         Cand te intorci in statia din safari, clientii conduc ATV-uri sa vada apusul. Beduinii vor organiza clarii de camila.
         Dupa apus o sa serviti cina si vei experimenta o performanta traditionala a dansatorilor locali si dansul Tunoura. Pranzul si bauturi nonalcoolice nelimitate.
@@ -34,5 +60,31 @@
         Cand:<br>
         luni si marti
     </p>
+    <p id="paragraph-usa" class="paragraph invisible">
+        Excursion on the undiscovered desert at noon time by Landcruiser. safari ) , to the deeper terrain of desert, 
+        where You will see how people live extremely difficult conditions and run their daily basis. When You come back 
+        to the safari station ,the clients ridding quad to the desert to see the sunset Beduins will organise acamel rides 
+        as well. After the sunset will serve a dinner and You will experience a traditional performance of local dancers 
+        and Tunoura - whirling dervish. Dinner and nonalcoholic drinks unlimited. Arrival to hotel around 20:00-21:00        <br><br>
+        When:<br>
+        Monday and Tuesday
+    </p>
 </body>
+<script>
+    const translateBtnUsa = document.getElementById("translation-btn-usa")
+    const translateBtnRo = document.getElementById("translation-btn-ro")
+    const paragraphUsa = document.getElementById("paragraph-usa")
+    const paragraphRo = document.getElementById("paragraph-ro")
+
+    translateBtnUsa.addEventListener("click", ()=>{
+        paragraphUsa.classList.remove("invisible")
+        paragraphRo.classList.add("invisible")
+    })
+
+    translateBtnRo.addEventListener("click", ()=>{
+        paragraphUsa.classList.add("invisible")
+        paragraphRo.classList.remove("invisible")
+    })
+
+</script>
 </html>
