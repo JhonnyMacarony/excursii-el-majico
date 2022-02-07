@@ -21,6 +21,17 @@ app.get("/hurghada/home", (req, res) =>{
 app.get("/hurghada/cairo", (req, res) =>{
     res.render("layouts/hurghada/cairo.ejs")
 })
+app.get("/hurghada/safari-oasis", (req, res) =>{
+    res.render("layouts/hurghada/safari-oasis.ejs")
+})
+
+app.get("/hurghada/luxor-valea-reginelor", (req, res) =>{
+    res.render("layouts/hurghada/luxor-valea-reginelor.ejs")
+})
+
+app.get("/hurghada/cairo-economic", (req, res) =>{
+    res.render("layouts/hurghada/cairo-economic.ejs")
+})
 
 app.get("/hurghada/super-luxor", (req, res) =>{
     res.render("layouts/hurghada/super-luxor.ejs")
