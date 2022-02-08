@@ -18,12 +18,38 @@
         .back:hover{
             color: rgb(37, 37, 37);
         }
+        .translation-btn-usa{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1300px;
+        }
+        .translation-btn-ro{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1390px;
+        }
+        .invisible{
+            display: none;
+            top: -1000000px;
+        }
     </style>
 </head>
 <body>
     <a class="back" href="/hurghada/home">     <p class="back">←</p>    </a>
+    <div class="translation">
+        <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa" id="translation-btn-usa">
+        <img src="/images/1200px-Flag_of_Romania.svg.png" class="translation-btn-ro" id="translation-btn-ro">
+    </div>
     <h1>Excursie cu avionul din  Hurghada  la Cairo</h1>
-    <p class="paragraph">
+    <p id="paragraph-ro" class="paragraph">
         Dacă ați ajuns în Hurghada ,cu siguranță veți dori sa vizitați cel mai mare oraș din Africa ,Cairo.
         Autocarul nostru va va lua de la hotelul unde sunteți cazați si vă va duce la aeroport pentru zborul spre Cairo .
         <br><br>
@@ -43,5 +69,43 @@
         Cand:<br>
         intreaba ghidul
     </p>
+    <p id="paragraph-usa" class="paragraph invisible">
+        If you are in Hurghada, you will definitely want to visit the largest city in Africa, Cairo.
+        Our coach will pick you up from the hotel where you are staying and will take you to the airport for your flight to Cairo.
+        <br><br>
+        Include:<br>
+        * Transfer <br>
+        * Airline ticket <br>
+        * Museum entrance ticket <br>
+        * Guide <br>
+        * Lunch to be served at a restaurant on the Nile <br>
+        * We will visit the Pyramids and the Sphinx <br>
+        * Optional: - camel ride to the Pyramids <br>
+                    - boat ride on the Nile <br>
+        <br><br>
+        Price:<br>
+        Adult: 205 €<br>
+        Children: 200 €
+        <br><br>
+        When:<br>
+        asks the guide
+    </p>
 </body>
+<script>
+    const translateBtnUsa = document.getElementById("translation-btn-usa")
+    const translateBtnRo = document.getElementById("translation-btn-ro")
+    const paragraphUsa = document.getElementById("paragraph-usa")
+    const paragraphRo = document.getElementById("paragraph-ro")
+
+    translateBtnUsa.addEventListener("click", ()=>{
+        paragraphUsa.classList.remove("invisible")
+        paragraphRo.classList.add("invisible")
+    })
+
+    translateBtnRo.addEventListener("click", ()=>{
+        paragraphUsa.classList.add("invisible")
+        paragraphRo.classList.remove("invisible")
+    })
+
+</script>
 </html>

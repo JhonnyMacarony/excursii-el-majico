@@ -18,13 +18,39 @@
         .back:hover{
             color: rgb(37, 37, 37);
         }
+        .translation-btn-usa{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1300px;
+        }
+        .translation-btn-ro{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1390px;
+        }
+        .invisible{
+            display: none;
+            top: -1000000px;
+        }
     </style>
 </head>
 <body>
     <a class="back" href="/hurghada/home">     <p class="back">←</p>    </a>
+    <div class="translation">
+        <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa" id="translation-btn-usa">
+        <img src="/images/1200px-Flag_of_Romania.svg.png" class="translation-btn-ro" id="translation-btn-ro">
+    </div>
     <h1>ABU DABBAB</h1>
-    <p class="paragraph">
-        Excursie de o zi cu snorkeling la broaștele țestoase din Abu Dabbab , alături de echipa noastră El Majico.Plecare va fi in jurul orei 6:00 in functe de hotel si o sa ajungem in jurul orei 9:00 .O sa inotam cu brostele testoase si o sa vedem corali si pestisorii viu colorati . 
+    <p id="paragraph-ro" class="paragraph">
+        Excursie de o zi cu snorkeling la broaștele țestoase din Abu Dabbab , alături de echipa noastră El Majico. Plecare va fi in jurul orei 6:00 in functe de hotel si o sa ajungem in jurul orei 9:00 .O sa inotam cu brostele testoase si o sa vedem corali si pestisorii viu colorati . 
         Broaște țestoase în habitatul lor natural - o experiență fabuloasă.
         <br><br>
         Include:<br>
@@ -39,5 +65,38 @@
         Cand:<br>
         intreaba ghidul
     </p>
+    <p id="paragraph-usa" class="paragraph invisible">
+        A day trip with snorkeling to the turtles in Abu Dabbab, with our El Majico team.
+        Departure will be around 6:00 depending on the hotel and we will arrive around 9:00. We will swim with the turtles and we will see brightly colored corals and fish. Turtles in their natural habitat.
+        <br><br>
+        Include:<br>
+        Lunch will be open buffet and is included.<br>
+        Non-alcoholic beverages, fruits and oriental sweets.<br>
+        Snorkeling equipment.<br>
+        <br><br>
+        Price:<br>
+        € 50 - € 60 varies depending on the number of people.<br>
+        Preferably a group of between 8 and 11 people.
+        <br><br>
+        When:<br>
+        asks the guide
+    </p>
 </body>
+<script>
+    const translateBtnUsa = document.getElementById("translation-btn-usa")
+    const translateBtnRo = document.getElementById("translation-btn-ro")
+    const paragraphUsa = document.getElementById("paragraph-usa")
+    const paragraphRo = document.getElementById("paragraph-ro")
+
+    translateBtnUsa.addEventListener("click", ()=>{
+        paragraphUsa.classList.remove("invisible")
+        paragraphRo.classList.add("invisible")
+    })
+
+    translateBtnRo.addEventListener("click", ()=>{
+        paragraphUsa.classList.add("invisible")
+        paragraphRo.classList.remove("invisible")
+    })
+
+</script>
 </html>

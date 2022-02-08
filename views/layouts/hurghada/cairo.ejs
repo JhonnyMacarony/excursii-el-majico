@@ -18,10 +18,36 @@
         .back:hover{
             color: rgb(37, 37, 37);
         }
+        .translation-btn-usa{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1300px;
+        }
+        .translation-btn-ro{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1390px;
+        }
+        .invisible{
+            display: none;
+            top: -1000000px;
+        }
     </style>
 </head>
 <body>
     <a class="back" href="/hurghada/home">     <p class="back">←</p>    </a>
+    <div class="translation">
+        <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa" id="translation-btn-usa">
+        <img src="/images/1200px-Flag_of_Romania.svg.png" class="translation-btn-ro" id="translation-btn-ro">
+    </div>
     <h1>Cairo</h1>
     <p class="paragraph">
         Muzeul National al Egiptului,sfinxul si piramidele Gizeh,Pranz  fara bauturi (bauturile nu sunt incluse,sunt contra cost),vizita la magazine de  parfumuri, bijuterii si suveniruri.
@@ -34,5 +60,34 @@
         Cand:<br>
         sambata, luni si miercuri 
     </p>
+    <p id="paragraph-usa" class="paragraph invisible">
+        National Museum of Egypt, Sphinx and the Pyramids of Giza, Lunch without drinks (drinks not included, for a fee), visit to perfume shops, jewelry and souvenirs.
+        Optionally you can take a boat ride on the Nile and a camel ride to the pyramids for a fee.
+        Departure will be around 01:30 depending on the hotel where you are staying and arrival around 22:30 depending on the hotel where you are staying and traffic.        <br><br>
+        <br><br>
+        Price:<br>
+        Adult: 50 €<br>
+        Children: 30 €
+        <br><br>
+        When:<br>
+        Saturday, Monday and Wednesday
+    </p>
 </body>
+<script>
+    const translateBtnUsa = document.getElementById("translation-btn-usa")
+    const translateBtnRo = document.getElementById("translation-btn-ro")
+    const paragraphUsa = document.getElementById("paragraph-usa")
+    const paragraphRo = document.getElementById("paragraph-ro")
+
+    translateBtnUsa.addEventListener("click", ()=>{
+        paragraphUsa.classList.remove("invisible")
+        paragraphRo.classList.add("invisible")
+    })
+
+    translateBtnRo.addEventListener("click", ()=>{
+        paragraphUsa.classList.add("invisible")
+        paragraphRo.classList.remove("invisible")
+    })
+
+</script>
 </html>
