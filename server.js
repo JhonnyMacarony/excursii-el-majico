@@ -119,6 +119,55 @@ app.get("/sharm-el-sheikh/home", (req, res) =>{
     res.render("layouts/sharm-el-sheikh/home.ejs")
 })
 
+app.get("/sharm-el-sheikh/cairo-alexandria", (req, res) =>{
+    res.render("layouts/sharm-el-sheikh/cairo-alexandria.ejs")
+})
+
+app.get("/sharm-el-sheikh/aqua-park", (req, res) =>{
+    res.render("layouts/sharm-el-sheikh/aqua-park.ejs")
+})
+
+app.get("/sharm-el-sheikh/dolphin-show", (req, res) =>{
+    res.render("layouts/sharm-el-sheikh/dolphin-show.ejs")
+})
+
+app.get("/sharm-el-sheikh/petra", (req, res) =>{
+    res.render("layouts/sharm-el-sheikh/petra.ejs")
+})
+
+app.get("/sharm-el-sheikh/hammam", (req, res) =>{
+    res.render("layouts/sharm-el-sheikh/hammam.ejs")
+})
+
+app.get("/sharm-el-sheikh/parasailing", (req, res) =>{
+    res.render("layouts/sharm-el-sheikh/parasailing.ejs")
+})
+
+app.get("/sharm-el-sheikh/glass-boat", (req, res) =>{
+    res.render("layouts/sharm-el-sheikh/glass-boat.ejs")
+})
+
+
+app.get("/sharm-el-sheikh/sea-scope", (req, res) =>{
+    res.render("layouts/sharm-el-sheikh/sea-scope.ejs")
+})
+
+app.get("/sharm-el-sheikh/tiran", (req, res) =>{
+    res.render("layouts/sharm-el-sheikh/tiran.ejs")
+})
+
+app.get("/sharm-el-sheikh/moses-mountain", (req, res) =>{
+    res.render("layouts/sharm-el-sheikh/moses-mountain.ejs")
+})
+
+app.get("/sharm-el-sheikh/cairo-by-plane", (req, res) =>{
+    res.render("layouts/sharm-el-sheikh/cairo-by-plane.ejs")
+})
+
+app.get("/sharm-el-sheikh/cairo-by-bus", (req, res) =>{
+    res.render("layouts/sharm-el-sheikh/cairo-by-bus.ejs")
+})
+
                                                         //Marsalam
 app.get("/marsalam/home", (req, res) =>{
     res.render("layouts/marsalam/home.ejs")

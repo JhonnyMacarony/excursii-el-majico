@@ -65,15 +65,65 @@
             font-weight: bold;
             text-decoration: none;
             color: black;
+            width: 50px;
+            position: relative;
         }
         .invisible{
             display: none;
             top: -1000000px;
         }
+        .alfabet-btn{
+            position: absolute;
+            border: 5px solid lightgrey;
+            color: black;
+            padding: 7px 10px;
+            background-color: rgb(235, 235, 235);
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 1200px;
+            margin-top: -60px;
+        }
+        .alfabet-clicked{
+            position: absolute;
+            border: 5px solid rgb(235, 235, 235);
+            color: black;
+            padding: 7px 10px;
+            background-color: lightgrey;
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 1200px;
+            margin-top: -60px;
+        }
+        .translation-btn-usa{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1300px;
+        }
+        .translation-btn-ro{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1390px;
+        }
     </style>
 </head>
 <body>
     <a class="back" href="/">     <p class="back">←</p>    </a>
+    <div class="translation">
+        <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa" id="translation-btn-usa">
+        <img src="/images/1200px-Flag_of_Romania.svg.png" class="translation-btn-ro" id="translation-btn-ro">
+    </div>
+    <p id="alfabet-btn" class="alfabet-btn">Abc</p>
+    <p id="classic-btn" class="alfabet-btn invisible">Abc</p>
     <div id="normal" class="excursions">
         <a class="excursion" href="/hurghada/cairo">1. Cairo	</a>
         <a class="excursion" href="/hurghada/cairo-economic">2. Cairo Economic	</a>
@@ -98,7 +148,7 @@
         <a class="excursion" href="/hurghada/excursie-privata">21. Excursie  privata	</a>
         <a class="excursion" href="/hurghada/vizitarea-orasului-hurghada">22. Vizitarea  orasului  Hurghada	</a>
         <a class="excursion" href="/hurghada/abu-dabbab">23. Abu Dabbab	</a>
-        <a class="excursion" href="/hurghada/excursie-cu-avionul-din-hurghada-la-cairo">24. Excursie cu avionul din  Hurghada  la Cairo	</a>
+        <a class="excursion" href="/hurghada/excursie-cu-avionul-din-hurghada-la-cairo">24. Excursie cu avionul din  Hurghada  la Cairo	</a>        
     </div>
     <div id="alfabet" class="excursions invisible">
         <a class="excursion" href="/hurghada/abu-dabbab">1. Abu Dabbab	</a>
@@ -126,6 +176,33 @@
         <a class="excursion" href="/hurghada/super-safari">23. Super Safari	</a>
         <a class="excursion" href="/hurghada/vizitarea-orasului-hurghada">24. Vizitarea  orasului  Hurghada	</a>
     </div>
+    <div id="paragraph-usa" class="excursions invisible">
+        <a class="excursion" href="/hurghada/cairo">1. Cairo	</a>
+        <a class="excursion" href="/hurghada/cairo-economic">2. Cairo Economic	</a>
+        <a class="excursion" href="/hurghada/super-luxor">3. Super Luxor	</a>
+        <a class="excursion" href="/hurghada/luxor-valea-reginelor">4. Luxor Valley of the Queens	</a>
+        <a class="excursion" href="/hurghada/luxor-economic">5. Luxor Economic	</a>
+        <a class="excursion" href="/hurghada/super-safari">6. Super Safari	</a>
+        <a class="excursion" href="/hurghada/safari-oasis">7. Safari Oasis	</a>
+        <a class="excursion" href="/hurghada/express-safari-5-ore">8. Express  Safari  5 hours	</a>
+        <a class="excursion" href="/hurghada/moto-safari-3-ore">9. Moto  Safari  3 hours 	</a>
+        <a class="excursion" href="/hurghada/insula-orange-bay">10. Orange  Bay	Island</a>
+        <a class="excursion" href="/hurghada/insula-paradise">11. Paradise Island	</a>
+        <a class="excursion" href="/hurghada/casa-delfinilor">12. Dolphin House </a>
+        <a class="excursion" href="/hurghada/paraseling">13. Paraseling	</a>
+        <a class="excursion" href="/hurghada/scufundari">14. Diving	</a>
+        <a class="excursion" href="/hurghada/submarin-sindbad">15.  Sindbad	Submarin </a>
+        <a class="excursion" href="/hurghada/batiskaf">16. Batiskaf	</a>
+        <a class="excursion" href="/hurghada/dolphin-show">17. Dolphin  Show 	</a>
+        <a class="excursion" href="/hurghada/acvariu">18. Aquarium	</a>
+        <a class="excursion" href="/hurghada/aswan-abu-sibel">19. Aswan  Abu Sibel	</a>
+        <a class="excursion" href="/hurghada/manastirea-sfantul-pavel-si-antonie">20. St. Paul and Anthony Monastery	</a>
+        <a class="excursion" href="/hurghada/excursie-privata">21. Private trip	</a>
+        <a class="excursion" href="/hurghada/vizitarea-orasului-hurghada">22. Visiting the city of Hurghada	</a>
+        <a class="excursion" href="/hurghada/abu-dabbab">23. Abu Dabbab	</a>
+        <a class="excursion" href="/hurghada/excursie-cu-avionul-din-hurghada-la-cairo">24. Plane trip from Hurghada to Cairo</a>        
+
+    </div>    
     <div class="end">
         <p class="excursion-end">
             * Copiii cu varsta inre 0-5 ani au gratuitate. <br>
@@ -145,4 +222,56 @@
         </p>
     </div>
 </body>
+<script>
+    const alfabetBtn = document.getElementById("alfabet-btn")
+    const classicBtn = document.getElementById("classic-btn")
+
+    const alfabetContext = document.getElementById("alfabet")
+    const normalContext = document.getElementById("normal")
+
+    alfabetBtn.addEventListener("click", ()=>{
+        alfabetContext.classList.remove("invisible")
+        normalContext.classList.add("invisible")
+        classicBtn.classList.add("alfabet-clicked")
+        alfabetBtn.classList.remove("alfabet-clicked")
+        alfabetBtn.classList.add("invisible")
+        classicBtn.classList.remove("invisible")
+        translateBtnUsa.classList.add("invisible")
+        translateBtnRo.classList.add("invisible")
+    })
+
+    classicBtn.addEventListener("click", ()=>{
+        alfabetContext.classList.add("invisible")
+        normalContext.classList.remove("invisible")
+        alfabetBtn.classList.add("alfabet-clicked")
+        classicBtn.classList.remove("alfabet-clicked")
+        classicBtn.classList.add("invisible")
+        classicBtn.classList.add("invisible")
+        alfabetBtn.classList.remove("invisible")
+        alfabetBtn.classList.remove("alfabet-clicked")
+        translateBtnUsa.classList.remove("invisible")
+        translateBtnRo.classList.remove("invisible")
+    })
+
+
+    const translateBtnUsa = document.getElementById("translation-btn-usa")
+    const translateBtnRo = document.getElementById("translation-btn-ro")
+    const paragraphUsa = document.getElementById("paragraph-usa")
+    const paragraphRo = document.getElementById("paragraph-ro")
+
+    translateBtnUsa.addEventListener("click", ()=>{
+        paragraphUsa.classList.remove("invisible")
+        normalContext.classList.add("invisible")
+        alfabetBtn.classList.add("invisible")
+        classicBtn.classList.add("invisible")
+    })
+
+    translateBtnRo.addEventListener("click", ()=>{
+        paragraphUsa.classList.add("invisible")
+        normalContext.classList.remove("invisible")
+        classicBtn.classList.add("invisible")
+        alfabetBtn.classList.add("invisible")
+    })
+
+</script>
 </html>

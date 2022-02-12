@@ -6,10 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sharm El Sheikh</title>
     <style>
-                .excursions{
+        .excursion-end-i{
+            text-decoration: none;
+            color: black;
+            font-size: 27px;
+            height: 50px;
+            width: 800px;
+            padding: 10px;
+            position: relative;
+            margin: 10px;
+        }
+        .excursions{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: space-between;
+            margin-bottom: 300px;
         }
         .excursion-end{
             margin-top: 75px;
@@ -29,10 +40,6 @@
             height: 50px;
             width: 300px;
             padding: 10px;
-        }
-        .excursion:hover{
-            color: rgb(26, 26, 26);
-            background-color: rgba(77, 77, 77, 0.151);
         }
         ::-webkit-scrollbar {
             width: 15px;
@@ -56,13 +63,262 @@
             text-decoration: none;
             color: black;
         }
+        .invisible{
+            display: none;
+            top: -1000000px;
+        }
+        .alfabet-btn{
+            position: absolute;
+            border: 5px solid lightgrey;
+            color: black;
+            padding: 7px 10px;
+            background-color: rgb(235, 235, 235);
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 1300px;
+            margin-top: -60px;
+        }
+        .alfabet-clicked{
+            position: absolute;
+            border: 5px solid rgb(235, 235, 235);
+            color: black;
+            padding: 7px 10px;
+            background-color: lightgrey;
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 1300px;
+            margin-top: -60px;
+        }
+        .card{
+            align-content: center;
+            justify-content: center;
+            height: 340px;
+            width: 260px;
+            border-radius: 10px;
+            padding-top:  8px;
+            padding-left:  8px;
+            cursor: pointer;
+        }
+        .trip-card{
+            text-align: center;
+            color: white;
+            position: relative;
+            margin-top: -2px;
+            font-size: 26px;
+
+        }
+        .card:hover{
+            background-color: rgb(219, 219, 219);
+            height: 380px;
+            color: black;
+        }
+
+        .trip-card:hover{
+            color: black;
+        }
+                                                                    /* Card Images */
+        .image-card-petra{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Treasury_petra_crop.jpeg/1200px-Treasury_petra_crop.jpeg");
+        }
+        .image-card-cairo-by-bus{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://destepti.ro/wp-content/uploads/2016/08/Cairo-1-696x532.jpg");
+        }
+        .image-card-cairo-alexandria{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://www.lifebeyondex.com/wp-content/uploads/2020/08/Places-to-see-in-Alexandria-Egypt-1024x682.jpg");
+        }
+        .image-card-cairo-by-plane{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://i.redd.it/0drdwf9gw7j41.jpg");
+        }
+        .image-card-moses-mountain{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://cdn.getyourguide.com/img/tour/5e4ae8d66c15b.jpeg/99.jpg");
+        }
+        .image-card-tiran{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://www.sharmhurghadaexcursions.com/images/items/15685034710ad93eec427ba3ac70c7dc0a8037a013.jpg");
+        }
+        .image-card-sea-scope{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/6e/3d.jpg");
+        }
+        .image-card-aqua-park{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://pix10.agoda.net/hotelImages/353/3530521/3530521_17120416510060197811.jpg?ca=6&ce=1&s=1024x768");
+        }
+        .image-card-dolphin-show{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://outdoortrip-web.s3.eu-central-1.amazonaws.com/3739-dolphin-show-in-sharm-el-sheikh/dolphin-show-in-sharm-el-sheikh.5e5e3b3031473-full.jpg");
+        }
+        .image-card-glass-boat{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://www.menemtours.com/wp-content/uploads/2018/04/glass4.jpg");
+        }
+        .image-card-parasailing{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://www.sharm-club.com/assets/images/excursions/watersports/parasailing/parasailing-in-sharm-el-sheikh.jpg");
+        }
+        .image-card-hammam{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://nile-voyage.com/home/wp-content/uploads/2020/07/Turkish-bath-and-massage-in-Hurghada-www.nile-voyage.com_.-18.jpg");
+        }
     </style>
 </head>
 <body>
     <a class="back" href="/">     <p class="back">←</p>    </a>
     <div class="excursions">
-        <a class="excursion" href="/sharm-el-sheikh/">1. </a>
+
+    <a class="excursion" href="/sharm-el-sheikh/petra">
+        <div class="card">
+            <img class="image-card-petra">
+            <p class="trip-card">Petra</p>
+        </div>
+    </a>
+    <a class="excursion" href="/sharm-el-sheikh/cairo-by-bus">
+        <div class="card">
+            <img class="image-card-cairo-by-bus">
+            <p class="trip-card">Cairo by bus</p>
+        </div>
+    </a>
+    <a class="excursion" href="/sharm-el-sheikh/cairo-alexandria">
+        <div class="card">
+            <img class="image-card-cairo-alexandria">
+            <p class="trip-card">Cairo - Alexandria</p>
+        </div>
+    </a>
+    <a class="excursion" href="/sharm-el-sheikh/cairo-by-plane">
+        <div class="card">
+            <img class="image-card-cairo-by-plane">
+            <p class="trip-card">Cairo by plane</p>
+        </div>
+    </a>
+
     </div>
+
+    <div class="excursions">
+
+    <a class="excursion" href="/sharm-el-sheikh/moses-mountain">
+        <div class="card">
+            <img class="image-card-moses-mountain">
+            <p class="trip-card">Moses Mountain</p>
+        </div>
+    </a>
+    <a class="excursion" href="/sharm-el-sheikh/tiran">
+        <div class="card">
+            <img class="image-card-tiran">
+            <p class="trip-card">Tiran Island</p>
+        </div>
+    </a>
+    <a class="excursion" href="/sharm-el-sheikh/sea-scope">
+        <div class="card">
+            <img class="image-card-sea-scope">
+            <p class="trip-card">Sea Scope</p>
+        </div>
+    </a>
+    <a class="excursion" href="/sharm-el-sheikh/aqua-park">
+        <div class="card">
+            <img class="image-card-aqua-park">
+            <p class="trip-card">Aqua Park</p>
+        </div>
+    </a>
+
+    </div>
+
+    <div class="excursions">
+
+        <a class="excursion" href="/sharm-el-sheikh/dolphin-show">
+            <div class="card">
+                <img class="image-card-dolphin-show">
+                <p class="trip-card">Dolphin Show</p>
+            </div>
+        </a>
+        <a class="excursion" href="/sharm-el-sheikh/glass-boat">
+            <div class="card">
+                <img class="image-card-glass-boat">
+                <p class="trip-card">Glass Boat</p>
+            </div>
+        </a>
+        <a class="excursion" href="/sharm-el-sheikh/parasailing">
+            <div class="card">
+                <img class="image-card-parasailing">
+                <p class="trip-card">Parasailing</p>
+            </div>
+        </a>
+        <a class="excursion" href="/sharm-el-sheikh/hammam">
+            <div class="card">
+                <img class="image-card-hammam">
+                <p class="trip-card">Hammam</p>
+            </div>
+        </a>
+    
+        </div>    
+    
+
     <div class="end">
         <h1>Ce ar trebuii sa stii:</h1>
         <p class="excursion-end">

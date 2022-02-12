@@ -18,8 +18,9 @@
         }
         .excursions{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: space-between;
+            margin-bottom: 290px;
         }
         .excursion-end{
             margin-top: 75px;
@@ -39,10 +40,6 @@
             height: 50px;
             width: 300px;
             padding: 10px;
-        }
-        .excursion:hover{
-            color: rgb(26, 26, 26);
-            background-color: rgba(77, 77, 77, 0.151);
         }
         ::-webkit-scrollbar {
             width: 15px;
@@ -66,23 +63,245 @@
             text-decoration: none;
             color: black;
         }
+        .invisible{
+            display: none;
+            top: -1000000px;
+        }
+        .alfabet-btn{
+            position: absolute;
+            border: 5px solid lightgrey;
+            color: black;
+            padding: 7px 10px;
+            background-color: rgb(235, 235, 235);
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 1300px;
+            margin-top: -60px;
+        }
+        .alfabet-clicked{
+            position: absolute;
+            border: 5px solid rgb(235, 235, 235);
+            color: black;
+            padding: 7px 10px;
+            background-color: lightgrey;
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 1300px;
+            margin-top: -60px;
+        }
+        .card{
+            align-content: center;
+            justify-content: center;
+            height: 340px;
+            width: 260px;
+            border-radius: 10px;
+            padding-top:  8px;
+            padding-left:  8px;
+            cursor: pointer;
+        }
+        .trip-card{
+            text-align: center;
+            color: white;
+            position: relative;
+            margin-top: -2px;
+            font-size: 26px;
+
+        }
+        .card:hover{
+            background-color: rgb(219, 219, 219);
+            height: 380px;
+            color: black;
+        }
+
+        .trip-card:hover{
+            color: black;
+        }
+
+        /*                                                             Card images      */
+        .image-card-luxor{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("/images/5f2d8a233e2d6a641d62c631_1634319553914.jpg");
+        }
+        .image-card-asuan{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("/images/98960633-6c6a1600-24e3-11eb-89f1-045f55a1e494.png");
+        }
+        .image-card-asuan-abu-simbel{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("/images/98960633-6c6a1600-24e3-11eb-89f1-045f55a1e494.png");
+        }
+        .image-card-mega-city-tour{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("/images/98960633-6c6a1600-24e3-11eb-89f1-045f55a1e494.png");
+        }
+        .image-card-super-safari{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("/images/98960633-6c6a1600-24e3-11eb-89f1-045f55a1e494.png");
+        }
+        .image-card-moto-safari{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("/images/98960633-6c6a1600-24e3-11eb-89f1-045f55a1e494.png");
+        }
+        .image-card-seascope-glass-boat{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("/images/98960633-6c6a1600-24e3-11eb-89f1-045f55a1e494.png");
+        }
+        .image-card-hammata-islands{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("/images/98960633-6c6a1600-24e3-11eb-89f1-045f55a1e494.png");
+        }
+        .image-card-marsa-imbarak{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("/images/98960633-6c6a1600-24e3-11eb-89f1-045f55a1e494.png");
+        }
+        .image-card-satayeh{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("/images/98960633-6c6a1600-24e3-11eb-89f1-045f55a1e494.png");
+        }
+        .image-card-mega-nefertari{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("/images/98960633-6c6a1600-24e3-11eb-89f1-045f55a1e494.png");
+        }
     </style>
 </head>
 <body>
+
+    
+
     <a class="back" href="/">     <p class="back">←</p>    </a>
-    <div class="excursions">
-        <a class="excursion" href="/marsalam/luxor">1. Luxor</a>
-        <a class="excursion" href="/marsalam/asuan">2. Asuan</a>
-        <a class="excursion" href="/marsalam/asuan-abu-simbel">3. Asuan - Abu Simbel</a>
-        <a class="excursion" href="/marsalam/mega-city-tour">4. Mega City Tour</a>
-        <a class="excursion" href="/marsalam/super-safari">5. Super Safari</a>
-        <a class="excursion" href="/marsalam/moto-safari">6. Moto Safari</a>
-        <a class="excursion" href="/marsalam/seascope-glass-boat">7. Seascope Glass Boat</a>
-        <a class="excursion" href="/marsalam/hammata-islands">8. Hammata Islands</a>
-        <a class="excursion" href="/marsalam/marsa-imbarak">9. Marsa Imbarak</a>
-        <a class="excursion" href="/marsalam/satayeh">10. Satayeh</a>
-        <a class="excursion" href="/marsalam/mega-nefertari">11. Mega Nefertari</a>
+    <div id="normal" class="excursions">
+        
+        <a class="excursion" href="/marsalam/luxor">
+            <div class="card">
+                <img class="image-card-luxor">
+                <p class="trip-card">Luxor</p>
+            </div>
+        </a>
+        <a class="excursion" href="/marsalam/asuan">
+            <div class="card">
+                <img class="image-card-asuan">
+                <p class="trip-card">Asuan</p>
+            </div>
+        </a>
+        <a class="excursion" href="/marsalam/asuan-abu-simbel">
+                <div class="card">
+                    <img class="image-card-asuan-abu-simbel">
+                    <p class="trip-card">Asuan - Abu Simbel</p>
+                </div>
+        </a>
+        <a class="excursion" href="/marsalam/mega-city-tour">
+            <div class="card">
+                <img class="image-card-mega-city-tour">
+                <p class="trip-card">Mega City Tour</p>
+            </div>
+        </a>
     </div>
+    <div id="normal" class="excursions">
+        
+        <a class="excursion" href="/marsalam/super-safari">
+            <div class="card">
+                <img class="image-card-super-safari">
+                <p class="trip-card">Super Safari</p>
+            </div>
+        </a>
+        <a class="excursion" href="/marsalam/moto-safari">
+            <div class="card">
+                <img class="image-card-moto-safari">
+                <p class="trip-card">Moto Safari</p>
+            </div>
+        </a>
+        <a class="excursion" href="/marsalam/seascope-glass-boat">
+            <div class="card">
+                <img class="image-card-seascope-glass-boat">
+                <p class="trip-card">Seascope Glass Boat</p>
+            </div>
+        </a>
+        <a class="excursion" href="/marsalam/hammata-islands">
+            <div class="card">
+                <img class="image-card-hammata-islands">
+                <p class="trip-card">Hammata Islands</p>
+            </div>
+        </a>
+    </div>
+    <div id="normal" class="excursions">
+        
+        <a class="excursion" href="/marsalam/marsa-imbarak">
+            <div class="card">
+                <img class="image-card-marsa-imbarak">
+                <p class="trip-card"> Marsa Imbarak</p>
+            </div>
+        </a>
+        <a class="excursion" href="/marsalam/satayeh">
+            <div class="card">
+                <img class="image-card-satayeh">
+                <p class="trip-card"> Satayeh</p>
+            </div>
+        </a>
+        <a class="excursion" href="/marsalam/mega-nefertari">
+            <div class="card">
+                <img class="image-card-mega-nefertari">
+                <p class="trip-card">Mega Nefertari</p>
+            </div>
+        </a>
+        </div>
+
     <div class="end">
         <h1>Ce ar trebuii sa stii:</h1>
         <p class="excursion-end">
@@ -99,4 +318,7 @@
         </p>
         </div>
 </body>
+<script>
+
+</script>
 </html>
