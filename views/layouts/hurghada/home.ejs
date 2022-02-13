@@ -346,6 +346,9 @@
             width: 80px;
             color: white;
         }
+        .black{
+            color: black;
+        }
         .end-img{
             height: 60px;
             width: 60px;
@@ -372,33 +375,144 @@
                 font-size: 26px;
             }
         }
+        .on{
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            padding: 7px;
+            margin-left: 1200px;
+            cursor: pointer;
+            border-radius: 50%;
+            text-align: center;
+        }
+        .off{
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            padding: 7px;
+            margin-left: 1200px;
+            cursor: pointer;
+            border-radius: 50%;
+            text-align: center;
+        }
+        @keyframes rotate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes backgroundup{
+            0%{
+                background-color: rgba(107, 107, 107, 0);
+            }
+            25%{
+                background-color: rgba(122, 122, 122, 0.178);
+            }
+            50%{
+                background-color: rgba(121, 121, 121, 0.438);
+            }
+            75%{
+                background-color: rgba(119, 119, 119, 0.685);
+            }
+            100%{
+                background-color: rgb(128, 128, 128);
+            }
+        }
+        .rotate{
+            animation: rotate 0.3s ease-in-out forwards;
+        }
+        .background{
+            animation: backgroundcl 0.1s ease-in-out forwards;
+        }
+        .wheel{
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            margin-left: 1300px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        @keyframes appear{
+            0%{
+                right: -100px;
+            }
+            100%{
+                right: 180px;
+            }
+        }
+        .white{
+            color: white;
+        }
+        .appear{
+            animation: appear ease-in-out 0.4s;
+        }
+        .setting{
+            animation: backgroundup 0.9s ease-in-out forwards;
+            width: 400px;
+            height: auto;
+            background-color: rebeccapurple;
+        }
+        .start{
+            margin: 50px;
+        }
+        .title-text{
+            font-size: 24px;
+            font-weight: bold;
+            position: absolute;
+            margin-left: 950px;
+            width: 500px;
+        }
+        .first{
+            font-weight: bolder;
+            font-size: 40px;
+            position: absolute;
+            margin-left: 600px;
+        }
     </style>
 </head>
 <body>
-    <a class="back" href="/">     <p class="back">←</p>    </a>
+    <div class="start">
+        <a class="back" href="/">     <p class="back">←</p>    </a>
+        <h1 class="first">Hurghada</h1>
+        <div class="setting">
+            <img src="/images/settings.png" id="wheel" class="wheel">
+                <p class="title-text invisible" id="title-text">Vizibilitatea titlurilor:</p>
+                <p class="on invisible" id="on">On</p>
+                <p class="off invisible" id="off">Off</p>
+        </div>
+    </div>
     <div id="normal1" class="excursions">
         <a class="excursion" href="/hurghada/cairo">
             <div class="card">
                 <img class="image-card-cairo">
-                <p class="trip-card">Cairo</p>
+                <p id="trip-card1" class="trip-card">Cairo</p>
             </div>
         </a>
         <a class="excursion" href="/hurghada/cairo-economic">
             <div class="card">
                 <img class="image-card-cairo-economic">
-                <p class="trip-card">Cairo Economic</p>
+                <p id="trip-card2" class="trip-card">Cairo Economic</p>
             </div>
         </a>
         <a class="excursion" href="/hurghada/super-luxor">
             <div class="card">
                 <img class="image-card-super-luxor">
-                <p class="trip-card">Super Luxor</p>
+                <p id="trip-card3" class="trip-card">Super Luxor</p>
             </div>
         </a>
         <a class="excursion" href="/hurghada/luxor-valea-reginelor">
             <div class="card">
                 <img class="image-card-luxor-valea-reginelor">
-                <p class="trip-card">Luxor Valea Reginelor</p>
+                <p id="trip-card4" class="trip-card">Luxor Valea Reginelor</p>
             </div>
         </a>
     </div>
@@ -407,25 +521,25 @@
         <a class="excursion" href="/hurghada/luxor-economic">
             <div class="card">
                 <img class="image-card-luxor-economic">
-                <p class="trip-card">Luxor Economic</p>
+                <p id="trip-card5" class="trip-card">Luxor Economic</p>
             </div>
         </a>
         <a class="excursion" href="/hurghada/super-safari">
             <div class="card">
                 <img class="image-card-super-safari">
-                <p class="trip-card">Super Safari</p>
+                <p id="trip-card6" class="trip-card">Super Safari</p>
             </div>
         </a>
         <a class="excursion" href="/hurghada/safari-oasis">
             <div class="card">
                 <img class="image-card-safari-oasis">
-                <p class="trip-card">Safari Oasis</p>
+                <p id="trip-card7" class="trip-card">Safari Oasis</p>
             </div>
         </a>
         <a class="excursion" href="/hurghada/express-safari-5-ore">
             <div class="card">
                 <img class="image-card-express-safari-5-ore">
-                <p class="trip-card">Express Safari 5 Ore</p>
+                <p id="trip-card8" class="trip-card">Express Safari 5 Ore</p>
             </div> 
         </a>
         </div>
@@ -434,25 +548,25 @@
             <a class="excursion" href="/hurghada/moto-safari-3-ore">
                 <div class="card">
                     <img class="image-card-moto-safari-3-ore">
-                    <p class="trip-card">Moto Safari 3 Ore</p>
+                    <p id="trip-card9" class="trip-card">Moto Safari 3 Ore</p>
                 </div>     
             </a>
             <a class="excursion" href="/hurghada/insula-orange-bay">
                 <div class="card">
                     <img class="image-card-insula-orange-bay">
-                    <p class="trip-card">Insula Orange Bay</p>
+                    <p id="trip-card10" class="trip-card">Insula Orange Bay</p>
                 </div>     
             </a>
             <a class="excursion" href="/hurghada/insula-paradise">
                 <div class="card">
                     <img class="image-card-insula-paradise">
-                    <p class="trip-card">Insula Paradise</p>
+                    <p id="trip-card11" class="trip-card">Insula Paradise</p>
                 </div>     
             </a>
             <a class="excursion" href="/hurghada/casa-delfinilor">
                 <div class="card">
                     <img class="image-card-casa-delfinilor">
-                    <p class="trip-card">Casa Delfinilor</p>
+                    <p id="trip-card12" class="trip-card">Casa Delfinilor</p>
                 </div>     
             </a>
         </div>   
@@ -461,25 +575,25 @@
             <a class="excursion" href="/hurghada/paraseling">
                 <div class="card">
                     <img class="image-card-paraseling">
-                    <p class="trip-card">Paraseling</p>
+                    <p id="trip-card13" class="trip-card">Paraseling</p>
                 </div>     
             </a>
             <a class="excursion" href="/hurghada/scufundari">
                 <div class="card">
                     <img class="image-card-scufundari">
-                    <p class="trip-card">Scufundari</p>
+                    <p id="trip-card14" class="trip-card">Scufundari</p>
                 </div>     
             </a>
             <a class="excursion" href="/hurghada/submarin-sindbad">
                 <div class="card">
                     <img class="image-card-submarin-sindbad">
-                    <p class="trip-card">Submarin Sindbad</p>
+                    <p id="trip-card15" class="trip-card">Submarin Sindbad</p>
                 </div>     
             </a>
             <a class="excursion" href="/hurghada/batiskaf">
                 <div class="card">
                     <img class="image-card-batiskaf">
-                    <p class="trip-card">Batiskaf</p>
+                    <p id="trip-card16" class="trip-card">Batiskaf</p>
                 </div>     
             </a>
         </div>    
@@ -488,25 +602,25 @@
             <a class="excursion" href="/hurghada/dolphin-show">
                 <div class="card">
                     <img class="image-card-dolphin-show">
-                    <p class="trip-card">Dolphin Show</p>
+                    <p id="trip-card17" class="trip-card">Dolphin Show</p>
                 </div>     
             </a>
             <a class="excursion" href="/hurghada/acvariu">
                 <div class="card">
                     <img class="image-card-acvariu">
-                    <p class="trip-card">Acvariu</p>
+                    <p id="trip-card18" class="trip-card">Acvariu</p>
                 </div>     
             </a>
             <a class="excursion" href="/hurghada/aswan-abu-sibel">
                 <div class="card">
                     <img class="image-card-aswan-abu-sibel">
-                    <p class="trip-card">Aswan Abu Sibel</p>
+                    <p id="trip-card19" class="trip-card">Aswan Abu Sibel</p>
                 </div>     
             </a>
             <a class="excursion" href="/hurghada/manastirea-sfantul-pavel-si-antonie">
                 <div class="card">
                     <img class="image-card-manastirea-sfantul-pavel-si-antonie">
-                    <p class="trip-card">Manastirea Sf. Pavel si Antonie</p>
+                    <p id="trip-card20" class="trip-card">Manastirea Sf. Pavel si Antonie</p>
                 </div>     
             </a>
         </div>    
@@ -515,25 +629,25 @@
             <a class="excursion" href="/hurghada/excursie-privata">
                 <div class="card">
                     <img class="image-card-excursie-privata">
-                    <p class="trip-card">Excursie Privata</p>
+                    <p id="trip-card21" class="trip-card">Excursie Privata</p>
                 </div>     
             </a>
             <a class="excursion" href="/hurghada/vizitarea-orasului-hurghada">
                 <div class="card">
                     <img class="image-card-vizitarea-orasului-hurghada">
-                    <p class="trip-card">Vizitarea Orasului Hurghada</p>
+                    <p id="trip-card22" class="trip-card">Vizitarea Orasului Hurghada</p>
                 </div>     
             </a>
             <a class="excursion" href="/hurghada/abu-dabbab">
                 <div class="card">
                     <img class="image-card-abu-dabbab">
-                    <p class="trip-card">Abu Dabbab</p>
+                    <p id="trip-card23" class="trip-card">Abu Dabbab</p>
                 </div>     
             </a>
             <a class="excursion" href="/hurghada/excursie-cu-avionul-din-hurghada-la-cairo">
                 <div class="card">
                     <img class="image-card-excursie-cu-avionul-din-hurghada-la-cairo">
-                    <p class="trip-card"> Excursie cu avionul din  Hurghada  la Cairo	</p>
+                    <p id="trip-card24" class="trip-card"> Excursie cu avionul din  Hurghada  la Cairo	</p>
                 </div>     
             </a>        
         
@@ -566,36 +680,158 @@
     </div>
 </body>
 <script>
-    const alfabetBtn = document.getElementById("alfabet-btn")
-    const classicBtn = document.getElementById("classic-btn")
+        const tripTitle1 = document.getElementById("trip-card1")
+        const tripTitle2 = document.getElementById("trip-card2")
+        const tripTitle3 = document.getElementById("trip-card3")
+        const tripTitle4 = document.getElementById("trip-card4")
+        const tripTitle5 = document.getElementById("trip-card5")
+        const tripTitle6 = document.getElementById("trip-card6")
+        const tripTitle7 = document.getElementById("trip-card7")
+        const tripTitle8 = document.getElementById("trip-card8")
+        const tripTitle9 = document.getElementById("trip-card9")
+        const tripTitle10 = document.getElementById("trip-card10")
+        const tripTitle11 = document.getElementById("trip-card11")
+        const tripTitle12 = document.getElementById("trip-card12")
+        const tripTitle13 = document.getElementById("trip-card13")
+        const tripTitle14 = document.getElementById("trip-card14")
+        const tripTitle15 = document.getElementById("trip-card15")
+        const tripTitle16 = document.getElementById("trip-card16")
+        const tripTitle17 = document.getElementById("trip-card17")
+        const tripTitle18 = document.getElementById("trip-card18")
+        const tripTitle19 = document.getElementById("trip-card19")
+        const tripTitle20 = document.getElementById("trip-card20")
+        const tripTitle21 = document.getElementById("trip-card21")
+        const tripTitle22 = document.getElementById("trip-card22")
+        const tripTitle23 = document.getElementById("trip-card23")
+        const tripTitle24 = document.getElementById("trip-card24")
 
-    const alfabetContext = document.getElementById("alfabet")
-    const normalContext = document.getElementById("normal")
 
-    alfabetBtn.addEventListener("click", ()=>{
-        alfabetContext.classList.remove("invisible")
-        normalContext.classList.add("invisible")
-        classicBtn.classList.add("alfabet-clicked")
-        alfabetBtn.classList.remove("alfabet-clicked")
-        alfabetBtn.classList.add("invisible")
-        classicBtn.classList.remove("invisible")
-        translateBtnUsa.classList.add("invisible")
-        translateBtnRo.classList.add("invisible")
+    const wheel = document.getElementById("wheel")
+    const on = document.getElementById("on")
+    const off = document.getElementById("off")
+    const titleText = document.getElementById("title-text")
+
+    wheel.addEventListener("click", ()=>{
+        wheel.classList.add("rotate")
+        setTimeout(() =>{
+            on.classList.remove("invisible")
+            on.classList.add("appear")
+            titleText.classList.remove("invisible")
+            titleText.classList.add("appear")
+        },350)
+        setTimeout(() =>{
+            on.classList.remove("appear")
+            titleText.classList.remove("appear")
+        },500)
     })
 
-    classicBtn.addEventListener("click", ()=>{
-        alfabetContext.classList.add("invisible")
-        normalContext.classList.remove("invisible")
-        alfabetBtn.classList.add("alfabet-clicked")
-        classicBtn.classList.remove("alfabet-clicked")
-        classicBtn.classList.add("invisible")
-        classicBtn.classList.add("invisible")
-        alfabetBtn.classList.remove("invisible")
-        alfabetBtn.classList.remove("alfabet-clicked")
-        translateBtnUsa.classList.remove("invisible")
-        translateBtnRo.classList.remove("invisible")
+    off.addEventListener("click", ()=>{
+        tripTitle1.classList.add("white")
+        tripTitle2.classList.add("white")
+        tripTitle3.classList.add("white")
+        tripTitle4.classList.add("white")
+        tripTitle5.classList.add("white")
+        tripTitle6.classList.add("white")
+        tripTitle7.classList.add("white")
+        tripTitle8.classList.add("white")
+        tripTitle9.classList.add("white")
+        tripTitle10.classList.add("white")
+        tripTitle11.classList.add("white")
+        tripTitle12.classList.add("white")
+        tripTitle13.classList.add("white")
+        tripTitle14.classList.add("white")
+        tripTitle15.classList.add("white")
+        tripTitle16.classList.add("white")
+        tripTitle17.classList.add("white")
+        tripTitle18.classList.add("white")
+        tripTitle19.classList.add("white")
+        tripTitle20.classList.add("white")
+        tripTitle21.classList.add("white")
+        tripTitle22.classList.add("white")
+        tripTitle23.classList.add("white")
+        tripTitle24.classList.add("white")
+        off.classList.add("invisible")
+        on.classList.remove("invisible")
+
+        tripTitle1.classList.remove("black")
+        tripTitle2.classList.remove("black")
+        tripTitle3.classList.remove("black")
+        tripTitle4.classList.remove("black")
+        tripTitle5.classList.remove("black")
+        tripTitle6.classList.remove("black")
+        tripTitle7.classList.remove("black")
+        tripTitle8.classList.remove("black")
+        tripTitle9.classList.remove("black")
+        tripTitle10.classList.remove("black")
+        tripTitle11.classList.remove("black")
+        tripTitle12.classList.remove("black")
+        tripTitle13.classList.remove("black")
+        tripTitle14.classList.remove("black")
+        tripTitle15.classList.remove("black")
+        tripTitle16.classList.remove("black")
+        tripTitle17.classList.remove("black")
+        tripTitle18.classList.remove("black")
+        tripTitle19.classList.remove("black")
+        tripTitle20.classList.remove("black")
+        tripTitle21.classList.remove("black")
+        tripTitle22.classList.remove("black")
+        tripTitle23.classList.remove("black")
+        tripTitle24.classList.remove("black")
     })
 
+    on.addEventListener("click", ()=>{
+        tripTitle1.classList.add("black")
+        tripTitle2.classList.add("black")
+        tripTitle3.classList.add("black")
+        tripTitle4.classList.add("black")
+        tripTitle5.classList.add("black")
+        tripTitle6.classList.add("black")
+        tripTitle7.classList.add("black")
+        tripTitle8.classList.add("black")
+        tripTitle9.classList.add("black")
+        tripTitle10.classList.add("black")
+        tripTitle11.classList.add("black")
+        tripTitle12.classList.add("black")
+        tripTitle13.classList.add("black")
+        tripTitle14.classList.add("black")
+        tripTitle15.classList.add("black")
+        tripTitle16.classList.add("black")
+        tripTitle17.classList.add("black")
+        tripTitle18.classList.add("black")
+        tripTitle19.classList.add("black")
+        tripTitle20.classList.add("black")
+        tripTitle21.classList.add("black")
+        tripTitle22.classList.add("black")
+        tripTitle23.classList.add("black")
+        tripTitle24.classList.add("black")
+        off.classList.remove("invisible")
+        on.classList.add("invisible")
+
+        tripTitle1.classList.remove("white")
+        tripTitle2.classList.remove("white")
+        tripTitle3.classList.remove("white")
+        tripTitle4.classList.remove("white")
+        tripTitle5.classList.remove("white")
+        tripTitle6.classList.remove("white")
+        tripTitle7.classList.remove("white")
+        tripTitle8.classList.remove("white")
+        tripTitle9.classList.remove("white")
+        tripTitle10.classList.remove("white")
+        tripTitle11.classList.remove("white")
+        tripTitle12.classList.remove("white")
+        tripTitle13.classList.remove("white")
+        tripTitle14.classList.remove("white")
+        tripTitle15.classList.remove("white")
+        tripTitle16.classList.remove("white")
+        tripTitle17.classList.remove("white")
+        tripTitle18.classList.remove("white")
+        tripTitle19.classList.remove("white")
+        tripTitle20.classList.remove("white")
+        tripTitle21.classList.remove("white")
+        tripTitle22.classList.remove("white")
+        tripTitle23.classList.remove("white")
+        tripTitle24.classList.remove("white")
+    })
 
     const translateBtnUsa = document.getElementById("translation-btn-usa")
     const translateBtnRo = document.getElementById("translation-btn-ro")
