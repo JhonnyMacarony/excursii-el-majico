@@ -7,9 +7,10 @@
     <title>Contact us</title>
     <style>
         *{
-            padding: 0;
             margin: 0;
-            box-sizing: border-box;
+            padding: 0;
+            max-height: 100vh;
+            max-width: 140vw;
         }
         .contact{
             height: 300px;
@@ -22,6 +23,19 @@
             font-size: 25px;
             font-weight: bold;
             padding: 9px;
+        }
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgb(37, 37, 37); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+            border-radius: 25px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
         }
         .back{
             font-size: 27px;
