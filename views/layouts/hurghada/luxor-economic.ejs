@@ -18,12 +18,38 @@
         .back:hover{
             color: rgb(37, 37, 37);
         }
+        .translation-btn-usa{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1300px;
+        }
+        .translation-btn-ro{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1390px;
+        }
+        .invisible{
+            display: none;
+            top: -1000000px;
+        }
     </style>
 </head>
 <body>
     <a class="back" href="/hurghada/home">     <p class="back">←</p>    </a>
+    <div class="translation">
+        <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa" id="translation-btn-usa">
+        <img src="/images/1200px-Flag_of_Romania.svg.png" class="translation-btn-ro" id="translation-btn-ro">
+    </div>
     <h1>Luxor Economic</h1>
-    <p class="paragraph">
+    <p id="paragraph-ro" class="paragraph">
         Excursia este in cel mai vechi oras istoric Teba pe numele modern Luxor unde se gasesc 1/3 din obiectivele istorice ale lumii.Orasul este imprtit in doua parti pe langa cursul Nilului,astfel ,malul de est (denumita orasul viilor) si malul de vest (denumita orasul mortilor) .Orasul Luxor este un vast muzeu in aer liber.
         Programul include :transportul cu microbuzul sau autocarul ,ghid vorbitor de limba engleza,pranzul fara bauturi (bauturile sunt contra cost),biletele de intrare la obiectivele  mentionate  in program.
         Templul karnak ,Templul Hatshepsut ,colosii lui Memnon , 5 minute plimbare  pe Nil  si shopping.
@@ -35,5 +61,33 @@
         Cand:<br>
         in fiecare zi
     </p>
+    <p id="paragraph-usa" class="paragraph invisible">
+        The trip is in the oldest historical city Thebes on the modern name Luxor where you can find 1/3 of the historical objectives of the world. (called the city of the dead). Luxor is a vast open-air museum.
+        The program includes: transport by minibus or bus, English speaking guide, lunch without drinks (drinks are for a fee), entrance tickets to the objectives mentioned in the program.
+        Karnak Temple, Hatshepsut Temple, Memnon's Colossi, 5 minute walk on the Nile and shopping.
+        Departure will be around 04:30 depending on the hotel where you are staying and arrival around 21:30 depending on the hotel where you are staying and traffic.        Price:<br>
+        Adult: 40 €<br>
+        Children: 22 €
+        <br><br>
+        When:<br>
+        every day
+    </p>
 </body>
+<script>
+    const translateBtnUsa = document.getElementById("translation-btn-usa")
+    const translateBtnRo = document.getElementById("translation-btn-ro")
+    const paragraphUsa = document.getElementById("paragraph-usa")
+    const paragraphRo = document.getElementById("paragraph-ro")
+
+    translateBtnUsa.addEventListener("click", ()=>{
+        paragraphUsa.classList.remove("invisible")
+        paragraphRo.classList.add("invisible")
+    })
+
+    translateBtnRo.addEventListener("click", ()=>{
+        paragraphUsa.classList.add("invisible")
+        paragraphRo.classList.remove("invisible")
+    })
+
+</script>
 </html>

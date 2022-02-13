@@ -18,12 +18,38 @@
         .back:hover{
             color: rgb(37, 37, 37);
         }
+        .translation-btn-usa{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1300px;
+        }
+        .translation-btn-ro{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1390px;
+        }
+        .invisible{
+            display: none;
+            top: -1000000px;
+        }
     </style>
 </head>
 <body>
     <a class="back" href="/hurghada/home">     <p class="back">←</p>    </a>
+    <div class="translation">
+        <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa" id="translation-btn-usa">
+        <img src="/images/1200px-Flag_of_Romania.svg.png" class="translation-btn-ro" id="translation-btn-ro">
+    </div>
     <h1>Paraseling</h1>
-    <p class="paragraph">
+    <p id="paragraph-ro" class="paragraph">
         Vacanta în Egipt este un prilej excelent sa încercați activități noi sau sa va îmbunătățiți abilitățile sportive .
         Bucurați-vă de priveliștea uimitoare a Mării Roșii de la înălțime !!!
         Paraselingul se face cu o singura persoana sau cu 2 persoane la dublu.
@@ -36,5 +62,35 @@
         Cand:<br>
         in fiecare zi, intreaba ghidul
     </p>
+    <p id="paragraph-usa" class="paragraph invisible">
+        A holiday in Egypt is a great opportunity to try new activities or improve your sports skills.
+        Enjoy the amazing view of the Red Sea from the heights !!!
+        Paraseling is done with one person or with 2 people in a double.
+        The price is the same for children.
+        The transfer is not included in the price and is paid depending on the area where you are staying. The weight should not exceed 150 kg for your safety.       <br><br>
+        Price:<br>
+        Adult (1): 15 €<br>
+        adult (2): 20 €
+        <br><br>
+        When:<br>
+        every day, ask the guide
+    </p>
 </body>
+<script>
+    const translateBtnUsa = document.getElementById("translation-btn-usa")
+    const translateBtnRo = document.getElementById("translation-btn-ro")
+    const paragraphUsa = document.getElementById("paragraph-usa")
+    const paragraphRo = document.getElementById("paragraph-ro")
+
+    translateBtnUsa.addEventListener("click", ()=>{
+        paragraphUsa.classList.remove("invisible")
+        paragraphRo.classList.add("invisible")
+    })
+
+    translateBtnRo.addEventListener("click", ()=>{
+        paragraphUsa.classList.add("invisible")
+        paragraphRo.classList.remove("invisible")
+    })
+
+</script>
 </html>
