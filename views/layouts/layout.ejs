@@ -17,7 +17,19 @@
             margin-left: 100px;
             border: none;
         }
-        .image-selection{
+        .image-selection1{
+            height: 300px;
+            width: 500px;
+            margin-left: 50px;
+            margin-right: 100px;
+        }
+        .image-selection2{
+            height: 300px;
+            width: 500px;
+            margin-left: 50px;
+            margin-right: 100px;
+        }
+        .image-selection3{
             height: 300px;
             width: 500px;
             margin-left: 50px;
@@ -89,7 +101,7 @@
             width: 100%;
             bottom: 0;
             position: relative;
-            margin-top: 250px;
+            margin-top: 700px;
         }
         .icon{
             color: white;
@@ -112,16 +124,92 @@
             color: white;
             margin: 15px;
         }
+        @media (max-width: 600px) {
+            .end-page{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                background-color: black;
+                height: 120px;
+                width: 180vw;
+                bottom: 0;
+                position: relative;
+                margin-top: 700px;
+            }
+            .selection{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-top: 200px;
+                margin-left: 100px;
+                border: none;
+                width: 900px;
+            }
+            .image-selection1{
+                position: absolute;
+                height: 300px;
+                width: 500px;
+                margin-left: 50px;
+                margin-right: 100px;
+                margin-bottom: 200px;
+            }
+            .image-selection2{
+                position: absolute;
+                height: 300px;
+                width: 500px;
+                margin-left: 50px;
+                margin-right: 100px;
+                margin-bottom: 200px;
+                margin-top: 400px;
+            }
+            .image-selection3{
+                position: absolute;
+                height: 300px;
+                width: 500px;
+                margin-left: 50px;
+                margin-right: 100px;
+                margin-bottom: 200px;
+                margin-top: 120px;
+            }
+            .title-selection-hurghada{
+                position: absolute;
+                color: white;
+                padding-left: 250px;
+                padding-top: 260px;
+                font-size: 26px;
+                font-weight: bold;
+                height: 5px;
+                width: 10px;
+            }
+            .title-selection-marsalam{
+                position: relative;
+                color: white;
+                margin-left: 250px;
+                margin-top: 660px;
+                font-size: 26px;
+                font-weight: bold;
+                width: 200px;
+            }
+            .title-selection-sharm{
+                position: absolute;
+                color: white;
+                margin-left: 250px;
+                margin-top: 1065px;
+                font-size: 26px;
+                font-weight: bold;
+                width: 220px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="selection">
-        <a href="/hurghada/home"> <img class="image-selection" src="/images/Hurghada_Hotels_R03.jpg"> </a>
-        <p class="title-selection-hurghada">Hurghada</p>
-        <a href="/marsalam/home"> <img class="image-selection" src="/images/Carnelia_Beach,_Marsa_Alam_(2232052889).jpg"> </a>
-        <p class="title-selection-marsalam">Marsa Alam</p>
-        <a href="/sharm-el-sheikh/home"> <img class="image-selection" src="/images/Sharm-El-Sheikh.jpg"> </a>
-        <p class="title-selection-sharm">Sharm El Sheikh</p>
+            <a href="/hurghada/home"> <img class="image-selection1" src="/images/Hurghada_Hotels_R03.jpg"> </a>
+            <p class="title-selection-hurghada">Hurghada</p>    
+            <a href="/marsalam/home"> <img class="image-selection2" src="/images/Carnelia_Beach,_Marsa_Alam_(2232052889).jpg"> </a>
+            <p class="title-selection-marsalam">Marsa Alam</p>
+            <a href="/sharm-el-sheikh/home"> <img class="image-selection3" src="/images/Sharm-El-Sheikh.jpg"> </a>
+            <p class="title-selection-sharm">Sharm El Sheikh</p>
     </div>
     <div class="end-page">
         <a class="icon" target="_blank" href="https://www.facebook.com/profile.php?id=100057490687559&is_tour_dismissed=true"> <img class="end-img-facebook" src="/images/facebook-logo-png-white-facebook-logo-png-white-facebook-icon-png--32.png"> </a>

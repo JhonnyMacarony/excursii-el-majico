@@ -18,9 +18,14 @@ app.get("/hurghada/home", (req, res) =>{
     res.render("layouts/hurghada/home.ejs")
 })
 
+app.get("/hurghada/luxor-economic", (req, res) =>{
+    res.render("layouts/hurghada/luxor-economic.ejs")
+})
+
 app.get("/hurghada/cairo", (req, res) =>{
     res.render("layouts/hurghada/cairo.ejs")
 })
+
 app.get("/hurghada/safari-oasis", (req, res) =>{
     res.render("layouts/hurghada/safari-oasis.ejs")
 })
