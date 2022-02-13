@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d32220bc2b.js" crossorigin="anonymous"></script>
     <title>Hurghada</title>
     <style>
-        .excursion-end{
-            margin-top: 75px;
-            margin-left: 15px;
-            margin-bottom: 15px;
-            text-decoration: none;
-            color: black;
-            font-size: 27px;
-            width: 800px;
-            position: relative;
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
         }
         .excursion-end-i{
             text-decoration: none;
@@ -28,8 +24,19 @@
         }
         .excursions{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: space-between;
+            margin-bottom: 290px;
+        }
+        .excursion-end{
+            margin-top: 75px;
+            margin-left: 15px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: black;
+            font-size: 27px;
+            width: 1430px;
+            position: relative;
         }
         .excursion{
             margin: 20px;
@@ -39,10 +46,6 @@
             height: 50px;
             width: 300px;
             padding: 10px;
-        }
-        .excursion:hover{
-            color: rgb(26, 26, 26);
-            background-color: rgba(77, 77, 77, 0.151);
         }
         ::-webkit-scrollbar {
             width: 15px;
@@ -72,135 +75,438 @@
             display: none;
             top: -1000000px;
         }
-        .alfabet-btn{
-            position: absolute;
-            border: 5px solid lightgrey;
+        .card{
+            align-content: center;
+            justify-content: center;
+            height: 340px;
+            width: 260px;
+            border-radius: 10px;
+            padding-top:  8px;
+            padding-left:  8px;
+            cursor: pointer;
+        }
+        .trip-card{
+            text-align: center;
+            color: white;
+            position: relative;
+            margin-top: -2px;
+            font-size: 26px;
+        }
+        .card:hover{
+            background-color: rgb(219, 219, 219);
+            height: 380px;
             color: black;
-            padding: 7px 10px;
-            background-color: rgb(235, 235, 235);
-            font-size: 25px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-left: 1200px;
-            margin-top: -60px;
         }
-        .alfabet-clicked{
-            position: absolute;
-            border: 5px solid rgb(235, 235, 235);
+
+        .trip-card:hover{
             color: black;
-            padding: 7px 10px;
-            background-color: lightgrey;
+        }
+
+        /*                                                             Card images    */
+        .image-card-cairo{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://d.newsweek.com/en/full/813669/gettyimages-918637914.jpg");
+        }
+        .image-card-excursie-cu-avionul-din-hurghada-la-cairo{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://i.redd.it/0drdwf9gw7j41.jpg");
+        }
+        .image-card-abu-dabbab{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://www.karpaten.ro/media/cache/big_image/images/hotel/10750/s3-malikia-resort-abu-dabbab-ex-sol-y-mar-268885.jpg");
+        }
+        .image-card-vizitarea-orasului-hurghada{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://galaxytravel.ro/wp-content/uploads/2016/10/hurghada_final_cover.jpg");
+        }
+        .image-card-excursie-privata{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://superegipt.ro/wp-content/uploads/2018/08/aerial-view.jpg");
+        }
+        .image-card-manastirea-sfantul-pavel-si-antonie{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://doxologia.ro/sites/default/files/articol/2015/09/manastirea_sfantului_antonie.jpg");
+        }
+        .image-card-aswan-abu-sibel{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://www.marsaalamtours.com/ro/data1/images/Excursii-de-2-zile-la-Aswan-si-Abu-simble-de-la-Hurghada/4.jpg");
+        }
+        .image-card-acvariu{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://mediaim.expedia.com/localexpert/2077084/08353012-2b14-4711-ac13-a913cb5780e1.jpg?impolicy=resizecrop&rw=1005&rh=565");
+        }
+        .image-card-dolphin-show{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://excursiihurghada.ro/images/activitate/jpeg/425_px/6181a03f3c5b9301eb578700_1635885851571.jpg");
+        }
+        .image-card-batiskaf{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://excursiihurghada.ro/images/undefined/jpeg/1024_px/5f2c50343e2d6a641d62c492_1596821340638.jpg");
+        }
+        .image-card-submarin-sindbad{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://nile-voyage.com/home/wp-content/uploads/2020/04/Submarinul-Sindbad-din-Hurghada-7.jpg");
+        }
+        .image-card-scufundari{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://www.tripsavvy.com/thmb/AIiNbdjY4ZXYKIDPdoRe9f1MclA=/2121x1193/smart/filters:no_upscale()/egypt--red-sea--hurghada--young-woman-snorkeling-at-coral-reef-926722356-5269429ca25a49d8877b57ab4a249856.jpg");
+        }
+        .image-card-paraseling{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://nile-voyage.com/home/wp-content/uploads/2020/10/Parasiutas-is-Hurgados-parasailing-www.nile-voyage.com-6.jpg");
+        }
+        .image-card-casa-delfinilor{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://cdn.getyourguide.com/img/tour/5d5bddc969a18.jpeg/146.jpg");
+        }
+        .image-card-insula-paradise{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://api.seeplaces.com/Storage/Static/Images/3ed42a82-9438-4b02-9fcc-9f75294c7d91.jpg?width=800&quality=85");
+        }
+        .image-card-insula-orange-bay{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://excursiihurghada.ro/images/undefined/jpeg/1024_px/5f2c4f9f3e2d6a641d62c468_1596870355242.jpg");
+        }
+
+        .image-card-moto-safari-3-ore{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://nile-voyage.com/home/wp-content/uploads/2020/04/Safari-cu-ATV-UL-3-ore-diminea%C8%9Ba-3-Copy.jpg");
+        }
+        .image-card-express-safari-5-ore {
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("  https://media.tacdn.com/media/attractions-splice-spp-674x446/06/75/85/8e.jpg");
+        }
+        .image-card-safari-oasis{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://discovering-egypt.com/new/wp-content/uploads/2012/11/desert-safari-1.jpg");
+        }
+        .image-card-super-safari{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://www.tripsinegypt.com/wp-content/uploads/2018/11/EL-Gouna-Super-Safari-by-Quads-Trips-in-Egypt-3.jpg");
+        }
+        .image-card-luxor-economic{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://www.vacante-excursii.ro/storage/uploads/teba3-1597065785.jpg");
+        }
+        .image-card-luxor-valea-reginelor{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://www.misronatours.com/prog/309664792.jpg");
+        }
+        .image-card-cairo-economic{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://cdn.britannica.com/85/99185-050-E1110E5C/Great-Sphinx-Giza-Egypt.jpg");
+        }
+        .image-card-super-luxor{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("/images/5f2d8a233e2d6a641d62c631_1634319553914.jpg");
+        }
+        .end-page{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: black;
+            height: 100px;
+            width: 100%;
+            bottom: 0;
+            position: relative;
+            margin-top: 250px;
+        }
+        .icon{
+            color: white;
+            position: relative;
             font-size: 25px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-left: 1200px;
-            margin-top: -60px;
+            text-decoration: none;
+            margin: 35px;
         }
-        .translation-btn-usa{
-            position: absolute;
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            margin-top: -80px;
-            margin-left: 1300px;
-        }
-        .translation-btn-ro{
-            position: absolute;
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            margin-top: -80px;
-            margin-left: 1390px;
+        .icon:hover{
+            color: rgb(194, 194, 194);
         }
     </style>
 </head>
 <body>
     <a class="back" href="/">     <p class="back">←</p>    </a>
-    <div class="translation">
-        <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa" id="translation-btn-usa">
-        <img src="/images/1200px-Flag_of_Romania.svg.png" class="translation-btn-ro" id="translation-btn-ro">
+    <div id="normal1" class="excursions">
+        <a class="excursion" href="/hurghada/cairo">
+            <div class="card">
+                <img class="image-card-cairo">
+                <p class="trip-card">Cairo</p>
+            </div>
+        </a>
+        <a class="excursion" href="/hurghada/cairo-economic">
+            <div class="card">
+                <img class="image-card-cairo-economic">
+                <p class="trip-card">Cairo Economic</p>
+            </div>
+        </a>
+        <a class="excursion" href="/hurghada/super-luxor">
+            <div class="card">
+                <img class="image-card-super-luxor">
+                <p class="trip-card">Super Luxor</p>
+            </div>
+        </a>
+        <a class="excursion" href="/hurghada/luxor-valea-reginelor">
+            <div class="card">
+                <img class="image-card-luxor-valea-reginelor">
+                <p class="trip-card">Luxor Valea Reginelor</p>
+            </div>
+        </a>
     </div>
-    <p id="alfabet-btn" class="alfabet-btn">Abc</p>
-    <p id="classic-btn" class="alfabet-btn invisible">Abc</p>
-    <div id="normal" class="excursions">
-        <a class="excursion" href="/hurghada/cairo">1. Cairo	</a>
-        <a class="excursion" href="/hurghada/cairo-economic">2. Cairo Economic	</a>
-        <a class="excursion" href="/hurghada/super-luxor">3. Super Luxor	</a>
-        <a class="excursion" href="/hurghada/luxor-valea-reginelor">4. Luxor Valea Reginelor	</a>
-        <a class="excursion" href="/hurghada/luxor-economic">5. Luxor Economic	</a>
-        <a class="excursion" href="/hurghada/super-safari">6. Super Safari	</a>
-        <a class="excursion" href="/hurghada/safari-oasis">7. Safari Oasis	</a>
-        <a class="excursion" href="/hurghada/express-safari-5-ore">8. Express  Safari  5 ore	</a>
-        <a class="excursion" href="/hurghada/moto-safari-3-ore">9. Moto  Safari  3 ore 	</a>
-        <a class="excursion" href="/hurghada/insula-orange-bay">10. Insula  Orange  Bay	</a>
-        <a class="excursion" href="/hurghada/insula-paradise">11. Insula  Paradise 	</a>
-        <a class="excursion" href="/hurghada/casa-delfinilor">12. Casa  delfinilor	</a>
-        <a class="excursion" href="/hurghada/paraseling">13. Paraseling	</a>
-        <a class="excursion" href="/hurghada/scufundari">14. Scufundari	</a>
-        <a class="excursion" href="/hurghada/submarin-sindbad">15. Submarin  Sindbad	</a>
-        <a class="excursion" href="/hurghada/batiskaf">16. Batiskaf	</a>
-        <a class="excursion" href="/hurghada/dolphin-show">17. Dolphin  Show 	</a>
-        <a class="excursion" href="/hurghada/acvariu">18. Acvariu	</a>
-        <a class="excursion" href="/hurghada/aswan-abu-sibel">19. Aswan  Abu Sibel	</a>
-        <a class="excursion" href="/hurghada/manastirea-sfantul-pavel-si-antonie">20. Manastirea   Sfantul  Pavel  si  Antonie	</a>
-        <a class="excursion" href="/hurghada/excursie-privata">21. Excursie  privata	</a>
-        <a class="excursion" href="/hurghada/vizitarea-orasului-hurghada">22. Vizitarea  orasului  Hurghada	</a>
-        <a class="excursion" href="/hurghada/abu-dabbab">23. Abu Dabbab	</a>
-        <a class="excursion" href="/hurghada/excursie-cu-avionul-din-hurghada-la-cairo">24. Excursie cu avionul din  Hurghada  la Cairo	</a>        
-    </div>
-    <div id="alfabet" class="excursions invisible">
-        <a class="excursion" href="/hurghada/abu-dabbab">1. Abu Dabbab	</a>
-        <a class="excursion" href="/hurghada/acvariu">2. Acvariu	</a>
-        <a class="excursion" href="/hurghada/aswan-abu-sibel">3. Aswan  Abu Sibel	</a>
-        <a class="excursion" href="/hurghada/batiskaf">4. Batiskaf	</a>
-        <a class="excursion" href="/hurghada/cairo">5. Cairo	</a>
-        <a class="excursion" href="/hurghada/cairo-economic">6. Cairo Economic	</a>
-        <a class="excursion" href="/hurghada/casa-delfinilor">7. Casa  Delfinilor	</a>
-        <a class="excursion" href="/hurghada/dolphin-show">8. Dolphin  Show 	</a>
-        <a class="excursion" href="/hurghada/excursie-cu-avionul-din-hurghada-la-cairo">9. Excursie cu avionul din  Hurghada  la Cairo	</a>
-        <a class="excursion" href="/hurghada/excursie-privata">10. Excursie  privata	</a>
-        <a class="excursion" href="/hurghada/express-safari-5-ore">11. Express  Safari  5 ore	</a>
-        <a class="excursion" href="/hurghada/insula-orange-bay">12. Insula  Orange  Bay	</a>
-        <a class="excursion" href="/hurghada/insula-paradise">13. Insula  Paradise 	</a>
-        <a class="excursion" href="/hurghada/luxor-economic">14. Luxor Economic	</a>
-        <a class="excursion" href="/hurghada/luxor-valea-reginelor">15. Luxor Valea Reginelor	</a>
-        <a class="excursion" href="/hurghada/manastirea-sfantul-pavel-si-antonie">16. Manastirea   Sfantul  Pavel  si  Antonie	</a>
-        <a class="excursion" href="/hurghada/moto-safari-3-ore">17. Moto  Safari  3 ore 	</a>
-        <a class="excursion" href="/hurghada/paraseling">18. Paraseling	</a>
-        <a class="excursion" href="/hurghada/safari-oasis">19. Safari Oasis	</a>
-        <a class="excursion" href="/hurghada/scufundari">20. Scufundari	</a>
-        <a class="excursion" href="/hurghada/submarin-sindbad">21. Submarin  Sindbad	</a>
-        <a class="excursion" href="/hurghada/super-luxor">22. Super Luxor	</a>
-        <a class="excursion" href="/hurghada/super-safari">23. Super Safari	</a>
-        <a class="excursion" href="/hurghada/vizitarea-orasului-hurghada">24. Vizitarea  orasului  Hurghada	</a>
-    </div>
-    <div id="paragraph-usa" class="excursions invisible">
-        <a class="excursion" href="/hurghada/cairo">1. Cairo	</a>
-        <a class="excursion" href="/hurghada/cairo-economic">2. Cairo Economic	</a>
-        <a class="excursion" href="/hurghada/super-luxor">3. Super Luxor	</a>
-        <a class="excursion" href="/hurghada/luxor-valea-reginelor">4. Luxor Valley of the Queens	</a>
-        <a class="excursion" href="/hurghada/luxor-economic">5. Luxor Economic	</a>
-        <a class="excursion" href="/hurghada/super-safari">6. Super Safari	</a>
-        <a class="excursion" href="/hurghada/safari-oasis">7. Safari Oasis	</a>
-        <a class="excursion" href="/hurghada/express-safari-5-ore">8. Express  Safari  5 hours	</a>
-        <a class="excursion" href="/hurghada/moto-safari-3-ore">9. Moto  Safari  3 hours 	</a>
-        <a class="excursion" href="/hurghada/insula-orange-bay">10. Orange  Bay	Island</a>
-        <a class="excursion" href="/hurghada/insula-paradise">11. Paradise Island	</a>
-        <a class="excursion" href="/hurghada/casa-delfinilor">12. Dolphin House </a>
-        <a class="excursion" href="/hurghada/paraseling">13. Paraseling	</a>
-        <a class="excursion" href="/hurghada/scufundari">14. Diving	</a>
-        <a class="excursion" href="/hurghada/submarin-sindbad">15.  Sindbad	Submarin </a>
-        <a class="excursion" href="/hurghada/batiskaf">16. Batiskaf	</a>
-        <a class="excursion" href="/hurghada/dolphin-show">17. Dolphin  Show 	</a>
-        <a class="excursion" href="/hurghada/acvariu">18. Aquarium	</a>
-        <a class="excursion" href="/hurghada/aswan-abu-sibel">19. Aswan  Abu Sibel	</a>
-        <a class="excursion" href="/hurghada/manastirea-sfantul-pavel-si-antonie">20. St. Paul and Anthony Monastery	</a>
-        <a class="excursion" href="/hurghada/excursie-privata">21. Private trip	</a>
-        <a class="excursion" href="/hurghada/vizitarea-orasului-hurghada">22. Visiting the city of Hurghada	</a>
-        <a class="excursion" href="/hurghada/abu-dabbab">23. Abu Dabbab	</a>
-        <a class="excursion" href="/hurghada/excursie-cu-avionul-din-hurghada-la-cairo">24. Plane trip from Hurghada to Cairo</a>        
+
+    <div id="normal2" class="excursions">
+        <a class="excursion" href="/hurghada/luxor-economic">
+            <div class="card">
+                <img class="image-card-luxor-economic">
+                <p class="trip-card">Luxor Economic</p>
+            </div>
+        </a>
+        <a class="excursion" href="/hurghada/super-safari">
+            <div class="card">
+                <img class="image-card-super-safari">
+                <p class="trip-card">Super Safari</p>
+            </div>
+        </a>
+        <a class="excursion" href="/hurghada/safari-oasis">
+            <div class="card">
+                <img class="image-card-safari-oasis">
+                <p class="trip-card">Safari Oasis</p>
+            </div>
+        </a>
+        <a class="excursion" href="/hurghada/express-safari-5-ore">
+            <div class="card">
+                <img class="image-card-express-safari-5-ore">
+                <p class="trip-card">Express Safari 5 Ore</p>
+            </div> 
+        </a>
+        </div>
+
+        <div id="normal3" class="excursions">
+            <a class="excursion" href="/hurghada/moto-safari-3-ore">
+                <div class="card">
+                    <img class="image-card-moto-safari-3-ore">
+                    <p class="trip-card">Moto Safari 3 Ore</p>
+                </div>     
+            </a>
+            <a class="excursion" href="/hurghada/insula-orange-bay">
+                <div class="card">
+                    <img class="image-card-insula-orange-bay">
+                    <p class="trip-card">Insula Orange Bay</p>
+                </div>     
+            </a>
+            <a class="excursion" href="/hurghada/insula-paradise">
+                <div class="card">
+                    <img class="image-card-insula-paradise">
+                    <p class="trip-card">Insula Paradise</p>
+                </div>     
+            </a>
+            <a class="excursion" href="/hurghada/casa-delfinilor">
+                <div class="card">
+                    <img class="image-card-casa-delfinilor">
+                    <p class="trip-card">Casa Delfinilor</p>
+                </div>     
+            </a>
+        </div>   
+
+        <div id="normal4" class="excursions">
+            <a class="excursion" href="/hurghada/paraseling">
+                <div class="card">
+                    <img class="image-card-paraseling">
+                    <p class="trip-card">Paraseling</p>
+                </div>     
+            </a>
+            <a class="excursion" href="/hurghada/scufundari">
+                <div class="card">
+                    <img class="image-card-scufundari">
+                    <p class="trip-card">Scufundari</p>
+                </div>     
+            </a>
+            <a class="excursion" href="/hurghada/submarin-sindbad">
+                <div class="card">
+                    <img class="image-card-submarin-sindbad">
+                    <p class="trip-card">Submarin Sindbad</p>
+                </div>     
+            </a>
+            <a class="excursion" href="/hurghada/batiskaf">
+                <div class="card">
+                    <img class="image-card-batiskaf">
+                    <p class="trip-card">Batiskaf</p>
+                </div>     
+            </a>
+        </div>    
+
+        <div id="normal5" class="excursions">
+            <a class="excursion" href="/hurghada/dolphin-show">
+                <div class="card">
+                    <img class="image-card-dolphin-show">
+                    <p class="trip-card">Dolphin Show</p>
+                </div>     
+            </a>
+            <a class="excursion" href="/hurghada/acvariu">
+                <div class="card">
+                    <img class="image-card-acvariu">
+                    <p class="trip-card">Acvariu</p>
+                </div>     
+            </a>
+            <a class="excursion" href="/hurghada/aswan-abu-sibel">
+                <div class="card">
+                    <img class="image-card-aswan-abu-sibel">
+                    <p class="trip-card">Aswan Abu Sibel</p>
+                </div>     
+            </a>
+            <a class="excursion" href="/hurghada/manastirea-sfantul-pavel-si-antonie">
+                <div class="card">
+                    <img class="image-card-manastirea-sfantul-pavel-si-antonie">
+                    <p class="trip-card">Manastirea Sf. Pavel si Antonie</p>
+                </div>     
+            </a>
+        </div>    
+
+        <div id="normal6" class="excursions">
+            <a class="excursion" href="/hurghada/excursie-privata">
+                <div class="card">
+                    <img class="image-card-excursie-privata">
+                    <p class="trip-card">Excursie Privata</p>
+                </div>     
+            </a>
+            <a class="excursion" href="/hurghada/vizitarea-orasului-hurghada">
+                <div class="card">
+                    <img class="image-card-vizitarea-orasului-hurghada">
+                    <p class="trip-card">Vizitarea Orasului Hurghada</p>
+                </div>     
+            </a>
+            <a class="excursion" href="/hurghada/abu-dabbab">
+                <div class="card">
+                    <img class="image-card-abu-dabbab">
+                    <p class="trip-card">Abu Dabbab</p>
+                </div>     
+            </a>
+            <a class="excursion" href="/hurghada/excursie-cu-avionul-din-hurghada-la-cairo">
+                <div class="card">
+                    <img class="image-card-excursie-cu-avionul-din-hurghada-la-cairo">
+                    <p class="trip-card"> Excursie cu avionul din  Hurghada  la Cairo	</p>
+                </div>     
+            </a>        
+        
+        </div>    
 
     </div>    
     <div class="end">
@@ -220,6 +526,12 @@
             Transferul de la hotel la spitalul ALFA este gratuit.<br>
             Singura asigurare medicala care nu este valabila este cea încheiată cu firma Grhoma.
         </p>
+    </div>
+    <div class="end-page">
+        <a class="icon" target="_blank" href="https://www.facebook.com/profile.php?id=100057490687559&is_tour_dismissed=true">Facebook</a>
+        <a class="icon" target="_blank" href="https://www.instagram.com/excursii_elmajico/">Instagram</i></a>
+        <a class="icon" href="https://excursiihurghada.ro/">Site</a>
+        <a class="icon" href="/contact-us">Contact Us</a>
     </div>
 </body>
 <script>

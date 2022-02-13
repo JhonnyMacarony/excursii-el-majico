@@ -222,6 +222,11 @@ app.get("/marsalam/mega-nefertari", (req, res) =>{
     res.render("layouts/marsalam/mega-nefertari.ejs")
 })
 
+//                                      contact us
+app.get("/contact-us", (req, res) =>{
+    res.render("layouts/contact-us.ejs")
+})
+
 
 app.set("view engine", "ejs")
 app.set("views", __dirname + '/views')
