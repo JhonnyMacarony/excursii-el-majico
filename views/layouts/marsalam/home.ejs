@@ -276,88 +276,370 @@
                 font-size: 26px;
             }
         }
+        .black{
+            color: black;
+        }
+        .translation-btn-usa{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1300px;
+        }
+        .translation-btn-ro{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1390px;
+        }
+        .end-img{
+            height: 60px;
+            width: 60px;
+            color: white;
+            margin: 15px;
+        }
+        @media (max-width: 600px) {
+            .end-page{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                background-color: black;
+                height: 120px;
+                width: 288vw;
+                bottom: 0;
+                position: relative;
+                margin-top: 550px;
+            }
+            .excursions{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 380px;
+            }
+            .excursion-end{
+                text-decoration: none;
+                color: black;
+                font-size: 27px;
+                height: 50px;
+                width: 280vw;
+                padding: 10px;
+                position: relative;
+                margin: 300px 10px;
+            }
+            .excursion-end-i{
+                text-decoration: none;
+                color: black;
+                font-size: 27px;
+                height: 50px;
+                width: 280vw;
+                padding: 10px;
+                position: relative;
+                margin: 10px;
+            }
+            .trip-card{
+                text-align: center;
+                color: black;
+                position: relative;
+                margin-top: -2px;
+                font-size: 26px;
+            }
+        }
+        .on{
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            padding: 7px;
+            margin-left: 1200px;
+            cursor: pointer;
+            border-radius: 50%;
+            text-align: center;
+        }
+        .off{
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            padding: 7px;
+            margin-left: 1200px;
+            cursor: pointer;
+            border-radius: 50%;
+            text-align: center;
+        }
+        @keyframes rotate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .rotate{
+            animation: rotate 0.3s ease-in-out forwards;
+        }
+        .wheel{
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            margin-left: 1300px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        @keyframes appear{
+            0%{
+                right: -100px;
+            }
+            100%{
+                right: 180px;
+            }
+        }
+        .white{
+            color: white;
+        }
+        .appear{
+            animation: appear ease-in-out 0.4s;
+        }
+        .setting{
+            width: 400px;
+            height: auto;
+        }
+        .start{
+            margin: 50px;
+        }
+        .title-text{
+            font-size: 24px;
+            font-weight: bold;
+            position: absolute;
+            margin-left: 950px;
+            width: 500px;
+        }
+        .first{
+            font-weight: bolder;
+            font-size: 40px;
+            position: absolute;
+            margin-left: 600px;
+        }
+        .next{
+            position: absolute;
+            font-weight: bolder;
+            font-size: 25px;
+            margin-left: 1260px;
+            cursor: pointer;
+        }
+        .translate-form{
+            position: absolute;
+            font-weight: bolder;
+            font-size: 25px;
+            margin-left: 1090px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .previous{
+            position: absolute;
+            font-weight: bolder;
+            font-size: 25px;
+            margin-left: 926px;
+            cursor: pointer;
+        }
+        .translation-btn-usa{
+            position: absolute;
+            margin-top: 7px;
+            margin-left: 1130px;
+        }
+        .translation-btn-ro{
+            position: absolute;
+            margin-top: 7px;
+            margin-left: 1230px;
+        }
     </style>
 </head>
-<body>
+<div>
 
     
-
-    <a class="back" href="/">     <p class="back">←</p>    </a>
-    <div id="normal" class="excursions">
-        
-        <a class="excursion" href="/marsalam/luxor">
-            <div class="card">
-                <img class="image-card-luxor">
-                <p class="trip-card">Luxor</p>
+    <div class="start">
+        <a class="back" href="/">     <p class="back">←</p>    </a>
+        <h1 class="first">Marsa Alam</h1>
+        <div class="setting">
+            <img src="/images/settings.png" id="wheel" class="wheel">
+            <div class="title-visibility">
+                <p class="title-text invisible" id="title-text">Vizibilitatea titlurilor:</p>
+                <p class="on invisible" id="on">On</p>
+                <p class="off invisible" id="off">Off</p>    
             </div>
-        </a>
-        <a class="excursion" href="/marsalam/asuan">
-            <div class="card">
-                <img class="image-card-asuan">
-                <p class="trip-card">Asuan</p>
+            <p class="next invisible" id="next"> > </p>
+            <p class="previous invisible" id="previous"> < </p>
+            <div class="translate-setting">
+                <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa invisible" id="translation-btn-usa">
+                <img src="/images/1200px-Flag_of_Romania.svg.png" class="translation-btn-ro invisible" id="translation-btn-ro">
             </div>
-        </a>
-        <a class="excursion" href="/marsalam/asuan-abu-simbel">
-                <div class="card">
-                    <img class="image-card-asuan-abu-simbel">
-                    <p class="trip-card">Asuan - Abu Simbel</p>
-                </div>
-        </a>
-        <a class="excursion" href="/marsalam/mega-city-tour">
-            <div class="card">
-                <img class="image-card-mega-city-tour">
-                <p class="trip-card">Mega City Tour</p>
-            </div>
-        </a>
-    </div>
-    <div id="normal" class="excursions">
-        
-        <a class="excursion" href="/marsalam/super-safari">
-            <div class="card">
-                <img class="image-card-super-safari">
-                <p class="trip-card">Super Safari</p>
-            </div>
-        </a>
-        <a class="excursion" href="/marsalam/moto-safari">
-            <div class="card">
-                <img class="image-card-moto-safari">
-                <p class="trip-card">Moto Safari</p>
-            </div>
-        </a>
-        <a class="excursion" href="/marsalam/seascope-glass-boat">
-            <div class="card">
-                <img class="image-card-seascope-glass-boat">
-                <p class="trip-card">Seascope Glass Boat</p>
-            </div>
-        </a>
-        <a class="excursion" href="/marsalam/hammata-islands">
-            <div class="card">
-                <img class="image-card-hammata-islands">
-                <p class="trip-card">Hammata Islands</p>
-            </div>
-        </a>
-    </div>
-    <div id="normal" class="excursions">
-        
-        <a class="excursion" href="/marsalam/marsa-imbarak">
-            <div class="card">
-                <img class="image-card-marsa-imbarak">
-                <p class="trip-card"> Marsa Imbarak</p>
-            </div>
-        </a>
-        <a class="excursion" href="/marsalam/satayeh">
-            <div class="card">
-                <img class="image-card-satayeh">
-                <p class="trip-card"> Satayeh</p>
-            </div>
-        </a>
-        <a class="excursion" href="/marsalam/mega-nefertari">
-            <div class="card">
-                <img class="image-card-mega-nefertari">
-                <p class="trip-card">Mega Nefertari</p>
-            </div>
-        </a>
         </div>
+    </div>
+
+    <div class="paragraph-ro" id="paragraph-ro">
+        <div id="normal" class="excursions">
+        
+            <a class="excursion" href="/marsalam/luxor">
+                <div class="card">
+                    <img class="image-card-luxor">
+                    <p id="trip-card1" class="trip-card">Luxor</p>
+                </div>
+            </a>
+            <a class="excursion" href="/marsalam/asuan">
+                <div class="card">
+                    <img class="image-card-asuan">
+                    <p id="trip-card2" class="trip-card">Asuan</p>
+                </div>
+            </a>
+            <a class="excursion" href="/marsalam/asuan-abu-simbel">
+                    <div class="card">
+                        <img class="image-card-asuan-abu-simbel">
+                        <p id="trip-card3" class="trip-card">Asuan - Abu Simbel</p>
+                    </div>
+            </a>
+            <a class="excursion" href="/marsalam/mega-city-tour">
+                <div class="card">
+                    <img class="image-card-mega-city-tour">
+                    <p id="trip-card4" class="trip-card">Mega City Tour</p>
+                </div>
+            </a>
+        </div>
+        <div id="normal" class="excursions">
+            
+            <a class="excursion" href="/marsalam/super-safari">
+                <div class="card">
+                    <img class="image-card-super-safari">
+                    <p id="trip-card5" class="trip-card">Super Safari</p>
+                </div>
+            </a>
+            <a class="excursion" href="/marsalam/moto-safari">
+                <div class="card">
+                    <img class="image-card-moto-safari">
+                    <p id="trip-card6" class="trip-card">Moto Safari</p>
+                </div>
+            </a>
+            <a class="excursion" href="/marsalam/seascope-glass-boat">
+                <div class="card">
+                    <img class="image-card-seascope-glass-boat">
+                    <p id="trip-card7" class="trip-card">Seascope Glass Boat</p>
+                </div>
+            </a>
+            <a class="excursion" href="/marsalam/hammata-islands">
+                <div class="card">
+                    <img class="image-card-hammata-islands">
+                    <p id="trip-card8" class="trip-card">Hammata Islands</p>
+                </div>
+            </a>
+        </div>
+        <div id="normal" class="excursions">
+            
+            <a class="excursion" href="/marsalam/marsa-imbarak">
+                <div class="card">
+                    <img class="image-card-marsa-imbarak">
+                    <p id="trip-card9" class="trip-card"> Marsa Imbarak</p>
+                </div>
+            </a>
+            <a class="excursion" href="/marsalam/satayeh">
+                <div class="card">
+                    <img class="image-card-satayeh">
+                    <p id="trip-card10" class="trip-card"> Satayeh</p>
+                </div>
+            </a>
+            <a class="excursion" href="/marsalam/mega-nefertari">
+                <div class="card">
+                    <img class="image-card-mega-nefertari">
+                    <p id="trip-card11" class="trip-card">Mega Nefertari</p>
+                </div>
+            </a>
+            </div>    
+    </div>
+
+    <div class="paragraph-usa invisible" id="paragraph-usa">
+        <div id="normal" class="excursions">
+        
+            <a class="excursion" href="/marsalam/luxor">
+                <div class="card">
+                    <img class="image-card-luxor">
+                    <p id="trip-cardA" class="trip-card">Luxor</p>
+                </div>
+            </a>
+            <a class="excursion" href="/marsalam/asuan">
+                <div class="card">
+                    <img class="image-card-asuan">
+                    <p id="trip-cardB" class="trip-card">Asuan</p>
+                </div>
+            </a>
+            <a class="excursion" href="/marsalam/asuan-abu-simbel">
+                    <div class="card">
+                        <img class="image-card-asuan-abu-simbel">
+                        <p id="trip-cardC" class="trip-card">Asuan - Abu Simbel</p>
+                    </div>
+            </a>
+            <a class="excursion" href="/marsalam/mega-city-tour">
+                <div class="card">
+                    <img class="image-card-mega-city-tour">
+                    <p id="trip-cardD" class="trip-card">Mega City Tour</p>
+                </div>
+            </a>
+        </div>
+        <div id="normal" class="excursions">
+            
+            <a class="excursion" href="/marsalam/super-safari">
+                <div class="card">
+                    <img class="image-card-super-safari">
+                    <p id="trip-cardE" class="trip-card">Super Safari</p>
+                </div>
+            </a>
+            <a class="excursion" href="/marsalam/moto-safari">
+                <div class="card">
+                    <img class="image-card-moto-safari">
+                    <p id="trip-cardF" class="trip-card">Moto Safari</p>
+                </div>
+            </a>
+            <a class="excursion" href="/marsalam/seascope-glass-boat">
+                <div class="card">
+                    <img class="image-card-seascope-glass-boat">
+                    <p id="trip-cardG" class="trip-card">Seascope Glass Boat</p>
+                </div>
+            </a>
+            <a class="excursion" href="/marsalam/hammata-islands">
+                <div class="card">
+                    <img class="image-card-hammata-islands">
+                    <p id="trip-cardH" class="trip-card">Hammata Islands</p>
+                </div>
+            </a>
+        </div>
+        <div id="normal" class="excursions">
+            
+            <a class="excursion" href="/marsalam/marsa-imbarak">
+                <div class="card">
+                    <img class="image-card-marsa-imbarak">
+                    <p id="trip-cardI" class="trip-card"> Marsa Imbarak</p>
+                </div>
+            </a>
+            <a class="excursion" href="/marsalam/satayeh">
+                <div class="card">
+                    <img class="image-card-satayeh">
+                    <p id="trip-cardJ" class="trip-card"> Satayeh</p>
+                </div>
+            </a>
+            <a class="excursion" href="/marsalam/mega-nefertari">
+                <div class="card">
+                    <img class="image-card-mega-nefertari">
+                    <p id="trip-cardK" class="trip-card">Mega Nefertari</p>
+                </div>
+            </a>
+            </div>    
+    </div>
+
 
     <div class="end">
         <h1>Ce ar trebuii sa stii:</h1>
@@ -382,6 +664,214 @@
             </div>    
 </body>
 <script>
+
+const tripTitle1 = document.getElementById("trip-card1")
+        const tripTitle2 = document.getElementById("trip-card2")
+        const tripTitle3 = document.getElementById("trip-card3")
+        const tripTitle4 = document.getElementById("trip-card4")
+        const tripTitle5 = document.getElementById("trip-card5")
+        const tripTitle6 = document.getElementById("trip-card6")
+        const tripTitle7 = document.getElementById("trip-card7")
+        const tripTitle8 = document.getElementById("trip-card8")
+        const tripTitle9 = document.getElementById("trip-card9")
+        const tripTitle10 = document.getElementById("trip-card10")
+        const tripTitle11 = document.getElementById("trip-card11")
+
+        const tripTitleA = document.getElementById("trip-cardA")
+        const tripTitleB = document.getElementById("trip-cardB")
+        const tripTitleC = document.getElementById("trip-cardC")
+        const tripTitleD = document.getElementById("trip-cardD")
+        const tripTitleE = document.getElementById("trip-cardE")
+        const tripTitleF = document.getElementById("trip-cardF")
+        const tripTitleG = document.getElementById("trip-cardG")
+        const tripTitleH = document.getElementById("trip-cardH")
+        const tripTitleI = document.getElementById("trip-cardI")
+        const tripTitleJ = document.getElementById("trip-cardJ")
+        const tripTitleK = document.getElementById("trip-cardK")
+
+
+    const wheel = document.getElementById("wheel")
+    const on = document.getElementById("on")
+    const off = document.getElementById("off")
+    const titleText = document.getElementById("title-text")
+    const next = document.getElementById("next")
+    const previous = document.getElementById("previous")
+
+    next.addEventListener("click", ()=>{
+        on.classList.add("invisible")
+        off.classList.add("invisible")
+        titleText.classList.add("invisible")
+        translateBtnUsa.classList.remove("invisible")
+        translateBtnRo.classList.remove("invisible")
+        next.classList.add("invisible")
+        previous.classList.remove("invisible")
+        translateBtnUsa.classList.add("appear")
+        translateBtnRo.classList.add("appear")
+        previous.classList.remove("previous")
+        previous.classList.add("translate-form")
+        setTimeout(() =>{
+            translateBtnUsa.classList.remove("appear")
+            translateBtnRo.classList.remove("appear")
+        },350)
+    })
+
+    previous.addEventListener("click", ()=>{
+        on.classList.remove("invisible")
+        off.classList.remove("invisible")
+        titleText.classList.remove("invisible")
+        translateBtnUsa.classList.add("invisible")
+        translateBtnRo.classList.add("invisible")
+        next.classList.remove("invisible")
+        previous.classList.add("invisible")
+        setTimeout(() =>{
+            translateBtnUsa.classList.remove("appear")
+            translateBtnRo.classList.remove("appear")
+        },350)
+    })
+
+    wheel.addEventListener("click", ()=>{
+        wheel.classList.add("rotate")
+        setTimeout(() =>{
+            on.classList.remove("invisible")
+            on.classList.add("appear")
+            titleText.classList.remove("invisible")
+            titleText.classList.add("appear")
+            previous.classList.remove("invisible")
+            previous.classList.add("appear")
+            next.classList.remove("invisible")
+            next.classList.add("appear")
+        },350)
+        setTimeout(() =>{
+            next.classList.remove("appear")
+            previous.classList.remove("appear")
+            on.classList.remove("appear")
+            titleText.classList.remove("appear")
+        },500)
+    })
+
+    off.addEventListener("click", ()=>{
+        tripTitle1.classList.add("white")
+        tripTitle2.classList.add("white")
+        tripTitle3.classList.add("white")
+        tripTitle4.classList.add("white")
+        tripTitle5.classList.add("white")
+        tripTitle6.classList.add("white")
+        tripTitle7.classList.add("white")
+        tripTitle8.classList.add("white")
+        tripTitle9.classList.add("white")
+        tripTitle10.classList.add("white")
+        tripTitle11.classList.add("white")
+
+        tripTitleA.classList.add("white")
+        tripTitleB.classList.add("white")
+        tripTitleC.classList.add("white")
+        tripTitleD.classList.add("white")
+        tripTitleE.classList.add("white")
+        tripTitleF.classList.add("white")
+        tripTitleG.classList.add("white")
+        tripTitleH.classList.add("white")
+        tripTitleI.classList.add("white")
+        tripTitleJ.classList.add("white")
+        tripTitleK.classList.add("white") 
+
+        off.classList.add("invisible")
+        on.classList.remove("invisible")
+
+        tripTitle1.classList.remove("black")
+        tripTitle2.classList.remove("black")
+        tripTitle3.classList.remove("black")
+        tripTitle4.classList.remove("black")
+        tripTitle5.classList.remove("black")
+        tripTitle6.classList.remove("black")
+        tripTitle7.classList.remove("black")
+        tripTitle8.classList.remove("black")
+        tripTitle9.classList.remove("black")
+        tripTitle10.classList.remove("black")
+        tripTitle11.classList.remove("black")
+
+        tripTitleA.classList.remove("black")
+        tripTitleB.classList.remove("black")
+        tripTitleC.classList.remove("black")
+        tripTitleD.classList.remove("black")
+        tripTitleE.classList.remove("black")
+        tripTitleF.classList.remove("black")
+        tripTitleG.classList.remove("black")
+        tripTitleH.classList.remove("black")
+        tripTitleI.classList.remove("black")
+        tripTitleJ.classList.remove("black")
+        tripTitleK.classList.remove("black") 
+    })
+
+    on.addEventListener("click", ()=>{
+        tripTitle1.classList.add("black")
+        tripTitle2.classList.add("black")
+        tripTitle3.classList.add("black")
+        tripTitle4.classList.add("black")
+        tripTitle5.classList.add("black")
+        tripTitle6.classList.add("black")
+        tripTitle7.classList.add("black")
+        tripTitle8.classList.add("black")
+        tripTitle9.classList.add("black")
+        tripTitle10.classList.add("black")
+        tripTitle11.classList.add("black")
+
+        tripTitleA.classList.add("black")
+        tripTitleB.classList.add("black")
+        tripTitleC.classList.add("black")
+        tripTitleD.classList.add("black")
+        tripTitleE.classList.add("black")
+        tripTitleF.classList.add("black")
+        tripTitleG.classList.add("black")
+        tripTitleH.classList.add("black")
+        tripTitleI.classList.add("black")
+        tripTitleJ.classList.add("black")
+        tripTitleK.classList.add("black") 
+
+
+        off.classList.remove("invisible")
+        on.classList.add("invisible")
+
+        tripTitle1.classList.remove("white")
+        tripTitle2.classList.remove("white")
+        tripTitle3.classList.remove("white")
+        tripTitle4.classList.remove("white")
+        tripTitle5.classList.remove("white")
+        tripTitle6.classList.remove("white")
+        tripTitle7.classList.remove("white")
+        tripTitle8.classList.remove("white")
+        tripTitle9.classList.remove("white")
+        tripTitle10.classList.remove("white")
+        tripTitle11.classList.remove("white")
+
+        tripTitleA.classList.remove("white")
+        tripTitleB.classList.remove("white")
+        tripTitleC.classList.remove("white")
+        tripTitleD.classList.remove("white")
+        tripTitleE.classList.remove("white")
+        tripTitleF.classList.remove("white")
+        tripTitleG.classList.remove("white")
+        tripTitleH.classList.remove("white")
+        tripTitleI.classList.remove("white")
+        tripTitleJ.classList.remove("white")
+        tripTitleK.classList.remove("white") 
+    })
+
+    const translateBtnUsa = document.getElementById("translation-btn-usa")
+    const translateBtnRo = document.getElementById("translation-btn-ro")
+    const paragraphUsa = document.getElementById("paragraph-usa")
+    const paragraphRo = document.getElementById("paragraph-ro")
+
+    translateBtnUsa.addEventListener("click", ()=>{
+        paragraphUsa.classList.remove("invisible")
+        paragraphRo.classList.add("invisible")
+    })
+
+    translateBtnRo.addEventListener("click", ()=>{
+        paragraphUsa.classList.add("invisible")
+        paragraphRo.classList.remove("invisible")
+    })
+
+
 
 </script>
 </html>

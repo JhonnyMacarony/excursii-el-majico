@@ -11,6 +11,7 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            max-width: 287vw;
         }
         .excursion-end-i{
             text-decoration: none;
@@ -326,7 +327,7 @@
             justify-content: space-between;
             background-color: black;
             height: 120px;
-            width: 100%;
+            width: 100%vw;
             bottom: 0;
             position: relative;
             margin-top: 250px;
@@ -349,6 +350,24 @@
         .black{
             color: black;
         }
+        .translation-btn-usa{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1300px;
+        }
+        .translation-btn-ro{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1390px;
+        }
         .end-img{
             height: 60px;
             width: 60px;
@@ -362,10 +381,36 @@
                 justify-content: space-between;
                 background-color: black;
                 height: 120px;
-                width: 260vw;
+                width: 288vw;
                 bottom: 0;
                 position: relative;
                 margin-top: 550px;
+            }
+            .excursions{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 380px;
+            }
+            .excursion-end{
+                text-decoration: none;
+                color: black;
+                font-size: 27px;
+                height: 50px;
+                width: 280vw;
+                padding: 10px;
+                position: relative;
+                margin: 300px 10px;
+            }
+            .excursion-end-i{
+                text-decoration: none;
+                color: black;
+                font-size: 27px;
+                height: 50px;
+                width: 280vw;
+                padding: 10px;
+                position: relative;
+                margin: 10px;
             }
             .trip-card{
                 text-align: center;
@@ -409,29 +454,8 @@
                 transform: rotate(360deg);
             }
         }
-
-        @keyframes backgroundup{
-            0%{
-                background-color: rgba(107, 107, 107, 0);
-            }
-            25%{
-                background-color: rgba(122, 122, 122, 0.178);
-            }
-            50%{
-                background-color: rgba(121, 121, 121, 0.438);
-            }
-            75%{
-                background-color: rgba(119, 119, 119, 0.685);
-            }
-            100%{
-                background-color: rgb(128, 128, 128);
-            }
-        }
         .rotate{
             animation: rotate 0.3s ease-in-out forwards;
-        }
-        .background{
-            animation: backgroundcl 0.1s ease-in-out forwards;
         }
         .wheel{
             height: 60px;
@@ -456,10 +480,8 @@
             animation: appear ease-in-out 0.4s;
         }
         .setting{
-            animation: backgroundup 0.9s ease-in-out forwards;
             width: 400px;
             height: auto;
-            background-color: rebeccapurple;
         }
         .start{
             margin: 50px;
@@ -477,6 +499,38 @@
             position: absolute;
             margin-left: 600px;
         }
+        .next{
+            position: absolute;
+            font-weight: bolder;
+            font-size: 25px;
+            margin-left: 1260px;
+            cursor: pointer;
+        }
+        .translate-form{
+            position: absolute;
+            font-weight: bolder;
+            font-size: 25px;
+            margin-left: 1090px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .previous{
+            position: absolute;
+            font-weight: bolder;
+            font-size: 25px;
+            margin-left: 926px;
+            cursor: pointer;
+        }
+        .translation-btn-usa{
+            position: absolute;
+            margin-top: 7px;
+            margin-left: 1130px;
+        }
+        .translation-btn-ro{
+            position: absolute;
+            margin-top: 7px;
+            margin-left: 1230px;
+        }
     </style>
 </head>
 <body>
@@ -485,175 +539,353 @@
         <h1 class="first">Hurghada</h1>
         <div class="setting">
             <img src="/images/settings.png" id="wheel" class="wheel">
+            <div class="title-visibility">
                 <p class="title-text invisible" id="title-text">Vizibilitatea titlurilor:</p>
                 <p class="on invisible" id="on">On</p>
-                <p class="off invisible" id="off">Off</p>
+                <p class="off invisible" id="off">Off</p>    
+            </div>
+            <p class="next invisible" id="next"> > </p>
+            <p class="previous invisible" id="previous"> < </p>
+            <div class="translate-setting">
+                <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa invisible" id="translation-btn-usa">
+                <img src="/images/1200px-Flag_of_Romania.svg.png" class="translation-btn-ro invisible" id="translation-btn-ro">
+            </div>
         </div>
     </div>
-    <div id="normal1" class="excursions">
-        <a class="excursion" href="/hurghada/cairo">
-            <div class="card">
-                <img class="image-card-cairo">
-                <p id="trip-card1" class="trip-card">Cairo</p>
+
+    <div class="paragraph-ro" id="paragraph-ro">
+
+        <div id="normal1" class="excursions">
+            <a class="excursion" href="/hurghada/cairo">
+                <div class="card">
+                    <img class="image-card-cairo">
+                    <p id="trip-card1" class="trip-card">Cairo</p>
+                </div>
+            </a>
+            <a class="excursion" href="/hurghada/cairo-economic">
+                <div class="card">
+                    <img class="image-card-cairo-economic">
+                    <p id="trip-card2" class="trip-card">Cairo Economic</p>
+                </div>
+            </a>
+            <a class="excursion" href="/hurghada/super-luxor">
+                <div class="card">
+                    <img class="image-card-super-luxor">
+                    <p id="trip-card3" class="trip-card">Super Luxor</p>
+                </div>
+            </a>
+            <a class="excursion" href="/hurghada/luxor-valea-reginelor">
+                <div class="card">
+                    <img class="image-card-luxor-valea-reginelor">
+                    <p id="trip-card4" class="trip-card">Luxor Valea Reginelor</p>
+                </div>
+            </a>
+        </div>
+    
+        <div id="normal2" class="excursions">
+            <a class="excursion" href="/hurghada/luxor-economic">
+                <div class="card">
+                    <img class="image-card-luxor-economic">
+                    <p id="trip-card5" class="trip-card">Luxor Economic</p>
+                </div>
+            </a>
+            <a class="excursion" href="/hurghada/super-safari">
+                <div class="card">
+                    <img class="image-card-super-safari">
+                    <p id="trip-card6" class="trip-card">Super Safari</p>
+                </div>
+            </a>
+            <a class="excursion" href="/hurghada/safari-oasis">
+                <div class="card">
+                    <img class="image-card-safari-oasis">
+                    <p id="trip-card7" class="trip-card">Safari Oasis</p>
+                </div>
+            </a>
+            <a class="excursion" href="/hurghada/express-safari-5-ore">
+                <div class="card">
+                    <img class="image-card-express-safari-5-ore">
+                    <p id="trip-card8" class="trip-card">Express Safari 5 Ore</p>
+                </div> 
+            </a>
             </div>
-        </a>
-        <a class="excursion" href="/hurghada/cairo-economic">
-            <div class="card">
-                <img class="image-card-cairo-economic">
-                <p id="trip-card2" class="trip-card">Cairo Economic</p>
+    
+            <div id="normal3" class="excursions">
+                <a class="excursion" href="/hurghada/moto-safari-3-ore">
+                    <div class="card">
+                        <img class="image-card-moto-safari-3-ore">
+                        <p id="trip-card9" class="trip-card">Moto Safari 3 Ore</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/insula-orange-bay">
+                    <div class="card">
+                        <img class="image-card-insula-orange-bay">
+                        <p id="trip-card10" class="trip-card">Insula Orange Bay</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/insula-paradise">
+                    <div class="card">
+                        <img class="image-card-insula-paradise">
+                        <p id="trip-card11" class="trip-card">Insula Paradise</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/casa-delfinilor">
+                    <div class="card">
+                        <img class="image-card-casa-delfinilor">
+                        <p id="trip-card12" class="trip-card">Casa Delfinilor</p>
+                    </div>     
+                </a>
+            </div>   
+    
+            <div id="normal4" class="excursions">
+                <a class="excursion" href="/hurghada/paraseling">
+                    <div class="card">
+                        <img class="image-card-paraseling">
+                        <p id="trip-card13" class="trip-card">Paraseling</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/scufundari">
+                    <div class="card">
+                        <img class="image-card-scufundari">
+                        <p id="trip-card14" class="trip-card">Scufundari</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/submarin-sindbad">
+                    <div class="card">
+                        <img class="image-card-submarin-sindbad">
+                        <p id="trip-card15" class="trip-card">Submarin Sindbad</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/batiskaf">
+                    <div class="card">
+                        <img class="image-card-batiskaf">
+                        <p id="trip-card16" class="trip-card">Batiskaf</p>
+                    </div>     
+                </a>
+            </div>    
+    
+            <div id="normal5" class="excursions">
+                <a class="excursion" href="/hurghada/dolphin-show">
+                    <div class="card">
+                        <img class="image-card-dolphin-show">
+                        <p id="trip-card17" class="trip-card">Dolphin Show</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/acvariu">
+                    <div class="card">
+                        <img class="image-card-acvariu">
+                        <p id="trip-card18" class="trip-card">Acvariu</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/aswan-abu-sibel">
+                    <div class="card">
+                        <img class="image-card-aswan-abu-sibel">
+                        <p id="trip-card19" class="trip-card">Aswan Abu Sibel</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/manastirea-sfantul-pavel-si-antonie">
+                    <div class="card">
+                        <img class="image-card-manastirea-sfantul-pavel-si-antonie">
+                        <p id="trip-card20" class="trip-card">Manastirea Sf. Pavel si Antonie</p>
+                    </div>     
+                </a>
+            </div>    
+    
+            <div id="normal6" class="excursions">
+                <a class="excursion" href="/hurghada/excursie-privata">
+                    <div class="card">
+                        <img class="image-card-excursie-privata">
+                        <p id="trip-card21" class="trip-card">Excursie Privata</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/vizitarea-orasului-hurghada">
+                    <div class="card">
+                        <img class="image-card-vizitarea-orasului-hurghada">
+                        <p id="trip-card22" class="trip-card">Vizitarea Orasului Hurghada</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/abu-dabbab">
+                    <div class="card">
+                        <img class="image-card-abu-dabbab">
+                        <p id="trip-card23" class="trip-card">Abu Dabbab</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/excursie-cu-avionul-din-hurghada-la-cairo">
+                    <div class="card">
+                        <img class="image-card-excursie-cu-avionul-din-hurghada-la-cairo">
+                        <p id="trip-card24" class="trip-card"> Excursie cu avionul din  Hurghada  la Cairo	</p>
+                    </div>     
+                </a>        
+            
             </div>
-        </a>
-        <a class="excursion" href="/hurghada/super-luxor">
-            <div class="card">
-                <img class="image-card-super-luxor">
-                <p id="trip-card3" class="trip-card">Super Luxor</p>
-            </div>
-        </a>
-        <a class="excursion" href="/hurghada/luxor-valea-reginelor">
-            <div class="card">
-                <img class="image-card-luxor-valea-reginelor">
-                <p id="trip-card4" class="trip-card">Luxor Valea Reginelor</p>
-            </div>
-        </a>
     </div>
 
-    <div id="normal2" class="excursions">
-        <a class="excursion" href="/hurghada/luxor-economic">
-            <div class="card">
-                <img class="image-card-luxor-economic">
-                <p id="trip-card5" class="trip-card">Luxor Economic</p>
-            </div>
-        </a>
-        <a class="excursion" href="/hurghada/super-safari">
-            <div class="card">
-                <img class="image-card-super-safari">
-                <p id="trip-card6" class="trip-card">Super Safari</p>
-            </div>
-        </a>
-        <a class="excursion" href="/hurghada/safari-oasis">
-            <div class="card">
-                <img class="image-card-safari-oasis">
-                <p id="trip-card7" class="trip-card">Safari Oasis</p>
-            </div>
-        </a>
-        <a class="excursion" href="/hurghada/express-safari-5-ore">
-            <div class="card">
-                <img class="image-card-express-safari-5-ore">
-                <p id="trip-card8" class="trip-card">Express Safari 5 Ore</p>
-            </div> 
-        </a>
-        </div>
 
-        <div id="normal3" class="excursions">
-            <a class="excursion" href="/hurghada/moto-safari-3-ore">
-                <div class="card">
-                    <img class="image-card-moto-safari-3-ore">
-                    <p id="trip-card9" class="trip-card">Moto Safari 3 Ore</p>
-                </div>     
-            </a>
-            <a class="excursion" href="/hurghada/insula-orange-bay">
-                <div class="card">
-                    <img class="image-card-insula-orange-bay">
-                    <p id="trip-card10" class="trip-card">Insula Orange Bay</p>
-                </div>     
-            </a>
-            <a class="excursion" href="/hurghada/insula-paradise">
-                <div class="card">
-                    <img class="image-card-insula-paradise">
-                    <p id="trip-card11" class="trip-card">Insula Paradise</p>
-                </div>     
-            </a>
-            <a class="excursion" href="/hurghada/casa-delfinilor">
-                <div class="card">
-                    <img class="image-card-casa-delfinilor">
-                    <p id="trip-card12" class="trip-card">Casa Delfinilor</p>
-                </div>     
-            </a>
-        </div>   
-
-        <div id="normal4" class="excursions">
-            <a class="excursion" href="/hurghada/paraseling">
-                <div class="card">
-                    <img class="image-card-paraseling">
-                    <p id="trip-card13" class="trip-card">Paraseling</p>
-                </div>     
-            </a>
-            <a class="excursion" href="/hurghada/scufundari">
-                <div class="card">
-                    <img class="image-card-scufundari">
-                    <p id="trip-card14" class="trip-card">Scufundari</p>
-                </div>     
-            </a>
-            <a class="excursion" href="/hurghada/submarin-sindbad">
-                <div class="card">
-                    <img class="image-card-submarin-sindbad">
-                    <p id="trip-card15" class="trip-card">Submarin Sindbad</p>
-                </div>     
-            </a>
-            <a class="excursion" href="/hurghada/batiskaf">
-                <div class="card">
-                    <img class="image-card-batiskaf">
-                    <p id="trip-card16" class="trip-card">Batiskaf</p>
-                </div>     
-            </a>
-        </div>    
-
-        <div id="normal5" class="excursions">
-            <a class="excursion" href="/hurghada/dolphin-show">
-                <div class="card">
-                    <img class="image-card-dolphin-show">
-                    <p id="trip-card17" class="trip-card">Dolphin Show</p>
-                </div>     
-            </a>
-            <a class="excursion" href="/hurghada/acvariu">
-                <div class="card">
-                    <img class="image-card-acvariu">
-                    <p id="trip-card18" class="trip-card">Acvariu</p>
-                </div>     
-            </a>
-            <a class="excursion" href="/hurghada/aswan-abu-sibel">
-                <div class="card">
-                    <img class="image-card-aswan-abu-sibel">
-                    <p id="trip-card19" class="trip-card">Aswan Abu Sibel</p>
-                </div>     
-            </a>
-            <a class="excursion" href="/hurghada/manastirea-sfantul-pavel-si-antonie">
-                <div class="card">
-                    <img class="image-card-manastirea-sfantul-pavel-si-antonie">
-                    <p id="trip-card20" class="trip-card">Manastirea Sf. Pavel si Antonie</p>
-                </div>     
-            </a>
-        </div>    
-
-        <div id="normal6" class="excursions">
-            <a class="excursion" href="/hurghada/excursie-privata">
-                <div class="card">
-                    <img class="image-card-excursie-privata">
-                    <p id="trip-card21" class="trip-card">Excursie Privata</p>
-                </div>     
-            </a>
-            <a class="excursion" href="/hurghada/vizitarea-orasului-hurghada">
-                <div class="card">
-                    <img class="image-card-vizitarea-orasului-hurghada">
-                    <p id="trip-card22" class="trip-card">Vizitarea Orasului Hurghada</p>
-                </div>     
-            </a>
-            <a class="excursion" href="/hurghada/abu-dabbab">
-                <div class="card">
-                    <img class="image-card-abu-dabbab">
-                    <p id="trip-card23" class="trip-card">Abu Dabbab</p>
-                </div>     
-            </a>
-            <a class="excursion" href="/hurghada/excursie-cu-avionul-din-hurghada-la-cairo">
-                <div class="card">
-                    <img class="image-card-excursie-cu-avionul-din-hurghada-la-cairo">
-                    <p id="trip-card24" class="trip-card"> Excursie cu avionul din  Hurghada  la Cairo	</p>
-                </div>     
-            </a>        
+    <div class="paragraph-usa invisible" id="paragraph-usa">
         
-        </div>    
+        <div id="normal1" class="excursions">
+            <a class="excursion" href="/hurghada/cairo">
+                <div class="card">
+                    <img class="image-card-cairo">
+                    <p id="trip-cardA" class="trip-card">Cairo</p>
+                </div>
+            </a>
+            <a class="excursion" href="/hurghada/cairo-economic">
+                <div class="card">
+                    <img class="image-card-cairo-economic">
+                    <p id="trip-cardB" class="trip-card">Cairo Economic</p>
+                </div>
+            </a>
+            <a class="excursion" href="/hurghada/super-luxor">
+                <div class="card">
+                    <img class="image-card-super-luxor">
+                    <p id="trip-cardC" class="trip-card">Super Luxor</p>
+                </div>
+            </a>
+            <a class="excursion" href="/hurghada/luxor-valea-reginelor">
+                <div class="card">
+                    <img class="image-card-luxor-valea-reginelor">
+                    <p id="trip-cardD" class="trip-card">Luxor Valley of the Queens</p>
+                </div>
+            </a>
+        </div>
+    
+        <div id="normal2" class="excursions">
+            <a class="excursion" href="/hurghada/luxor-economic">
+                <div class="card">
+                    <img class="image-card-luxor-economic">
+                    <p id="trip-cardE" class="trip-card">Luxor Economic</p>
+                </div>
+            </a>
+            <a class="excursion" href="/hurghada/super-safari">
+                <div class="card">
+                    <img class="image-card-super-safari">
+                    <p id="trip-cardF" class="trip-card">Super Safari</p>
+                </div>
+            </a>
+            <a class="excursion" href="/hurghada/safari-oasis">
+                <div class="card">
+                    <img class="image-card-safari-oasis">
+                    <p id="trip-cardG" class="trip-card">Safari Oasis</p>
+                </div>
+            </a>
+            <a class="excursion" href="/hurghada/express-safari-5-ore">
+                <div class="card">
+                    <img class="image-card-express-safari-5-ore">
+                    <p id="trip-cardH" class="trip-card">Express Safari 5 Hours</p>
+                </div> 
+            </a>
+            </div>
+    
+            <div id="normal3" class="excursions">
+                <a class="excursion" href="/hurghada/moto-safari-3-ore">
+                    <div class="card">
+                        <img class="image-card-moto-safari-3-ore">
+                        <p id="trip-cardI" class="trip-card">Moto Safari 3 Hours</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/insula-orange-bay">
+                    <div class="card">
+                        <img class="image-card-insula-orange-bay">
+                        <p id="trip-cardJ" class="trip-card">Orange Bay Island</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/insula-paradise">
+                    <div class="card">
+                        <img class="image-card-insula-paradise">
+                        <p id="trip-cardK" class="trip-card">Paradise Island</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/casa-delfinilor">
+                    <div class="card">
+                        <img class="image-card-casa-delfinilor">
+                        <p id="trip-cardL" class="trip-card">Dolphin House</p>
+                    </div>     
+                </a>
+            </div>   
+    
+            <div id="normal4" class="excursions">
+                <a class="excursion" href="/hurghada/paraseling">
+                    <div class="card">
+                        <img class="image-card-paraseling">
+                        <p id="trip-cardM" class="trip-card">Paraseling</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/scufundari">
+                    <div class="card">
+                        <img class="image-card-scufundari">
+                        <p id="trip-cardN" class="trip-card">Diving</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/submarin-sindbad">
+                    <div class="card">
+                        <img class="image-card-submarin-sindbad">
+                        <p id="trip-cardO" class="trip-card">Sindbad Submarin</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/batiskaf">
+                    <div class="card">
+                        <img class="image-card-batiskaf">
+                        <p id="trip-cardP" class="trip-card">Batiskaf</p>
+                    </div>     
+                </a>
+            </div>    
+    
+            <div id="normal5" class="excursions">
+                <a class="excursion" href="/hurghada/dolphin-show">
+                    <div class="card">
+                        <img class="image-card-dolphin-show">
+                        <p id="trip-cardQ" class="trip-card">Dolphin Show</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/acvariu">
+                    <div class="card">
+                        <img class="image-card-acvariu">
+                        <p id="trip-cardR" class="trip-card">Aquarium</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/aswan-abu-sibel">
+                    <div class="card">
+                        <img class="image-card-aswan-abu-sibel">
+                        <p id="trip-cardS" class="trip-card">Aswan Abu Sibel</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/manastirea-sfantul-pavel-si-antonie">
+                    <div class="card">
+                        <img class="image-card-manastirea-sfantul-pavel-si-antonie">
+                        <p id="trip-cardT" class="trip-card">St. Paul and Anthony Monastery</p>
+                    </div>     
+                </a>
+            </div>    
+    
+            <div id="normal6" class="excursions">
+                <a class="excursion" href="/hurghada/excursie-privata">
+                    <div class="card">
+                        <img class="image-card-excursie-privata">
+                        <p id="trip-cardAA" class="trip-card">Private Trip</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/vizitarea-orasului-hurghada">
+                    <div class="card">
+                        <img class="image-card-vizitarea-orasului-hurghada">
+                        <p id="trip-cardBB" class="trip-card">Visiting Hurghada</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/abu-dabbab">
+                    <div class="card">
+                        <img class="image-card-abu-dabbab">
+                        <p id="trip-cardCC" class="trip-card">Abu Dabbab</p>
+                    </div>     
+                </a>
+                <a class="excursion" href="/hurghada/excursie-cu-avionul-din-hurghada-la-cairo">
+                    <div class="card">
+                        <img class="image-card-excursie-cu-avionul-din-hurghada-la-cairo">
+                        <p id="trip-cardDD" class="trip-card"> Plane trip from Hurghada to Cairo	</p>
+                    </div>     
+                </a>        
+            
+            </div>
+    </div>
 
-    </div>    
     <div class="end">
         <p class="excursion-end">
             * Copiii cu varsta inre 0-5 ani au gratuitate. <br>
@@ -705,11 +937,70 @@
         const tripTitle23 = document.getElementById("trip-card23")
         const tripTitle24 = document.getElementById("trip-card24")
 
+        const tripTitleA = document.getElementById("trip-cardA")
+        const tripTitleB = document.getElementById("trip-cardB")
+        const tripTitleC = document.getElementById("trip-cardC")
+        const tripTitleD = document.getElementById("trip-cardD")
+        const tripTitleE = document.getElementById("trip-cardE")
+        const tripTitleF = document.getElementById("trip-cardF")
+        const tripTitleG = document.getElementById("trip-cardG")
+        const tripTitleH = document.getElementById("trip-cardH")
+        const tripTitleI = document.getElementById("trip-cardI")
+        const tripTitleJ = document.getElementById("trip-cardJ")
+        const tripTitleK = document.getElementById("trip-cardK")
+        const tripTitleL = document.getElementById("trip-cardL")
+        const tripTitleM = document.getElementById("trip-cardM")
+        const tripTitleN = document.getElementById("trip-cardN")
+        const tripTitleO = document.getElementById("trip-cardO")
+        const tripTitleP = document.getElementById("trip-cardP")
+        const tripTitleQ = document.getElementById("trip-cardQ")
+        const tripTitleR = document.getElementById("trip-cardR")
+        const tripTitleS = document.getElementById("trip-cardS")
+        const tripTitleT = document.getElementById("trip-cardT")
+        const tripTitleAA = document.getElementById("trip-cardAA")
+        const tripTitleBB = document.getElementById("trip-cardBB")
+        const tripTitleCC = document.getElementById("trip-cardCC")
+        const tripTitleDD = document.getElementById("trip-cardDD")
+
 
     const wheel = document.getElementById("wheel")
     const on = document.getElementById("on")
     const off = document.getElementById("off")
     const titleText = document.getElementById("title-text")
+    const next = document.getElementById("next")
+    const previous = document.getElementById("previous")
+
+    next.addEventListener("click", ()=>{
+        on.classList.add("invisible")
+        off.classList.add("invisible")
+        titleText.classList.add("invisible")
+        translateBtnUsa.classList.remove("invisible")
+        translateBtnRo.classList.remove("invisible")
+        next.classList.add("invisible")
+        previous.classList.remove("invisible")
+        translateBtnUsa.classList.add("appear")
+        translateBtnRo.classList.add("appear")
+        previous.classList.remove("previous")
+        previous.classList.add("translate-form")
+        setTimeout(() =>{
+            translateBtnUsa.classList.remove("appear")
+            translateBtnRo.classList.remove("appear")
+        },350)
+    })
+
+    previous.addEventListener("click", ()=>{
+        on.classList.remove("invisible")
+        off.classList.remove("invisible")
+        titleText.classList.remove("invisible")
+        translateBtnUsa.classList.add("invisible")
+        translateBtnRo.classList.add("invisible")
+        next.classList.remove("invisible")
+        previous.classList.add("invisible")
+        setTimeout(() =>{
+            translateBtnUsa.classList.remove("appear")
+            translateBtnRo.classList.remove("appear")
+        },350)
+    })
 
     wheel.addEventListener("click", ()=>{
         wheel.classList.add("rotate")
@@ -718,8 +1009,14 @@
             on.classList.add("appear")
             titleText.classList.remove("invisible")
             titleText.classList.add("appear")
+            previous.classList.remove("invisible")
+            previous.classList.add("appear")
+            next.classList.remove("invisible")
+            next.classList.add("appear")
         },350)
         setTimeout(() =>{
+            next.classList.remove("appear")
+            previous.classList.remove("appear")
             on.classList.remove("appear")
             titleText.classList.remove("appear")
         },500)
@@ -750,6 +1047,32 @@
         tripTitle22.classList.add("white")
         tripTitle23.classList.add("white")
         tripTitle24.classList.add("white")
+
+        tripTitleA.classList.add("white")
+        tripTitleB.classList.add("white")
+        tripTitleC.classList.add("white")
+        tripTitleD.classList.add("white")
+        tripTitleE.classList.add("white")
+        tripTitleF.classList.add("white")
+        tripTitleG.classList.add("white")
+        tripTitleH.classList.add("white")
+        tripTitleI.classList.add("white")
+        tripTitleJ.classList.add("white")
+        tripTitleK.classList.add("white") 
+        tripTitleL.classList.add("white")
+        tripTitleM.classList.add("white")
+        tripTitleN.classList.add("white")
+        tripTitleO.classList.add("white")
+        tripTitleP.classList.add("white")
+        tripTitleQ.classList.add("white")
+        tripTitleR.classList.add("white")
+        tripTitleS.classList.add("white")
+        tripTitleT.classList.add("white")
+        tripTitleAA.classList.add("white")
+        tripTitleBB.classList.add("white")
+        tripTitleCC.classList.add("white")
+        tripTitleDD.classList.add("white")
+
         off.classList.add("invisible")
         on.classList.remove("invisible")
 
@@ -777,6 +1100,31 @@
         tripTitle22.classList.remove("black")
         tripTitle23.classList.remove("black")
         tripTitle24.classList.remove("black")
+
+        tripTitleA.classList.remove("black")
+        tripTitleB.classList.remove("black")
+        tripTitleC.classList.remove("black")
+        tripTitleD.classList.remove("black")
+        tripTitleE.classList.remove("black")
+        tripTitleF.classList.remove("black")
+        tripTitleG.classList.remove("black")
+        tripTitleH.classList.remove("black")
+        tripTitleI.classList.remove("black")
+        tripTitleJ.classList.remove("black")
+        tripTitleK.classList.remove("black") 
+        tripTitleL.classList.remove("black")
+        tripTitleM.classList.remove("black")
+        tripTitleN.classList.remove("black")
+        tripTitleO.classList.remove("black")
+        tripTitleP.classList.remove("black")
+        tripTitleQ.classList.remove("black")
+        tripTitleR.classList.remove("black")
+        tripTitleS.classList.remove("black")
+        tripTitleT.classList.remove("black")
+        tripTitleAA.classList.remove("black")
+        tripTitleBB.classList.remove("black")
+        tripTitleCC.classList.remove("black")
+        tripTitleDD.classList.remove("black")
     })
 
     on.addEventListener("click", ()=>{
@@ -804,6 +1152,33 @@
         tripTitle22.classList.add("black")
         tripTitle23.classList.add("black")
         tripTitle24.classList.add("black")
+
+        tripTitleA.classList.add("black")
+        tripTitleB.classList.add("black")
+        tripTitleC.classList.add("black")
+        tripTitleD.classList.add("black")
+        tripTitleE.classList.add("black")
+        tripTitleF.classList.add("black")
+        tripTitleG.classList.add("black")
+        tripTitleH.classList.add("black")
+        tripTitleI.classList.add("black")
+        tripTitleJ.classList.add("black")
+        tripTitleK.classList.add("black") 
+        tripTitleL.classList.add("black")
+        tripTitleM.classList.add("black")
+        tripTitleN.classList.add("black")
+        tripTitleO.classList.add("black")
+        tripTitleP.classList.add("black")
+        tripTitleQ.classList.add("black")
+        tripTitleR.classList.add("black")
+        tripTitleS.classList.add("black")
+        tripTitleT.classList.add("black")
+        tripTitleAA.classList.add("black")
+        tripTitleBB.classList.add("black")
+        tripTitleCC.classList.add("black")
+        tripTitleDD.classList.add("black")
+
+
         off.classList.remove("invisible")
         on.classList.add("invisible")
 
@@ -831,6 +1206,31 @@
         tripTitle22.classList.remove("white")
         tripTitle23.classList.remove("white")
         tripTitle24.classList.remove("white")
+
+        tripTitleA.classList.remove("white")
+        tripTitleB.classList.remove("white")
+        tripTitleC.classList.remove("white")
+        tripTitleD.classList.remove("white")
+        tripTitleE.classList.remove("white")
+        tripTitleF.classList.remove("white")
+        tripTitleG.classList.remove("white")
+        tripTitleH.classList.remove("white")
+        tripTitleI.classList.remove("white")
+        tripTitleJ.classList.remove("white")
+        tripTitleK.classList.remove("white") 
+        tripTitleL.classList.remove("white")
+        tripTitleM.classList.remove("white")
+        tripTitleN.classList.remove("white")
+        tripTitleO.classList.remove("white")
+        tripTitleP.classList.remove("white")
+        tripTitleQ.classList.remove("white")
+        tripTitleR.classList.remove("white")
+        tripTitleS.classList.remove("white")
+        tripTitleT.classList.remove("white")
+        tripTitleAA.classList.remove("white")
+        tripTitleBB.classList.remove("white")
+        tripTitleCC.classList.remove("white")
+        tripTitleDD.classList.remove("white")
     })
 
     const translateBtnUsa = document.getElementById("translation-btn-usa")
@@ -840,16 +1240,12 @@
 
     translateBtnUsa.addEventListener("click", ()=>{
         paragraphUsa.classList.remove("invisible")
-        normalContext.classList.add("invisible")
-        alfabetBtn.classList.add("invisible")
-        classicBtn.classList.add("invisible")
+        paragraphRo.classList.add("invisible")
     })
 
     translateBtnRo.addEventListener("click", ()=>{
         paragraphUsa.classList.add("invisible")
-        normalContext.classList.remove("invisible")
-        classicBtn.classList.add("invisible")
-        alfabetBtn.classList.add("invisible")
+        paragraphRo.classList.remove("invisible")
     })
 
 </script>
