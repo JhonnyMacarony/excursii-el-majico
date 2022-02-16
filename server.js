@@ -12,10 +12,30 @@ app.get("/", (req, res) =>{
     res.render("layouts/layout.ejs")
 })
 
-                                                        //Hurghada
+                                                        //Hurghada 
 
 app.get("/hurghada/home", (req, res) =>{
     res.render("layouts/hurghada/home.ejs")
+})
+
+app.get("/hurghada/admirarea-stelelor", (req, res) =>{
+    res.render("layouts/hurghada/admirarea-stelelor.ejs")
+})
+
+app.get("/hurghada/echitatie-in-desert-si-pe-plaja", (req, res) =>{
+    res.render("layouts/hurghada/echitatie-in-desert-si-pe-plaja.ejs")
+})
+
+app.get("/hurghada/hammam", (req, res) =>{
+    res.render("layouts/hurghada/hammam.ejs")
+})
+
+app.get("/hurghada/hammam-cleopatra", (req, res) =>{
+    res.render("layouts/hurghada/hammam-cleopatra.ejs")
+})
+
+app.get("/hurghada/hammam-cleopatra-plus", (req, res) =>{
+    res.render("layouts/hurghada/hammam-cleopatra-plus.ejs")
 })
 
 app.get("/hurghada/luxor-economic", (req, res) =>{

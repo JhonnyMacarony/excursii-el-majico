@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echitatie in desert si pe plaja</title>
+    <style>
+        .back{
+            font-size: 27px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+        .paragraph{
+            font-size: 25px;
+        }
+        .back:hover{
+            color: rgb(37, 37, 37);
+        }
+        .translation-btn-usa{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1300px;
+        }
+        @media (max-width: 600px) {
+            .paragraph{
+                font-size: 25px;
+                width: 280vw;
+            }
+        }
+        .translation-btn-ro{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1390px;
+        }
+        .invisible{
+            display: none;
+            top: -1000000px;
+        }
+    </style>
+</head>
+<body>
+    <a class="back" href="/hurghada/home">     <p class="back">←</p>    </a>
+    <div class="translation">
+        <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa" id="translation-btn-usa">
+        <img src="/images/1200px-Flag_of_Romania.svg.png" class="translation-btn-ro" id="translation-btn-ro">
+    </div>
+    <h1>Echitatie in desert si pe plaja</h1>
+    <p id="paragraph-ro" class="paragraph">
+        Bucurați-vă de o călătorie de 2 ore călare prin deșert si pe plajă.
+        Galopează în jurul deșertului sălbatic și admiră decorul pitoresc al acestuia.
+        Aventura călare pe plajă !!!
+        În această călătorie sunt asteptati atât calareti neexperimentati cât și călăreții experți.
+        Bucurați-vă de o aventură încântătoare de călărie și experimentați frumusețea pitorească a deșertului sălbatic pe un cal galopand.
+        Veti fi preluati de la hotelul dumneavoastră și veți fi dus direct la grajd unde o sa incalecati pe cai și o sa începe aventură. O sa călăriți pe un cal bine antrenat și veti simți viteza și agilitatea acestor animale în timp ce calariti in desert și pe plajă și admirați frumusețea naturii.Caii sunt blânzi și ușor de mânuit.
+        Un instructor experimentat vă va însoți în călătorie.
+        Puține lucruri din viață sunt mai entuziasmante decât un galop rapid pe plajă, cu valurile care se sparg lângă tine.
+        Experimentați ceva unic în timp ce călăriți pe cal de-a lungul plajei pitorești. Călăria de-a lungul plajei este uimitoare, cu vederi fantastice asupra nisipului amestecat cu farmecul Mării Roșii.
+        După ce vă bucurați de o călărie de neuitate, veti fi conduși la hotel.        <br><br>
+        Pret:<br>
+        Adult: 25 €<br><br>
+        Cand:<br>
+        <br><br>
+
+    </p>
+    <p id="paragraph-usa" class="paragraph invisible">
+        Enjoy a 2-hour horseback ride through the desert and the beach.
+        Gallop around the wild desert and admire its scenic scenery.
+        Adventure riding on the beach !!!
+        Both inexperienced riders and expert riders are expected on this trip.
+        Enjoy a delightful horseback riding adventure and experience the scenic beauty of the wild desert on a galloping horse.
+        You will be picked up from your hotel and taken directly to the stable where you will ride horses and begin the adventure. You will ride a well-trained horse and you will feel the speed and agility of these animals as you ride in the desert and on the beach and admire the beauty of nature. The horses are gentle and easy to handle.
+        An experienced instructor will accompany you on the journey.
+        Few things in life are more exciting than a quick gallop on the beach, with the waves crashing next to you.
+        Experience something unique as you ride your horse along the scenic beach. The ride along the beach is amazing, with fantastic views of the sand mixed with the charm of the Red Sea.
+        After enjoying an unforgettable ride, you will be taken to the hotel.        <br><br>
+        Price:<br>
+        Adult: 25 €
+        <br><br>
+        When:<br>
+    </p>
+</body>
+<script>
+    const translateBtnUsa = document.getElementById("translation-btn-usa")
+    const translateBtnRo = document.getElementById("translation-btn-ro")
+    const paragraphUsa = document.getElementById("paragraph-usa")
+    const paragraphRo = document.getElementById("paragraph-ro")
+
+    translateBtnUsa.addEventListener("click", ()=>{
+        paragraphUsa.classList.remove("invisible")
+        paragraphRo.classList.add("invisible")
+    })
+
+    translateBtnRo.addEventListener("click", ()=>{
+        paragraphUsa.classList.add("invisible")
+        paragraphRo.classList.remove("invisible")
+    })
+
+</script>
+</html>

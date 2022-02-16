@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hammam Cleopatra Plus</title>
+    <style>
+        .back{
+            font-size: 27px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+        .paragraph{
+            font-size: 25px;
+        }
+        .back:hover{
+            color: rgb(37, 37, 37);
+        }
+        .translation-btn-usa{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1300px;
+        }
+        @media (max-width: 600px) {
+            .paragraph{
+                font-size: 25px;
+                width: 280vw;
+            }
+        }
+        .translation-btn-ro{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1390px;
+        }
+        .invisible{
+            display: none;
+            top: -1000000px;
+        }
+    </style>
+</head>
+<body>
+    <a class="back" href="/hurghada/home">     <p class="back">←</p>    </a>
+    <div class="translation">
+        <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa" id="translation-btn-usa">
+        <img src="/images/1200px-Flag_of_Romania.svg.png" class="translation-btn-ro" id="translation-btn-ro">
+    </div>
+    <h1>Hammam Cleopatra Plus</h1>
+    <p id="paragraph-ro" class="paragraph">
+        Suferiți de stres, de oboseală și corpul dvs. a fost expus la poluarea aerului sau la alte efecte nocive sau doriți doar să vă relaxați pe deplin în vacanță?
+        Atunci baia noastră turcească si Masaj este exact ceea ce ai nevoie.O experiență minunată și un mod minunat de a răsfăța corpul și de a-l ajuta să elibereze o parte din acest stres. Relaxați-vă la o baie tradițională turcească din Sharm el sheikh, bucurați-vă de o experiență minunată de două ore în timp ce obțineți cel mai bun serviciu. Reîmprospătați-vă și înmuiați-vă pielea în timp ce vă relaxați în saună și baie de aburi, bucurați-vă de toate serviciile de spa și saună oferite, tratament de decojire de piele, de la masaj și până la toate, un masaj complet cu ulei de corp.
+        Baie tradițională turceascăajută la eliminarea toxinelor din organism prin răcirea și încălzirea controlată a sângelui. Înainte de hammam se recomandă 15 minute în sauna umedă, Intr-o sauna, aerul este fierbinte si uscat. Doar cateva minute petrecute in sauna sunt suficiente pentru a va ajuta sa uitati si cea mai obositoare zi. Sedintele de sauna intaresc imunitatea organismului, ajuta circulatia sangelui si au un efect benefic asupra pielii. Sauna va reface echilibrul natural intre corp si suflet.
+        Urmează un peeling cu o mănuşă specială, iar apoi masajul propriu-zis cu spumă de săpun originar din sâmburi de măsline, foarte hidratant. Dupa baia de spumă urmează clătirea cu apă caldă, iar pentru ca relaxarea să fie absolută.
+        Urmează, coji de cocos masca Cleopatra pe fata, timp pentru relaxare, băuturi calde (ceai), timp liber – saună / baie de aburi / jacuzzi , masaj complet al corpului (relaxare) timp de aproximativ 45 de minute;
+        Hammamul dă o stare de bine, de relaxare, dilată porii şi lasă o piele mai frumoasă, mai luminoasă şi mai elastică. Aici regăsiţi îmbinarea perfectă între căldura aerului şi umiditatea atmosferică.
+        La finalul programului, veți fi transferați cu un mini bus la hotelul dvs.
+        Pret:<br>
+        Adult: 30 €<br><br>
+        Cand:<br>
+        <br><br>
+
+    </p>
+    <p id="paragraph-usa" class="paragraph invisible">
+        Are you suffering from stress, fatigue and your body has been exposed to air pollution or other harmful effects or do you just want to fully relax on holiday?
+        Then our Turkish bath and Massage is exactly what you need. A wonderful experience and a wonderful way to pamper your body and help it release some of this stress. Relax in a traditional Turkish bath in Sharm el Sheikh, enjoy a wonderful two-hour experience while getting the best service. Refresh and soften your skin while relaxing in the sauna and steam bath, enjoy all the spa and sauna services offered, skin peeling treatment, from massage to all, a complete massage with body oil.
+        Traditional Turkish bath helps to eliminate toxins from the body through controlled cooling and heating of the blood. Before the hammam it is recommended 15 minutes in the wet sauna. In a sauna, the air is hot and dry. Just a few minutes spent in the sauna are enough to help you forget even the most tiring day. Sauna sessions strengthen the body's immunity, help blood circulation and have a beneficial effect on the skin. The sauna will restore the natural balance between body and soul.
+        This is followed by a peeling with a special glove, and then the actual massage with soap foam originating from olive seeds, very moisturizing. After the bubble bath, rinse with warm water, and for absolute relaxation.
+        Next, coconut shells mask Cleopatra on the face, time for relaxation, hot drinks (tea), leisure - sauna / steam bath / jacuzzi, full body massage (relaxation) for about 45 minutes;
+        The hammam gives a feeling of well-being, relaxation, dilates the pores and leaves a more beautiful, brighter and more elastic skin. Here you will find the perfect combination of air heat and atmospheric humidity.
+        At the end of the program, you will be transferred by minibus to your hotel.
+        <br><br>
+        Price:<br>
+        Adult: 30 €
+        <br><br>
+        When:<br>
+    </p>
+</body>
+<script>
+    const translateBtnUsa = document.getElementById("translation-btn-usa")
+    const translateBtnRo = document.getElementById("translation-btn-ro")
+    const paragraphUsa = document.getElementById("paragraph-usa")
+    const paragraphRo = document.getElementById("paragraph-ro")
+
+    translateBtnUsa.addEventListener("click", ()=>{
+        paragraphUsa.classList.remove("invisible")
+        paragraphRo.classList.add("invisible")
+    })
+
+    translateBtnRo.addEventListener("click", ()=>{
+        paragraphUsa.classList.add("invisible")
+        paragraphRo.classList.remove("invisible")
+    })
+
+</script>
+</html>

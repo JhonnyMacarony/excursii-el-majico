@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hammam</title>
+    <style>
+        .back{
+            font-size: 27px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+        .paragraph{
+            font-size: 25px;
+        }
+        .back:hover{
+            color: rgb(37, 37, 37);
+        }
+        .translation-btn-usa{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1300px;
+        }
+        @media (max-width: 600px) {
+            .paragraph{
+                font-size: 25px;
+                width: 280vw;
+            }
+        }
+        .translation-btn-ro{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1390px;
+        }
+        .invisible{
+            display: none;
+            top: -1000000px;
+        }
+    </style>
+</head>
+<body>
+    <a class="back" href="/hurghada/home">     <p class="back">←</p>    </a>
+    <div class="translation">
+        <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa" id="translation-btn-usa">
+        <img src="/images/1200px-Flag_of_Romania.svg.png" class="translation-btn-ro" id="translation-btn-ro">
+    </div>
+    <h1>Hammam</h1>
+    <p id="paragraph-ro" class="paragraph">
+        Delectează-te la un spa de zi la o baie tradițională turcească. Bucurați-vă de un tratament pe masa de marmură încălzită cu un specialist în wellness, Hammamul dă o stare de bine, de relaxare, dilată porii şi lasă o piele mai frumoasă, mai luminoasă şi mai elastică. Aici regăsiţi îmbinarea perfectă între căldura aerului şi umiditatea atmosferică.
+        Baie tradițională turceascăajută la eliminarea toxinelor din organism prin răcirea și încălzirea controlată a sângelui. Înainte de hammam se recomandă 15 minute în sauna umedă, Intr-o sauna, aerul este fierbinte si uscat. Doar cateva minute petrecute in sauna sunt suficiente pentru a va ajuta sa uitati si cea mai obositoare zi. Sedintele de sauna intaresc imunitatea organismului, ajuta circulatia sangelui si au un efect benefic asupra pielii. Sauna va reface echilibrul natural intre corp si suflet.
+        Urmează un peeling cu o mănuşă specială, iar apoi masajul propriu-zis cu spumă de săpun originar din sâmburi de măsline, foarte hidratant. Dupa baia de spumă urmează clătirea cu apă caldă, iar pentru ca relaxarea să fie absolută.
+        Pret:<br>
+        Adult: 20 €<br><br>
+        Cand:<br>
+        <br><br>
+
+    </p>
+    <p id="paragraph-usa" class="paragraph invisible">
+        Enjoy a day spa at a traditional Turkish bath. Enjoy a treatment on the heated marble table with a wellness specialist, the Hammam gives a feeling of well-being, relaxation, dilates pores and leaves a skin more beautiful, brighter and more elastic. Here you will find the perfect combination of air heat and atmospheric humidity.
+        Traditional Turkish bath helps to eliminate toxins from the body through controlled cooling and heating of the blood. Before the hammam it is recommended 15 minutes in the wet sauna. In a sauna, the air is hot and dry. Just a few minutes spent in the sauna are enough to help you forget even the most tiring day. Sauna sessions strengthen the body's immunity, help blood circulation and have a beneficial effect on the skin. The sauna will restore the natural balance between body and soul.
+        This is followed by a peeling with a special glove, and then the actual massage with soap foam originating from olive seeds, very moisturizing. After the bubble bath, rinse with warm water, and for absolute relaxation.
+        <br><br>
+        Price:<br>
+        Adult: 20 €
+        <br><br>
+        When:<br>
+    </p>
+</body>
+<script>
+    const translateBtnUsa = document.getElementById("translation-btn-usa")
+    const translateBtnRo = document.getElementById("translation-btn-ro")
+    const paragraphUsa = document.getElementById("paragraph-usa")
+    const paragraphRo = document.getElementById("paragraph-ro")
+
+    translateBtnUsa.addEventListener("click", ()=>{
+        paragraphUsa.classList.remove("invisible")
+        paragraphRo.classList.add("invisible")
+    })
+
+    translateBtnRo.addEventListener("click", ()=>{
+        paragraphUsa.classList.add("invisible")
+        paragraphRo.classList.remove("invisible")
+    })
+
+</script>
+</html>
