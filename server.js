@@ -18,6 +18,10 @@ app.get("/hurghada/home", (req, res) =>{
     res.render("layouts/hurghada/home.ejs")
 })
 
+app.get("/hurghada/about", (req, res) =>{
+    res.render("layouts/hurghada/about.ejs")
+})
+
 app.get("/hurghada/admirarea-stelelor", (req, res) =>{
     res.render("layouts/hurghada/admirarea-stelelor.ejs")
 })
@@ -144,6 +148,10 @@ app.get("/sharm-el-sheikh/home", (req, res) =>{
     res.render("layouts/sharm-el-sheikh/home.ejs")
 })
 
+app.get("/sharm-el-sheikh/about", (req, res) =>{
+    res.render("layouts/sharm-el-sheikh/about.ejs")
+})
+
 app.get("/sharm-el-sheikh/cairo-alexandria", (req, res) =>{
     res.render("layouts/sharm-el-sheikh/cairo-alexandria.ejs")
 })
@@ -196,6 +204,10 @@ app.get("/sharm-el-sheikh/cairo-by-bus", (req, res) =>{
                                                         //Marsalam
 app.get("/marsalam/home", (req, res) =>{
     res.render("layouts/marsalam/home.ejs")
+})
+
+app.get("/marsalam/about", (req, res) =>{
+    res.render("layouts/marsalam/about.ejs")
 })
 
 app.get("/marsalam/luxor", (req, res) =>{

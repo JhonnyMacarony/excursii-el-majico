@@ -46,20 +46,67 @@
             display: none;
             top: -1000000px;
         }
+        .image-end-1{
+            position: relative;
+            cursor: pointer;
+            height: 340px;
+            width: 380px;
+            margin: 40px;
+            box-shadow: 10px 10px 5px #aaaaaa;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://nile-voyage.com/home/wp-content/uploads/2020/07/Turkish-bath-and-massage-in-Hurghada-www.nile-voyage.com_.-18.jpg");
+        }
+        .dark{
+            background-color: #333;
+        }
+        .image-end-1-big{
+            z-index: 111;
+            position: absolute;
+            cursor: pointer;
+            height: 540px;
+            width: 880px;
+            margin-top: 40px;
+            margin-left: 400px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://nile-voyage.com/home/wp-content/uploads/2020/07/Turkish-bath-and-massage-in-Hurghada-www.nile-voyage.com_.-18.jpg");
+        }
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgb(37, 37, 37); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+            border-radius: 25px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+        .back:hover{
+            color: rgb(37, 37, 37);
+        }
     </style>
 </head>
 <body>
     <a class="back" href="/hurghada/home">     <p class="back">←</p>    </a>
+    <div id="image-1-big" class="image-end-1-big invisible"></div>
     <div class="translation">
         <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa" id="translation-btn-usa">
         <img src="/images/1200px-Flag_of_Romania.svg.png" class="translation-btn-ro" id="translation-btn-ro">
     </div>
     <h1>Hammam</h1>
     <p id="paragraph-ro" class="paragraph">
-        Delectează-te la un spa de zi la o baie tradițională turcească. Bucurați-vă de un tratament pe masa de marmură încălzită cu un specialist în wellness, Hammamul dă o stare de bine, de relaxare, dilată porii şi lasă o piele mai frumoasă, mai luminoasă şi mai elastică. Aici regăsiţi îmbinarea perfectă între căldura aerului şi umiditatea atmosferică.
-        Baie tradițională turceascăajută la eliminarea toxinelor din organism prin răcirea și încălzirea controlată a sângelui. Înainte de hammam se recomandă 15 minute în sauna umedă, Intr-o sauna, aerul este fierbinte si uscat. Doar cateva minute petrecute in sauna sunt suficiente pentru a va ajuta sa uitati si cea mai obositoare zi. Sedintele de sauna intaresc imunitatea organismului, ajuta circulatia sangelui si au un efect benefic asupra pielii. Sauna va reface echilibrul natural intre corp si suflet.
-        Urmează un peeling cu o mănuşă specială, iar apoi masajul propriu-zis cu spumă de săpun originar din sâmburi de măsline, foarte hidratant. Dupa baia de spumă urmează clătirea cu apă caldă, iar pentru ca relaxarea să fie absolută.
-        Pret:<br>
+        Delectează-te la un spa de zi la o baie tradițională turcească. Bucurați-vă de un tratament pe masa de marmură încălzită de un specialist în wellness, Hammamul dă o stare de bine, de relaxare, dilată porii şi lasă o piele mai frumoasă, mai luminoasă şi mai elastică. Aici regăsiţi îmbinarea perfectă între căldura aerului şi umiditatea atmosferică.
+        Baie tradițională turcească ajută la eliminarea toxinelor din organism prin răcirea și încălzirea controlată a sângelui. Înainte de hammam se recomandă 15 minute în sauna umedă, Intr-o sauna, aerul este fierbinte si uscat. Doar cateva minute petrecute in sauna sunt suficiente pentru a va ajuta sa uitati si cea mai obositoare zi. Sedintele de sauna intaresc imunitatea organismului, ajuta circulatia sangelui si au un efect benefic asupra pielii. Sauna va reface echilibrul natural intre corp si suflet.
+        Urmează un peeling cu o mănuşă specială, iar apoi masajul propriu-zis cu spumă de săpun originar din sâmburi de măsline, foarte hidratant. Dupa baia de spumă urmează clătirea cu apă caldă ca relaxarea să fie absolută.
+        <br><br>Pret:<br>
         Adult: 20 €<br><br>
         Cand:<br>
         <br><br>
@@ -75,8 +122,27 @@
         <br><br>
         When:<br>
     </p>
+    <div class="images-section" id="images-section">
+        <div id="image-1" class="image-end-1"></div>
+    </div>
 </body>
 <script>
+    const image1 = document.getElementById("image-1")
+    const imageBig1 = document.getElementById("image-1-big")
+    const body = document.querySelector("body")
+
+    image1.addEventListener("click", ()=>{
+        imageBig1.classList.remove("invisible")
+        body.classList.add("dark")
+        image1.classList.add("invisible")
+    })
+
+    imageBig1.addEventListener("click", ()=>{
+        imageBig1.classList.add("invisible")
+        body.classList.remove("dark")
+        image1.classList.remove("invisible")
+    })
+
     const translateBtnUsa = document.getElementById("translation-btn-usa")
     const translateBtnRo = document.getElementById("translation-btn-ro")
     const paragraphUsa = document.getElementById("paragraph-usa")
