@@ -18,6 +18,12 @@
         .back:hover{
             color: rgb(37, 37, 37);
         }
+        @media (max-width: 600px) {
+            .paragraph{
+                font-size: 25px;
+                width: 280vw;
+            }
+        }
         .translation-btn-usa{
             position: absolute;
             height: 50px;
@@ -25,13 +31,7 @@
             border-radius: 50%;
             cursor: pointer;
             margin-top: -80px;
-            margin-left: 1300px;
-        }
-        @media (max-width: 600px) {
-            .paragraph{
-                font-size: 25px;
-                width: 280vw;
-            }
+            margin-left: 1200px;
         }
         .translation-btn-ro{
             position: absolute;
@@ -40,7 +40,7 @@
             border-radius: 50%;
             cursor: pointer;
             margin-top: -80px;
-            margin-left: 1390px;
+            margin-left: 1290px;
         }
         .invisible{
             display: none;
@@ -92,10 +92,18 @@
         .back:hover{
             color: rgb(37, 37, 37);
         }
+        .next-excursion{
+            position: absolute;
+            font-size: 27px;
+            font-weight: bold;
+            margin-top: -35px;
+            margin-left: 690px;
+        }
     </style>
 </head>
 <body>
     <a class="back" href="/hurghada/home">     <p class="back">←</p>    </a>
+    <a class="next-excursion" href="/hurghada/admirarea-stelelor"> <p class="next-excursion">→</p> </a>
     <div id="image-1-big" class="image-end-1-big invisible"></div>
     <div class="translation">
         <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa" id="translation-btn-usa">
