@@ -27,7 +27,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            margin-bottom: 370px;
+            margin-bottom: 375px;
         }
         .excursion-end{
             margin-top: 75px;
@@ -73,8 +73,9 @@
             position: relative;
         }
         .invisible{
+            position: absolute;
             display: none;
-            top: -1000000px;
+            left: -1000000px;
         }
         .card{
             align-content: center;
@@ -112,6 +113,15 @@
             background-position: center;
             border-radius: 10px;
             background-image: url("https://d.newsweek.com/en/full/813669/gettyimages-918637914.jpg");
+        }
+        .image-card-excursie-cu-balonul{
+            height: 340px;
+            width: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://media.tacdn.com/media/attractions-splice-spp-674x446/07/2b/cb/c5.jpg");
         }
         .image-card-admirarea-stelelor{
             height: 340px;
@@ -507,8 +517,11 @@
             width: 60px;
             position: absolute;
             margin-left: 1300px;
-            cursor: pointer;
+            cursor: pointer ;
             border-radius: 10px;
+        }
+        .no-access-cursor{
+            cursor: not-allowed ;
         }
         @keyframes appear{
             0%{
@@ -530,6 +543,9 @@
         }
         .start{
             margin: 50px;
+        }
+        .margin-bottom{
+            margin-bottom: 500px;
         }
         .title-text{
             font-size: 24px;
@@ -583,11 +599,90 @@
         .about-link:hover{
             color: rgb(58, 58, 58);
         }
+        .filter-img{
+            margin-left: 250px;
+            margin-top: -60px;
+            cursor: pointer;
+            height: 80px;
+            width: 80px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://image.freepik.com/free-vector/filter-control-adjustment-icon-filter-control-settings-icon-vector-illustration_399089-2801.jpg");
+        }
+        .filter{
+            position: absolute;
+        }
+        .categories{
+            margin-left: 250px;
+            position: absolute;
+            width: 250px;
+        }
+        .category{
+            border-collapse: collapse;
+            border: 3px rgb(202, 202, 202) solid;
+            background-color: rgba(255, 255, 255, 0.658);
+            padding: 10px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 20px;
+            color: rgb(99, 99, 99);
+            cursor: pointer;
+        }
+        .category:hover{
+            background-color: rgba(221, 221, 221, 0.753);
+        }
+        .to-top{
+            margin-top: -450px;
+            position: absolute;
+        }
+        .to-top2{
+            margin-top: -1200px;
+        }
+        .absolute{
+            position: absolute;
+        }
+        .margin-bottom2{
+            margin-bottom: 1300px;
+        }
+        .to-top3{
+            margin-top: -2330px;
+        }
+        .to-top4{
+            margin-top: -800px;
+        }
+        .margin-bottom4{
+            margin-bottom: 900px;
+        }
+        .to-top1{
+            margin-top: -1700px;
+        }
+        .margin-bottom1{
+            margin-bottom: 1800px;
+        }
+        .excursions-big{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 410px;
+        }
     </style>
 </head>
 <body>
-    <div class="start">
+    <div id="start" class="start">
         <a class="back" href="/">     <p class="back">←</p>    </a>
+        <div id="filter" class="filter">
+            <div id="filter-img" class="filter-img"></div>
+            <div class="categories invisible" id="categories">
+                <p id="one-day" class="category "> Excursie o zi </p>
+                <p id="two-day" class="category "> Excursie doua zile </p>
+                <p id="on-sea" class="category "> Excursie pe mare </p>
+                <p id="in-desert" class="category "> Safari in desert </p>
+                <p id="personalized" class="category "> Excursii personalizate </p>
+                <p id="to-airport" class="category "> Transfer aeroport </p>  
+            </div>
+        </div>
         <a href="/hurghada/about" class="about-link"> <h1 class="first">Hurghada</h1> </a>
         <div class="setting">
             <img src="/images/settings.png" id="wheel" class="wheel">
@@ -608,25 +703,25 @@
     <div class="paragraph-ro" id="paragraph-ro">
 
         <div id="normal1" class="excursions">
-            <a class="excursion" href="/hurghada/cairo">
+            <a id="cairo" class="excursion" href="/hurghada/cairo">
                 <div class="card">
                     <img class="image-card-cairo">
                     <p id="trip-card1" class="trip-card">Cairo</p>
                 </div>
             </a>
-            <a class="excursion" href="/hurghada/cairo-economic">
+            <a id="cairo-economic" class="excursion" href="/hurghada/cairo-economic">
                 <div class="card">
                     <img class="image-card-cairo-economic">
                     <p id="trip-card2" class="trip-card">Cairo Economic</p>
                 </div>
             </a>
-            <a class="excursion" href="/hurghada/super-luxor">
+            <a id="super-luxor" class="excursion" href="/hurghada/super-luxor">
                 <div class="card">
                     <img class="image-card-super-luxor">
                     <p id="trip-card3" class="trip-card">Super Luxor</p>
                 </div>
             </a>
-            <a class="excursion" href="/hurghada/luxor-valea-reginelor">
+            <a id="luxor-valea-reginelor" class="excursion" href="/hurghada/luxor-valea-reginelor">
                 <div class="card">
                     <img class="image-card-luxor-valea-reginelor">
                     <p id="trip-card4" class="trip-card">Luxor Valea Reginelor</p>
@@ -635,25 +730,25 @@
         </div>
     
         <div id="normal2" class="excursions">
-            <a class="excursion" href="/hurghada/luxor-economic">
+            <a id="luxor-economic" class="excursion" href="/hurghada/luxor-economic">
                 <div class="card">
                     <img class="image-card-luxor-economic">
                     <p id="trip-card5" class="trip-card">Luxor Economic</p>
                 </div>
             </a>
-            <a class="excursion" href="/hurghada/super-safari">
+            <a id="super-safari" class="excursion" href="/hurghada/super-safari">
                 <div class="card">
                     <img class="image-card-super-safari">
                     <p id="trip-card6" class="trip-card">Super Safari</p>
                 </div>
             </a>
-            <a class="excursion" href="/hurghada/safari-oasis">
+            <a id="safari-oasis" class="excursion" href="/hurghada/safari-oasis">
                 <div class="card">
                     <img class="image-card-safari-oasis">
                     <p id="trip-card7" class="trip-card">Safari Oasis</p>
                 </div>
             </a>
-            <a class="excursion" href="/hurghada/express-safari-5-ore">
+            <a id="express-safari-5-ore" class="excursion" href="/hurghada/express-safari-5-ore">
                 <div class="card">
                     <img class="image-card-express-safari-5-ore">
                     <p id="trip-card8" class="trip-card">Express Safari 5 Ore</p>
@@ -662,25 +757,25 @@
             </div>
     
             <div id="normal3" class="excursions">
-                <a class="excursion" href="/hurghada/moto-safari-3-ore">
+                <a id="moto-safari-3-ore" class="excursion" href="/hurghada/moto-safari-3-ore">
                     <div class="card">
                         <img class="image-card-moto-safari-3-ore">
                         <p id="trip-card9" class="trip-card">Moto Safari 3 Ore</p>
                     </div>     
                 </a>
-                <a class="excursion" href="/hurghada/insula-orange-bay">
+                <a id="insula-orange-bay" class="excursion" href="/hurghada/insula-orange-bay">
                     <div class="card">
                         <img class="image-card-insula-orange-bay">
                         <p id="trip-card10" class="trip-card">Insula Orange Bay</p>
                     </div>     
                 </a>
-                <a class="excursion" href="/hurghada/insula-paradise">
+                <a id="insula-paradise" class="excursion" href="/hurghada/insula-paradise">
                     <div class="card">
                         <img class="image-card-insula-paradise">
                         <p id="trip-card11" class="trip-card">Insula Paradise</p>
                     </div>     
                 </a>
-                <a class="excursion" href="/hurghada/casa-delfinilor">
+                <a id="casa-delfinilor" class="excursion" href="/hurghada/casa-delfinilor">
                     <div class="card">
                         <img class="image-card-casa-delfinilor">
                         <p id="trip-card12" class="trip-card">Casa Delfinilor</p>
@@ -689,25 +784,25 @@
             </div>   
     
             <div id="normal4" class="excursions">
-                <a class="excursion" href="/hurghada/paraseling">
+                <a id="paraseling" class="excursion" href="/hurghada/paraseling">
                     <div class="card">
                         <img class="image-card-paraseling">
                         <p id="trip-card13" class="trip-card">Paraseling</p>
                     </div>     
                 </a>
-                <a class="excursion" href="/hurghada/scufundari">
+                <a id="scufundari" class="excursion" href="/hurghada/scufundari">
                     <div class="card">
                         <img class="image-card-scufundari">
                         <p id="trip-card14" class="trip-card">Scufundari</p>
                     </div>     
                 </a>
-                <a class="excursion" href="/hurghada/submarin-sindbad">
+                <a id="submarin-sindbad" class="excursion" href="/hurghada/submarin-sindbad">
                     <div class="card">
                         <img class="image-card-submarin-sindbad">
                         <p id="trip-card15" class="trip-card">Submarin Sindbad</p>
                     </div>     
                 </a>
-                <a class="excursion" href="/hurghada/batiskaf">
+                <a id="batiskaf" class="excursion" href="/hurghada/batiskaf">
                     <div class="card">
                         <img class="image-card-batiskaf">
                         <p id="trip-card16" class="trip-card">Batiskaf</p>
@@ -716,25 +811,25 @@
             </div>    
     
             <div id="normal5" class="excursions">
-                <a class="excursion" href="/hurghada/dolphin-show">
+                <a id="dolphin-show" class="excursion" href="/hurghada/dolphin-show">
                     <div class="card">
                         <img class="image-card-dolphin-show">
                         <p id="trip-card17" class="trip-card">Dolphin Show</p>
                     </div>     
                 </a>
-                <a class="excursion" href="/hurghada/acvariu">
+                <a id="acvariu" class="excursion" href="/hurghada/acvariu">
                     <div class="card">
                         <img class="image-card-acvariu">
                         <p id="trip-card18" class="trip-card">Acvariu</p>
                     </div>     
                 </a>
-                <a class="excursion" href="/hurghada/aswan-abu-sibel">
+                <a id="aswan-abu-sibel" class="excursion" href="/hurghada/aswan-abu-sibel">
                     <div class="card">
                         <img class="image-card-aswan-abu-sibel">
                         <p id="trip-card19" class="trip-card">Aswan Abu Sibel</p>
                     </div>     
                 </a>
-                <a class="excursion" href="/hurghada/manastirea-sfantul-pavel-si-antonie">
+                <a id="manastirea-sfantul-pavel-si-antonie" class="excursion" href="/hurghada/manastirea-sfantul-pavel-si-antonie">
                     <div class="card">
                         <img class="image-card-manastirea-sfantul-pavel-si-antonie">
                         <p id="trip-card20" class="trip-card">Manastirea Sf. Pavel si Antonie</p>
@@ -743,25 +838,25 @@
             </div>    
     
             <div id="normal6" class="excursions">
-                <a class="excursion" href="/hurghada/excursie-privata">
+                <a id="excursie-privata" class="excursion" href="/hurghada/excursie-privata">
                     <div class="card">
                         <img class="image-card-excursie-privata">
                         <p id="trip-card21" class="trip-card">Excursie Privata</p>
                     </div>     
                 </a>
-                <a class="excursion" href="/hurghada/vizitarea-orasului-hurghada">
+                <a id="vizitarea-orasului-hurghada" class="excursion" href="/hurghada/vizitarea-orasului-hurghada">
                     <div class="card">
                         <img class="image-card-vizitarea-orasului-hurghada">
                         <p id="trip-card22" class="trip-card">Vizitarea Orasului Hurghada</p>
                     </div>     
                 </a>
-                <a class="excursion" href="/hurghada/abu-dabbab">
+                <a id="abu-dabbab" class="excursion" href="/hurghada/abu-dabbab">
                     <div class="card">
                         <img class="image-card-abu-dabbab">
                         <p id="trip-card23" class="trip-card">Abu Dabbab</p>
                     </div>     
                 </a>
-                <a class="excursion" href="/hurghada/excursie-cu-avionul-din-hurghada-la-cairo">
+                <a id="excursie-cu-avionul-din-hurghada-la-cairo" class="excursion" href="/hurghada/excursie-cu-avionul-din-hurghada-la-cairo">
                     <div class="card">
                         <img class="image-card-excursie-cu-avionul-din-hurghada-la-cairo">
                         <p id="trip-card24" class="trip-card"> Excursie cu avionul din  Hurghada  la Cairo	</p>
@@ -771,25 +866,25 @@
             </div>
 
             <div id="normal7" class="excursions">
-                <a class="excursion" href="/hurghada/hammam">
+                <a id="hammam" class="excursion" href="/hurghada/hammam">
                     <div class="card">
                         <img class="image-card-hammam">
                         <p id="trip-card25" class="trip-card">Hammam</p>
                     </div>     
                 </a>
-                <a class="excursion" href="/hurghada/hammam-cleopatra">
+                <a id="hammam-cleopatra" class="excursion" href="/hurghada/hammam-cleopatra">
                     <div class="card">
                         <img class="image-card-hammam-cleopatra">
                         <p id="trip-card26" class="trip-card">Hammam Cleopatra</p>
                     </div>     
                 </a>
-                <a class="excursion" href="/hurghada/hammam-cleopatra-plus">
+                <a id="hammam-cleopatra-plus" class="excursion" href="/hurghada/hammam-cleopatra-plus">
                     <div class="card">
                         <img class="image-card-hammam-cleopatra-plus">
                         <p id="trip-card27" class="trip-card">Hammam Cleopatra Plus</p>
                     </div>     
                 </a>
-                <a class="excursion" href="/hurghada/echitatie-in-desert-si-pe-plaja">
+                <a id="echitatie-in-desert-si-pe-plaja" class="excursion" href="/hurghada/echitatie-in-desert-si-pe-plaja">
                     <div class="card">
                         <img class="image-card-echitatie-in-desert-si-pe-plaja">
                         <p id="trip-card28" class="trip-card">Echitatie in desert si pe plaja</p>
@@ -798,10 +893,16 @@
             </div>
 
             <div id="normal8" class="excursions">
-                <a class="excursion" href="/hurghada/admirarea-stelelor">
+                <a id="admirarea-stelelor" class="excursion" href="/hurghada/admirarea-stelelor">
                     <div class="card">
                         <img class="image-card-admirarea-stelelor">
                         <p id="trip-card29" class="trip-card">Plimbare cu camila si admirarea stelelor</p>
+                    </div>     
+                </a>
+                <a id="excursie-cu-balonul" class="excursion" href="/hurghada/excursie-cu-balonul">
+                    <div class="card">
+                        <img class="image-card-excursie-cu-balonul">
+                        <p id="trip-card30" class="trip-card">Excursie cu balonul</p>
                     </div>     
                 </a>
             </div>
@@ -811,7 +912,7 @@
 
     <div class="paragraph-usa invisible" id="paragraph-usa">
         
-        <div id="normal1" class="excursions">
+        <div id="normalA" class="excursions">
             <a class="excursion" href="/hurghada/cairo">
                 <div class="card">
                     <img class="image-card-cairo">
@@ -838,7 +939,7 @@
             </a>
         </div>
     
-        <div id="normal2" class="excursions">
+        <div id="normalB" class="excursions">
             <a class="excursion" href="/hurghada/luxor-economic">
                 <div class="card">
                     <img class="image-card-luxor-economic">
@@ -865,7 +966,7 @@
             </a>
             </div>
     
-            <div id="normal3" class="excursions">
+            <div id="normalC" class="excursions">
                 <a class="excursion" href="/hurghada/moto-safari-3-ore">
                     <div class="card">
                         <img class="image-card-moto-safari-3-ore">
@@ -892,7 +993,7 @@
                 </a>
             </div>   
     
-            <div id="normal4" class="excursions">
+            <div id="normalD" class="excursions">
                 <a class="excursion" href="/hurghada/paraseling">
                     <div class="card">
                         <img class="image-card-paraseling">
@@ -919,7 +1020,7 @@
                 </a>
             </div>    
     
-            <div id="normal5" class="excursions">
+            <div id="normalE" class="excursions">
                 <a class="excursion" href="/hurghada/dolphin-show">
                     <div class="card">
                         <img class="image-card-dolphin-show">
@@ -946,7 +1047,7 @@
                 </a>
             </div>    
     
-            <div id="normal6" class="excursions">
+            <div id="normalF" class="excursions">
                 <a class="excursion" href="/hurghada/excursie-privata">
                     <div class="card">
                         <img class="image-card-excursie-privata">
@@ -972,7 +1073,7 @@
                     </div>     
                 </a>        
             </div>
-            <div id="normal7" class="excursions">
+            <div id="normalG" class="excursions">
                 <a class="excursion" href="/hurghada/hammam">
                     <div class="card">
                         <img class="image-card-hammam">
@@ -998,17 +1099,23 @@
                     </div>     
                 </a>
             </div>
-            <div id="normal8" class="excursions">
+            <div id="normalH" class="excursions">
                 <a class="excursion" href="/hurghada/admirarea-stelelor">
                     <div class="card">
                         <img class="image-card-admirarea-stelelor">
                         <p id="trip-cardII" class="trip-card">Camel ride and admiring the stars</p>
                     </div>     
                 </a>
+                <a class="excursion" href="/hurghada/excursie-cu-balonul">
+                    <div class="card">
+                        <img class="image-card-excursie-cu-balonul">
+                        <p id="trip-cardJJ" class="trip-card">Ballon Trip</p>
+                    </div>     
+                </a>
             </div>
     </div>
 
-    <div class="end">
+    <div id="end" class="end">
         <p class="excursion-end">
             * Copiii cu varsta inre 0-5 ani au gratuitate. <br>
             * Copii cu varsta intre 5 ani si 11 ani platesc 50% din valoarea biletului . <br>
@@ -1034,6 +1141,393 @@
     </div>
 </body>
 <script>
+    const start = document.getElementById("start")
+    const end = document.getElementById("end")
+
+    const normal1 = document.getElementById("normal1")
+    const normal2 = document.getElementById("normal2")
+    const normal3 = document.getElementById("normal3")
+    const normal4 = document.getElementById("normal4")
+    const normal5 = document.getElementById("normal5")
+    const normal6 = document.getElementById("normal6")
+    const normal7 = document.getElementById("normal7")
+    const normal8 = document.getElementById("normal8")
+
+
+    const cairo = document.getElementById("cairo")
+    const cairoEconomic = document.getElementById("cairo-economic")
+    const superLuxor = document.getElementById("super-luxor")
+    const luxorValeaReginelor = document.getElementById("luxor-valea-reginelor")
+    const luxorEconomic = document.getElementById("luxor-economic")
+    const superSafari = document.getElementById("super-safari")
+    const safariOasis = document.getElementById("safari-oasis")
+    const expressSafari5Ore = document.getElementById("express-safari-5-ore")
+    const motoSafari3Ore = document.getElementById("moto-safari-3-ore")
+    const insulaOrangeBay = document.getElementById("insula-orange-bay")
+    const insulaParadise = document.getElementById("insula-paradise")
+    const casaDelfinilor = document.getElementById("casa-delfinilor")
+    const paraseling = document.getElementById("paraseling")
+    const scufundari = document.getElementById("scufundari")
+    const submarinSindbad = document.getElementById("submarin-sindbad")
+    const batiskaf = document.getElementById("batiskaf")
+    const dolphinShow = document.getElementById("dolphin-show")
+    const acvariu = document.getElementById("acvariu")
+    const aswanAbuSibel = document.getElementById("aswan-abu-sibel")
+    const manastireaSfantulPavelSiAntonie = document.getElementById("manastirea-sfantul-pavel-si-antonie")
+    const excursiePrivata = document.getElementById("excursie-privata")
+    const vizitareaOrasuluiHurghada = document.getElementById("vizitarea-orasului-hurghada")
+    const abuDabbab = document.getElementById("abu-dabbab")
+    const excursieCuAvionulDinHurghadaLaCairo = document.getElementById("excursie-cu-avionul-din-hurghada-la-cairo")
+    const hammam = document.getElementById("hammam")
+    const hammamCleopatra = document.getElementById("hammam-cleopatra")
+    const hammamCleopatraPlus = document.getElementById("hammam-cleopatra-plus")
+    const echitatieInDesertSiPePlaja = document.getElementById("echitatie-in-desert-si-pe-plaja")
+    const admirareaStelelor = document.getElementById("admirarea-stelelor")
+    const excursieCuBalonul = document.getElementById("excursie-cu-balonul")
+
+    const filterImage = document.getElementById("filter-img")
+    const categories = document.getElementById("categories")
+
+    const oneDay = document.getElementById("one-day")
+    const twoDay = document.getElementById("two-day")
+    const onSea = document.getElementById("on-sea")
+    const inDesert = document.getElementById("in-desert")
+    const personalized = document.getElementById("personalized")
+    const toAirport = document.getElementById("to-airport")
+
+    oneDay.addEventListener("click", ()=>{
+        cairo.classList.add("to-top1")
+        cairoEconomic.classList.add("to-top1")
+        superLuxor.classList.add("to-top1")
+        luxorValeaReginelor.classList.add("to-top1")
+        luxorEconomic.classList.add("to-top1")
+        manastireaSfantulPavelSiAntonie.classList.add("to-top1")
+        excursiePrivata.classList.add("to-top1")
+        abuDabbab.classList.add("to-top1")
+        excursieCuAvionulDinHurghadaLaCairo.classList.add("to-top1")
+        hammam.classList.add("to-top1")
+        hammamCleopatra.classList.add("to-top1")
+        hammamCleopatraPlus.classList.add("to-top1")
+        echitatieInDesertSiPePlaja.classList.add("to-top1")
+        admirareaStelelor.classList.add("to-top1")
+
+        paragraphRo.classList.add("absolute")
+        start.classList.add("margin-bottom1")
+
+        start.classList.remove("margin-bottom2")
+        start.classList.remove("margin-bottom4")
+        start.classList.remove("margin-bottom3")
+
+        normal1.classList.remove("invisible")
+        normal2.classList.add("invisible")
+        normal3.classList.add("invisible")
+        normal4.classList.add("invisible")
+        normal5.classList.add("invisible")
+        normal6.classList.remove("invisible")
+        normal7.classList.remove("invisible")
+        normal8.classList.remove("invisible")
+
+        normal1.classList.add("excursions-big")
+        normal2.classList.add("excursions-big")
+        normal3.classList.add("excursions-big")
+        normal4.classList.add("excursions-big")
+        normal5.classList.add("excursions-big")
+        normal6.classList.add("excursions-big")
+        normal7.classList.add("excursions-big")
+        normal8.classList.add("excursions-big")
+
+        cairo.classList.remove("invisible")
+        cairoEconomic.classList.remove("invisible")
+        superLuxor.classList.remove("invisible")
+        luxorValeaReginelor.classList.remove("invisible")
+        luxorEconomic.classList.remove("invisible")
+        manastireaSfantulPavelSiAntonie.classList.remove("invisible")
+        excursiePrivata.classList.remove("invisible")
+        abuDabbab.classList.remove("invisible")
+        excursieCuAvionulDinHurghadaLaCairo.classList.remove("invisible")
+        hammam.classList.remove("invisible")
+        hammamCleopatra.classList.remove("invisible")
+        hammamCleopatraPlus.classList.remove("invisible")
+        echitatieInDesertSiPePlaja.classList.remove("invisible")
+        admirareaStelelor.classList.remove("invisible")
+
+        superSafari.classList.add("invisible")
+        safariOasis.classList.add("invisible")
+        expressSafari5Ore.classList.add("invisible")
+        motoSafari3Ore.classList.add("invisible")
+        insulaOrangeBay.classList.add("invisible")
+        insulaParadise.classList.add("invisible")
+        casaDelfinilor.classList.add("invisible")
+        paraseling.classList.add("invisible")
+        scufundari.classList.add("invisible")
+        submarinSindbad.classList.add("invisible")
+        batiskaf.classList.add("invisible")
+        dolphinShow.classList.add("invisible")
+        acvariu.classList.add("invisible")
+        aswanAbuSibel.classList.add("invisible")
+        vizitareaOrasuluiHurghada.classList.add("invisible")
+        excursieCuBalonul.classList.add("invisible")
+    })
+
+    twoDay.addEventListener("click", ()=>{
+        cairo.classList.add("invisible")
+        cairoEconomic.classList.add("invisible")
+        superLuxor.classList.add("invisible")
+        luxorValeaReginelor.classList.add("invisible")
+        luxorEconomic.classList.add("invisible")
+        superSafari.classList.add("invisible")
+        safariOasis.classList.add("invisible")
+        expressSafari5Ore.classList.add("invisible")
+        motoSafari3Ore.classList.add("invisible")
+        insulaOrangeBay.classList.add("invisible")
+        insulaParadise.classList.add("invisible")
+        casaDelfinilor.classList.add("invisible")
+        paraseling.classList.add("invisible")
+        scufundari.classList.add("invisible")
+        submarinSindbad.classList.add("invisible")
+        batiskaf.classList.add("invisible")
+        dolphinShow.classList.add("invisible")
+        acvariu.classList.add("invisible")
+        aswanAbuSibel.classList.add("invisible")
+        manastireaSfantulPavelSiAntonie.classList.add("invisible")
+        excursiePrivata.classList.add("invisible")
+        vizitareaOrasuluiHurghada.classList.add("invisible")
+        abuDabbab.classList.add("invisible")
+        excursieCuAvionulDinHurghadaLaCairo.classList.add("invisible")
+        hammam.classList.add("invisible")
+        hammamCleopatra.classList.add("invisible")
+        hammamCleopatraPlus.classList.add("invisible")
+        echitatieInDesertSiPePlaja.classList.add("invisible")
+        admirareaStelelor.classList.add("invisible")
+
+        normal1.classList.add("excursions-big")
+        normal2.classList.add("excursions-big")
+        normal3.classList.add("excursions-big")
+        normal4.classList.add("excursions-big")
+        normal5.classList.add("excursions-big")
+        normal6.classList.add("excursions-big")
+        normal7.classList.add("excursions-big")
+        normal8.classList.add("excursions-big")
+
+        excursieCuBalonul.classList.remove("invisible")
+        start.classList.remove("margin-bottom2")
+
+        start.classList.remove("margin-bottom1")
+        start.classList.remove("margin-bottom4")
+        start.classList.remove("margin-bottom3")
+
+        excursieCuBalonul.classList.add("to-top")
+        normal8.classList.remove("absolute")
+        paragraphRo.classList.add("absolute")
+        start.classList.add("margin-bottom")
+
+        normal1.classList.add("invisible")
+        normal2.classList.add("invisible")
+        normal3.classList.add("invisible")
+        normal4.classList.add("invisible")
+        normal5.classList.add("invisible")
+        normal6.classList.add("invisible")
+        normal7.classList.add("invisible")
+    })
+
+    onSea.addEventListener("click", ()=>{
+        insulaOrangeBay.classList.add("to-top2")
+        insulaParadise.classList.add("to-top2")
+        casaDelfinilor.classList.add("to-top2")
+        paraseling.classList.add("to-top2")
+        scufundari.classList.add("to-top2")
+        submarinSindbad.classList.add("to-top2")
+        batiskaf.classList.add("to-top2")
+        dolphinShow.classList.add("to-top2")
+        acvariu.classList.add("to-top2")
+        start.classList.add("margin-bottom2")
+        paragraphRo.classList.add("absolute")
+
+        start.classList.remove("margin-bottom1")
+        start.classList.remove("margin-bottom4")
+        start.classList.remove("margin-bottom3")
+
+        insulaOrangeBay.classList.remove("invisible")
+        insulaParadise.classList.remove("invisible")
+        casaDelfinilor.classList.remove("invisible")
+        paraseling.classList.remove("invisible")
+        scufundari.classList.remove("invisible")
+        submarinSindbad.classList.remove("invisible")
+        batiskaf.classList.remove("invisible")
+        dolphinShow.classList.remove("invisible")
+        acvariu.classList.remove("invisible")
+
+        cairo.classList.add("invisible")
+        cairoEconomic.classList.add("invisible")
+        superLuxor.classList.add("invisible")
+        luxorValeaReginelor.classList.add("invisible")
+        luxorEconomic.classList.add("invisible")
+        superSafari.classList.add("invisible")
+        safariOasis.classList.add("invisible")
+        expressSafari5Ore.classList.add("invisible")
+        motoSafari3Ore.classList.add("invisible")
+        cairo.classList.add("invisible")
+        aswanAbuSibel.classList.add("invisible")
+        manastireaSfantulPavelSiAntonie.classList.add("invisible")
+        excursiePrivata.classList.add("invisible")
+        vizitareaOrasuluiHurghada.classList.add("invisible")
+        abuDabbab.classList.add("invisible")
+        excursieCuAvionulDinHurghadaLaCairo.classList.add("invisible")
+        hammam.classList.add("invisible")
+        hammamCleopatra.classList.add("invisible")
+        hammamCleopatraPlus.classList.add("invisible")
+        echitatieInDesertSiPePlaja.classList.add("invisible")
+        admirareaStelelor.classList.add("invisible")
+        excursieCuBalonul.classList.add("invisible")
+
+        normal3.classList.remove("invisible")
+        normal4.classList.remove("invisible")
+        normal5.classList.remove("invisible")
+
+        normal1.classList.add("invisible")
+        normal2.classList.add("invisible")
+        normal6.classList.add("invisible")
+        normal7.classList.add("invisible")
+        normal8.classList.add("invisible")
+
+        normal1.classList.add("excursions-big")
+        normal2.classList.add("excursions-big")
+        normal3.classList.add("excursions-big")
+        normal4.classList.add("excursions-big")
+        normal5.classList.add("excursions-big")
+        normal6.classList.add("excursions-big")
+        normal7.classList.add("excursions-big")
+        normal8.classList.add("excursions-big")
+    })
+
+    inDesert.addEventListener("click", ()=>{
+        cairo.classList.add("invisible")
+        cairoEconomic.classList.add("invisible")
+        superLuxor.classList.add("invisible")
+        luxorValeaReginelor.classList.add("invisible")
+        luxorEconomic.classList.add("invisible")
+        insulaOrangeBay.classList.add("invisible")
+        insulaParadise.classList.add("invisible")
+        casaDelfinilor.classList.add("invisible")
+        paraseling.classList.add("invisible")
+        scufundari.classList.add("invisible")
+        submarinSindbad.classList.add("invisible")
+        batiskaf.classList.add("invisible")
+        dolphinShow.classList.add("invisible")
+        acvariu.classList.add("invisible")
+        aswanAbuSibel.classList.add("invisible")
+        manastireaSfantulPavelSiAntonie.classList.add("invisible")
+        excursiePrivata.classList.add("invisible")
+        vizitareaOrasuluiHurghada.classList.add("invisible")
+        abuDabbab.classList.add("invisible")
+        excursieCuAvionulDinHurghadaLaCairo.classList.add("invisible")
+        hammam.classList.add("invisible")
+        hammamCleopatra.classList.add("invisible")
+        hammamCleopatraPlus.classList.add("invisible")
+        echitatieInDesertSiPePlaja.classList.add("invisible")
+        admirareaStelelor.classList.add("invisible")
+        excursieCuBalonul.classList.add("invisible")
+
+        superSafari.classList.remove("invisible")
+        safariOasis.classList.remove("invisible")
+        expressSafari5Ore.classList.remove("invisible")
+        motoSafari3Ore.classList.remove("invisible")
+
+        superSafari.classList.add("to-top4")
+        safariOasis.classList.add("to-top4")
+        expressSafari5Ore.classList.add("to-top4")
+        motoSafari3Ore.classList.add("to-top4")
+        paragraphRo.classList.add("absolute")
+        start.classList.add("margin-bottom4")
+
+        start.classList.remove("margin-bottom2")
+        start.classList.remove("margin-bottom1")
+        start.classList.remove("margin-bottom3")
+
+        normal1.classList.add("excursions-big")
+        normal2.classList.add("excursions-big")
+        normal3.classList.add("excursions-big")
+        normal4.classList.add("excursions-big")
+        normal5.classList.add("excursions-big")
+        normal6.classList.add("excursions-big")
+        normal7.classList.add("excursions-big")
+        normal8.classList.add("excursions-big")
+
+        normal2.classList.remove("invisible")
+        normal3.classList.remove("invisible")
+        normal4.classList.remove("invisible")
+
+        normal1.classList.add("invisible")
+        normal4.classList.add("invisible")
+        normal5.classList.add("invisible")
+        normal6.classList.add("invisible")
+        normal7.classList.add("invisible")
+        normal8.classList.add("invisible")
+    })
+
+    personalized.addEventListener("click", ()=>{
+        vizitareaOrasuluiHurghada.classList.add("to-top3")
+        paragraphRo.classList.add("absolute")
+        start.classList.add("margin-bottom")
+
+        vizitareaOrasuluiHurghada.classList.remove("invisible")
+        start.classList.remove("margin-bottom2")
+        start.classList.remove("margin-bottom1")
+        start.classList.remove("margin-bottom4")
+        start.classList.remove("margin-bottom3")
+
+        normal1.classList.add("excursions-big")
+        normal2.classList.add("excursions-big")
+        normal3.classList.add("excursions-big")
+        normal4.classList.add("excursions-big")
+        normal5.classList.add("excursions-big")
+        normal6.classList.add("excursions-big")
+        normal7.classList.add("excursions-big")
+        normal8.classList.add("excursions-big")
+
+        cairo.classList.add("invisible")
+        cairoEconomic.classList.add("invisible")
+        superLuxor.classList.add("invisible")
+        luxorValeaReginelor.classList.add("invisible")
+        luxorEconomic.classList.add("invisible")
+        superSafari.classList.add("invisible")
+        safariOasis.classList.add("invisible")
+        expressSafari5Ore.classList.add("invisible")
+        motoSafari3Ore.classList.add("invisible")
+        insulaOrangeBay.classList.add("invisible")
+        insulaParadise.classList.add("invisible")
+        casaDelfinilor.classList.add("invisible")
+        paraseling.classList.add("invisible")
+        scufundari.classList.add("invisible")
+        submarinSindbad.classList.add("invisible")
+        batiskaf.classList.add("invisible")
+        dolphinShow.classList.add("invisible")
+        acvariu.classList.add("invisible")
+        aswanAbuSibel.classList.add("invisible")
+        manastireaSfantulPavelSiAntonie.classList.add("invisible")
+        excursiePrivata.classList.add("invisible")
+        abuDabbab.classList.add("invisible")
+        excursieCuAvionulDinHurghadaLaCairo.classList.add("invisible")
+        hammam.classList.add("invisible")
+        hammamCleopatra.classList.add("invisible")
+        hammamCleopatraPlus.classList.add("invisible")
+        echitatieInDesertSiPePlaja.classList.add("invisible")
+        admirareaStelelor.classList.add("invisible")
+        excursieCuBalonul.classList.add("invisible")
+    })
+
+    toAirport.addEventListener("click", ()=>{
+        
+    })
+
+    filterImage.addEventListener("click", ()=>{
+        categories.classList.remove("invisible")
+    })
+
+    filterImage.addEventListener("dblclick", ()=>{
+        categories.classList.add("invisible")
+    })
+
         const tripTitle1 = document.getElementById("trip-card1")
         const tripTitle2 = document.getElementById("trip-card2")
         const tripTitle3 = document.getElementById("trip-card3")
@@ -1063,6 +1557,7 @@
         const tripTitle27 = document.getElementById("trip-card27")
         const tripTitle28 = document.getElementById("trip-card28")
         const tripTitle29 = document.getElementById("trip-card29")
+        const tripTitle30 = document.getElementById("trip-card30")
 
         const tripTitleA = document.getElementById("trip-cardA")
         const tripTitleB = document.getElementById("trip-cardB")
@@ -1093,6 +1588,7 @@
         const tripTitleGG = document.getElementById("trip-cardGG")
         const tripTitleHH = document.getElementById("trip-cardHH")
         const tripTitleII = document.getElementById("trip-cardII")
+        const tripTitleJJ = document.getElementById("trip-cardJJ")
 
     const wheel = document.getElementById("wheel")
     const on = document.getElementById("on")
@@ -1135,6 +1631,7 @@
 
     wheel.addEventListener("click", ()=>{
         wheel.classList.add("rotate")
+        wheel.classList.add("no-access-cursor")
         setTimeout(() =>{
             on.classList.remove("invisible")
             on.classList.add("appear")

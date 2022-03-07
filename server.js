@@ -22,6 +22,10 @@ app.get("/hurghada/about", (req, res) =>{
     res.render("layouts/hurghada/about.ejs")
 })
 
+app.get("/hurghada/excursie-cu-balonul", (req, res) =>{
+    res.render("layouts/hurghada/excursie-cu-balonul.ejs")
+})
+
 app.get("/hurghada/admirarea-stelelor", (req, res) =>{
     res.render("layouts/hurghada/admirarea-stelelor.ejs")
 })

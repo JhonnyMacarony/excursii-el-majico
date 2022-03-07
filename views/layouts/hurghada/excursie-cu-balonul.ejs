@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excursie cu balonul</title>
+    <style>
+        .back{
+            font-size: 27px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+        .paragraph{
+            font-size: 25px;
+        }
+        .back:hover{
+            color: rgb(37, 37, 37);
+        }
+        @media (max-width: 600px) {
+            .paragraph{
+                font-size: 25px;
+                width: 280vw;
+            }
+        }
+        .translation-btn-usa{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1200px;
+        }
+        .translation-btn-ro{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -80px;
+            margin-left: 1290px;
+        }
+        .invisible{
+            display: none;
+            top: -1000000px;
+        }
+        .image-end-1{
+            position: relative;
+            cursor: pointer;
+            height: 340px;
+            width: 380px;
+            margin: 40px;
+            box-shadow: 10px 10px 5px #aaaaaa;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://d.newsweek.com/en/full/813669/gettyimages-918637914.jpg");
+        }
+        .dark{
+            background-color: #333;
+        }
+        .image-end-1-big{
+            z-index: 111;
+            position: absolute;
+            cursor: pointer;
+            height: 540px;
+            width: 880px;
+            margin-top: 40px;
+            margin-left: 400px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            background-image: url("https://d.newsweek.com/en/full/813669/gettyimages-918637914.jpg");
+        }
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgb(37, 37, 37); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+            border-radius: 25px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+        .back:hover{
+            color: rgb(37, 37, 37);
+        }
+        .next-excursion{
+            position: absolute;
+            font-size: 27px;
+            font-weight: bold;
+            margin-top: -35px;
+            margin-left: 690px;
+        }
+    </style>
+</head>
+<body>
+    <a class="back" href="/hurghada/home">     <p class="back">←</p>    </a>
+    <a class="next-excursion" href="/hurghada/cairo-economic"> <p class="next-excursion">→</p> </a>
+    <div id="image-1-big" class="image-end-1-big invisible"></div>
+    <div class="translation">
+        <img src="/images/1200px-Flag_of_the_United_States.svg.png" class="translation-btn-usa" id="translation-btn-usa">
+        <img src="/images/1200px-Flag_of_Romania.svg.png" class="translation-btn-ro" id="translation-btn-ro">
+    </div>
+    <h1>Excursie cu balonul</h1>
+    <p id="paragraph-ro" class="paragraph">
+        Esti pregatit de o vacanta de vis ,atunci alaturate echipei El MAJICO pentru o aventura de neuiat PLIMBAREA CU BALONUL CU AER CALD LA LUXOR
+        Cunoscut ca muzeul în aer liber al Egiptului, Luxor oferă vizitatorilor șansa de a experimenta lumea antică la templele, monumentele și mormintele sale. Dar puțini vizitatori pot vedea aceste obiective istorice din cer. În această aventură de neegalat cu balonul cu aer cald, vedeți Luxorul de sus, deșertul și puteti face fotografii uimitoare în lumina dimineții în timp ce vă înălțați prin cer.
+        Doar cerul e mai sus de noi. E ora 5 dimineața, o lumină aurie se întrevede la orizont, dincolo de Nil și Templul Karnak, iar nacela se leagănă în voia curenților de aer, agățată de-un balon imens cu aer cald, colorat în cele mai îndrăznețe culori, dar atent dirijat de nimeni altul decât , cel mai bun căpitan din câți a dăruit universul afacerii cu baloane cu aer cald, în fascinantul oraș de pe malul Nilului, la Luxor! Ați tras aer în piept? Ați pregătit obiectivele camerei? Mai faceți doar un salt în nacelă și veti fi invitați întruna dintre cele mai captivante experiențe din câte poți încerca în Egipt: zborul cu balonul peste Valea Regilor! 
+        Programul excursiei este urmatorul:
+        Veti fi preluati de la hotelul de unde sunteti cazati in jurul orei 23: 00 de si vom parcurge traseul spre Luxor.Vom ajunge in jurul orei 4:00 la baza unde o sa inceapa aventura ,plimbarea cu balonul cu aer cald si vom admira rasaritul soarelui deasupra Nilului ,Valea Regilor ,Templul Karnak ,Templul Hasepsud si Colosii lui Memnon .Dupa plimbarea cu balonul o sa vizitam complexul de temple din Karnak, templul Reginei Hasepsud, Valea Regilor, Colosii lui Memnon , fabrica de Alabastru ,pranz..fara bauturi (bauturile sunt contra cost).     
+        <br><br>
+        Cand:<br>
+        intreaba ghidul 
+    </p>
+    <p id="paragraph-usa" class="paragraph invisible">
+        You are ready for a dream vacation, then join the El MAJICO team for an unforgettable adventure WALKING WITH THE BALLOON WITH HOT AIR TO LUXURY
+        Known as the open-air museum of Egypt, Luxor offers experimenters a chance to see the ancient world at its temples, monuments and tombs. But few visitors can see these historic landmarks from the sky. In this unparalleled adventure with the hot air balloon, see Luxor from above, the desert and you can take amazing photos in the morning light as you soar through the sky.
+        Only the sky is above us. It's 5 o'clock in the morning, a golden light can be seen on the horizon, beyond the Nile and the Karnak Temple, and the nacelle sways in the air, hanging from a huge hot air balloon, colored in the boldest colors, but carefully directed . none other than the best captain in the world of the hot air balloon business, in the fascinating city on the banks of the Nile, in Luxor! Did you catch your breath? Have you prepared the camera lenses? Just take a step back and you will be invited to one of the most exciting experiences you can try in Egypt: the balloon flight over the Valley of the Kings!
+        The trip schedule is as follows:
+        You will be picked up from the hotel where you are staying around 23:00 and we will take the route to Luxor. We will arrive around 4:00 at the base where the adventure will begin, the hot air balloon ride and we will admire the sunrise. The sun rises over the Nile, the Valley of the Kings, the Temple of Karnak, the Temple of Hasepsud and the Colossi of Memnon. (drinks are for a fee).        <br><br>
+        When:<br>
+        ask the guide
+    </p>
+    <div class="images-section" id="images-section">
+        <div id="image-1" class="image-end-1"></div>
+    </div>
+</body>
+<script>
+    const image1 = document.getElementById("image-1")
+    const imageBig1 = document.getElementById("image-1-big")
+    const body = document.querySelector("body")
+
+    image1.addEventListener("click", ()=>{
+        imageBig1.classList.remove("invisible")
+        body.classList.add("dark")
+        image1.classList.add("invisible")
+    })
+
+    imageBig1.addEventListener("click", ()=>{
+        imageBig1.classList.add("invisible")
+        body.classList.remove("dark")
+        image1.classList.remove("invisible")
+    })
+
+    const translateBtnUsa = document.getElementById("translation-btn-usa")
+    const translateBtnRo = document.getElementById("translation-btn-ro")
+    const paragraphUsa = document.getElementById("paragraph-usa")
+    const paragraphRo = document.getElementById("paragraph-ro")
+
+    translateBtnUsa.addEventListener("click", ()=>{
+        paragraphUsa.classList.remove("invisible")
+        paragraphRo.classList.add("invisible")
+    })
+
+    translateBtnRo.addEventListener("click", ()=>{
+        paragraphUsa.classList.add("invisible")
+        paragraphRo.classList.remove("invisible")
+    })
+
+</script>
+</html>

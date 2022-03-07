@@ -467,6 +467,9 @@
         .about-link:hover{
             color: rgb(58, 58, 58);
         }
+        .no-access-cursor{
+            cursor: not-allowed ;
+        }
     </style>
 </head>
 <div>
@@ -738,6 +741,7 @@ const tripTitle1 = document.getElementById("trip-card1")
 
     wheel.addEventListener("click", ()=>{
         wheel.classList.add("rotate")
+        wheel.classList.add("no-access-cursor")
         setTimeout(() =>{
             on.classList.remove("invisible")
             on.classList.add("appear")
